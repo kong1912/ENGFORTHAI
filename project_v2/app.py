@@ -130,5 +130,24 @@ def profile():
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
+
+@app.route('/pretest')
+def pretest():
+    # Check if account exists using MySQL
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)
+  
+    # Check if user is loggedin
+    if 'loggedin' in session:
+        # We need all the account info for the user so we can display it on the profile page
+        cursor.execute('SELECT * FROM pretest ')
+        pretest = cursor.fetchone()
+         # Show the pretest page with account info
+        
+        return render_template('pretest.html', pretest=pretest,datas=pretest)
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
+
