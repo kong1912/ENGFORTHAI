@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+ 
+{% block title %}Pretest{% endblock %}
+ 
+{% block content %}
+<center><h1>Pretest</h1></center>
+<div class="speak-this">        
+        <center><h2>Speak this word  </h2>   </center>
+
+</div>
+<div class="word">
+<center><h3>Apple</h3></center>
+</div>
+
+<div class="speech">
+    <textarea class="form-control" id="transcript" rows="6"></textarea>
+  </div>
+
+  
+  
+  
+  <div class="text-center">
+    <button id="start-btn" class="btn btn-success">Start</button>
+    <button id="stop-btn" class="btn btn-danger">Stop</button>
+</div>
+
+<script src="static/js/speech.js"></script>
+{% endblock %}
+
