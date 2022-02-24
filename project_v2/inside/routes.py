@@ -1,10 +1,10 @@
 from ctypes.wintypes import MSG
-from flask import Flask, request, session, redirect, url_for, render_template, jsonify
+from flask import request, session, redirect, url_for, render_template
 import pymysql 
 import re 
 from inside import app
 from inside import mysql
-from inside.forms import TestForm
+
 
 # http://localhost:5000/pythonlogin/ - this will be the login page
 @app.route('/pythonlogin/', methods=['GET', 'POST'])
@@ -21,7 +21,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         # Check if account exists using MySQL
-        cursor.execute('SELECT * FROM accounts WHERE username = %s AND password = %s', (username, password))
+        cursor.execute('SELECT * FROM user WHERE username = %s AND password = %s', (username, password))
         # Fetch one record and return result
         account = cursor.fetchone()
    
@@ -39,7 +39,6 @@ def login():
             msg = 'Incorrect username/password!'
     
     return render_template('index.html', msg=msg)
- 
 # http://localhost:5000/register - this will be the registration page
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -58,7 +57,7 @@ def register():
         email = request.form['email']
    
   #Check if account exists using MySQL
-        cursor.execute('SELECT * FROM accounts WHERE username = %s', (username))
+        cursor.execute('SELECT * FROM user WHERE username = %s', (username))
         account = cursor.fetchone()
         # If account exists show error and validation checks
         if account:
@@ -71,7 +70,7 @@ def register():
             msg = 'Please fill out the form!'
         else:
             # Account doesnt exists and the form data is valid, now insert new account into accounts table
-            cursor.execute('INSERT INTO accounts VALUES (NULL, %s, %s, %s, %s)', (fullname, username, password, email)) 
+            cursor.execute('INSERT INTO user VALUES (NULL, %s, %s, %s, %s)', (fullname, username, password, email)) 
             conn.commit()
    
             msg = 'You have successfully registered!'
@@ -112,29 +111,32 @@ def profile():
     # Check if user is loggedin
     if 'loggedin' in session:
         # We need all the account info for the user so we can display it on the profile page
-        cursor.execute('SELECT * FROM accounts WHERE id = %s', [session['id']])
-        account = cursor.fetchone()
+        cursor.execute('SELECT * FROM user WHERE id = %s', [session['id']])
+        user = cursor.fetchone()
         # Show the profile page with account info
-        return render_template('profile.html', account=account)
+        return render_template('profile.html', user=user)
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
 
-@app.route('/pretest')
+@app.route('/pretest', methods=['GET','POST'])
 
 def pretest():
-    # Check if account exists using MySQL
+    score = 0
     conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
-    #form = TestForm()
-    # Check if user is loggedin
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        # We need all the account info for the user so we can display it on the profile page
         cursor.execute('SELECT * FROM pretest ')
         pretest = cursor.fetchall()
-         # Show the pretest page with account info
-        return render_template('pretest.html',datas=pretest)
-    # User is not loggedin redirect to login page
+        # answer = request.form.get('answer')
+        # if request.method == 'POST' and 'answer' in request.form:            
+        #     if answer in pretest['word']:
+        #         score = 1
+        #     else:
+        #         score = 0
+       
+        return render_template('pretest.html',data=pretest)
+  
     return redirect(url_for('login'))
 
 
