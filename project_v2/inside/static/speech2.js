@@ -19,6 +19,10 @@ function getWorkingEls() {
             id_start_btn: "#start-btn-3",
             id_output_txta: "#output-textarea-3"
         },
+        {
+            id_start_btn: "#start-btn-4",
+            id_output_txta: "#output-textarea-4"
+        },
     ]
 }
 

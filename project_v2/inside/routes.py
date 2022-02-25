@@ -1,5 +1,6 @@
 from ctypes.wintypes import MSG
-from flask import request, session, redirect, url_for, render_template
+from flask import request, session, redirect, url_for, render_template, jsonify
+import json
 import pymysql 
 import re 
 from inside import app
@@ -128,6 +129,10 @@ def pretest():
     if 'loggedin' in session:
         cursor.execute('SELECT * FROM pretest ')
         pretest = cursor.fetchall()
+        pretest_json = len(pretest)
+        data_to_json = {'loop_pretest' : pretest_json}
+        data_to_json = json.dumps(data_to_json)
+         
         # answer = request.form.get('answer')
         # if request.method == 'POST' and 'answer' in request.form:            
         #     if answer in pretest['word']:
