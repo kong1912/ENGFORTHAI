@@ -1,3 +1,6 @@
+var textBox = document.querySelector("#transcript-{{ loop.index }}");
+var startBtn = document.querySelector("#start-btn-{{ loop.index }}");
+var stopBtn = document.querySelector("#stop-btn-{{ loop.index }}");  
 // stores the transcript of speech recognized
 var content = "";
 // boolean flag
@@ -17,7 +20,6 @@ startBtn.addEventListener('click',() => {
 stopBtn.addEventListener('click',() => {
     speechRecognitionIsOn = false;
     console.log("voice recognition stopped");
-    textBox.value = "";
     recognition.stop();
 });
 
