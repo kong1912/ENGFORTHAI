@@ -1,1 +1,3 @@
-print(len("this is some text"))
+from routes import pretest
+import json
+print(json.dumps(pretest))

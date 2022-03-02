@@ -120,27 +120,27 @@ def profile():
     return redirect(url_for('login'))
 
 
-@app.route('/pretest', methods=['GET','POST'])
+@app.route('/pretest', methods=['POST','GET'])
 
 def pretest():
+    # print(request.form.to_dict())
+    # print(request.form.get('www'))
     score = 0
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        cursor.execute('SELECT * FROM pretest ')
-        pretest = cursor.fetchall()
-        pretest_json = len(pretest)
-        data_to_json = {'loop_pretest' : pretest_json}
-        data_to_json = json.dumps(data_to_json)
-         
-        # answer = request.form.get('answer')
-        # if request.method == 'POST' and 'answer' in request.form:            
-        #     if answer in pretest['word']:
-        #         score = 1
-        #     else:
-        #         score = 0
+        cursor.execute('SELECT word FROM pretest ')
+        pretest = cursor.fetchall()  
+        print(pretest)
+        
+        
+        # if request.form == request.form['www']:
+        #     for row in pretest:
+        #         if row['word'] == request.form['www']:
+        #             score = 1
+        #             break
        
-        return render_template('pretest.html',data=pretest)
+        return render_template('pretest.html',data=pretest,score=score)
   
     return redirect(url_for('login'))
 

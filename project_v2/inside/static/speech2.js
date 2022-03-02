@@ -8,20 +8,8 @@ function attachEvents() {
 function getWorkingEls() {
     return [
         {
-            id_start_btn: "#start-btn-1",
-            id_output_txta: "#output-textarea-1"
-        },
-        {
-            id_start_btn: "#start-btn-2",
-            id_output_txta: "#output-textarea-2"
-        },
-        {
-            id_start_btn: "#start-btn-3",
-            id_output_txta: "#output-textarea-3"
-        },
-        {
-            id_start_btn: "#start-btn-4",
-            id_output_txta: "#output-textarea-4"
+            id_start_btn: "#start-btn-{{ loop.index }}",
+            id_output_txta: "#output-textarea-{{ loop.index }}"
         },
     ]
 }

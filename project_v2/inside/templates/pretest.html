@@ -8,21 +8,28 @@
   <h1>Pretest</h1>       
 <h2>Speak this word  </h2> 
 </div>
+<script>
+    var i = 0;
+</script>
+{% for x in data %}
 
-{% for data in data %}
 
-
-<div class="text-center"> <h2>{{data['word']}}</h2> </div>
-
-    <div class="text-center">
-       
-        <textarea  id="output-textarea-{{ loop.index }}" name="output-textarea-{{ loop.index }}" rows="1" cols="50"></textarea><br>
-        <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button">start</button><br>
-        <label for="output-textarea-{{ loop.index }}">output-{{ loop.index }}:</label><br>
-         <hr>
+<div class="text-center" id="words-{{ loop.index }}"> {{x['word']}} </div>
+<form id="answer" name="answer" action="{{ url_for('pretest') }}" method="post" >
+    <div class="text-center">       
+        
+        <textarea  placeholder="ํYour result will be there" id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="50"></textarea><br>
+        
+        <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}">start</button><br>
+        <input type="hidden" name="idx" value="{{ loop.index }}">
+        <input type="hidden" name="www" value="{{ data['word'] }}">
+        <input class="btn btn-primary" form="answer" type="submit" value="Submit" id="submit-answer">
     </div>
+        
+</form>
 
 <script>
+    
     attachEvents();
 
 function attachEvents() {
@@ -34,8 +41,9 @@ function getWorkingEls() {
     return [
         {
             id_start_btn: "#start-btn-{{ loop.index }}",
-            id_output_txta: "#output-textarea-{{ loop.index }}"
-        },
+            id_output_txta: "#output-textarea-{{ loop.index }}",
+            id_data: "#words-{{ loop.index }}"
+        }
         
     ]
 }
@@ -43,7 +51,7 @@ function getWorkingEls() {
 function attachEvent(element, index, array) {
     let startBtnEl = document.querySelector(element.id_start_btn);
     let outputTextAreaEl = document.querySelector(element.id_output_txta);
-
+    let pro = document.querySelector(element.id_data);
     // new speech recognition object
     let speechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
     let recognition = new speechRecognition();
@@ -65,15 +73,43 @@ function attachEvent(element, index, array) {
     recognition.onresult = function (event) {
         let current = event.resultIndex;
         outputTextAreaEl.value = `${event.results[current][0].transcript}`;
+        let prob = document.querySelector("#words-{{ loop.index }}").innerHTML;
+        let resultText = document.querySelector("#output-textarea-{{ loop.index }}").value;
+        outputTextAreaEl.value = resultText;
+        let result1 = prob.trim();
+        let result2 = resultText.trim();
+            var rLower = result1.toLowerCase();
+            var pLower = result2.toLowerCase();
+            if ( !(rLower.localeCompare(pLower))){
+            //if ("Apple" == "Apple"){
+
+            let score = document.querySelector("#score");
+        
+            i += 1;
+            score.value = i;
+            }
+        }
     }
 
-}
+
+
+
+
+
+
 
 </script>
 
 {% endfor %}
 <!-- <script src="static/speech2.js"></script> -->
 
+
+
+<div class="text-center"><hr>
     
+    <textarea name="score" id="score" cols="30" rows="1"></textarea>
+</div>   
+
+
 {% endblock %}
 
