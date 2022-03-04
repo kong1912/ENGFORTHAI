@@ -16,4 +16,4 @@ app.config['MYSQL_DATABASE_DB'] = 'project_2'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
 
-from inside import routes
+from inside import *
