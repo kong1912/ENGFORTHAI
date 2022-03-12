@@ -1,29 +1,32 @@
-
 {% extends 'layout.html' %}
 
 {% block title %}Pretest{% endblock %}
  
 {% block content %}
-
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleForPretest.css') }}">
 <div class="text-center">
   <h1>Pretest</h1>       
-<h2>Speak this word  </h2> 
+<h2>Speak these words  </h2> 
 </div>
+<script>
+     i = 0;
+</script>
+{% for x in data %}
 
-{% for row in data %}
 
-
-<div class="text-center" id="words-{{ loop.index }}"> {{row['word']}} </div>
+<div class="text-center" id="words-{{ loop.index }}"> {{x['word']}} </div>
 <form id="answer" name="answer" action="{{ url_for('pretest') }}" method="post" >
     <div class="text-center">       
         
-        <textarea  placeholder="ํYour result will be there" id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="50"></textarea><br>
+        <textarea disabled  placeholder="ํYour result will be there" id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="50"></textarea><br>
         
-        <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}">start</button><br>
+        <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" onclick= "disable()" >start</button><br>
     </div>
         
-</form>
-<script>
+
+
+ <script>
+    
     attachEvents();
 
 function attachEvents() {
@@ -58,42 +61,38 @@ function attachEvent(element, index, array) {
         recognition.start();
     };
 
-    recognition.onend = function() {
+  /*  recognition.onend = function() {
         startBtnEl.disabled = false;
-    }
+    } */
 
     recognition.onresult = function (event) {
         let current = event.resultIndex;
         outputTextAreaEl.value = `${event.results[current][0].transcript}`;
         let prob = document.querySelector("#words-{{ loop.index }}").innerHTML;
         let resultText = document.querySelector("#output-textarea-{{ loop.index }}").value;
-        outputTextAreaEl.value = resultText;
         let result1 = prob.trim();
         let result2 = resultText.trim();
-        var rLower = result1.toLowerCase();
-        var pLower = result2.toLowerCase();
-        let score = document.querySelector("#score");
+        let rLower = result1.toLowerCase();
+        let pLower = result2.toLowerCase();
+        let score = document.querySelector("#score"); 
         if ( rLower === pLower){
-        	       
             i += 1;
             score.value = i;
-        
-			}
-        }
-    }
+            }
+       }
+}    
 
-</script>
 
-{#<script src="{{ url_for('static', filename='js/speech_and_scoring.js') }}"></script>#}
+ </script>
 
-{% endfor %}
-
-<input class="btn btn-primary" type="submit" value="Submit">
-
-<div class="text-center"><hr>
-    <textarea name="score" id="score" cols="30" rows="1"></textarea>
-</div>   
-
+ {% endfor %}
+ 
+<input hidden type="text" name="score" id="score">
+ <hr>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit" id="submit"  form="answer" name="score">Submit </button>
+    </div>    
+</form>
 
 {% endblock %}
 

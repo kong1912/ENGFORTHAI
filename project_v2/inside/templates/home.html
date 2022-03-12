@@ -3,9 +3,51 @@
 {% block title %}Home{% endblock %}
  
 {% block content %}
-<h1 class="h2">Dashboard</h1>
-<p>Welcome back, {{ username }}!</p>
-<div >
-    <a class="btn btn-primary" href="{{ url_for('pretest') }}" role="button">Pretest</a>
+<div class="text-center">
+    <p class="h1">Welcome {{ username }} to EngForAll! </p>
+    
+    {% if score %}
+    <div class="text-center">
+        <p class="h3"> Your score : {{ score }}</p>
+
+    {% if score <= 3 %}
+        <p class="h4"> Now you're on beginner level 
+            We suggest you to learn this course
+        </p>
+        <a href="https://www.youtube.com/watch?v=8oJzRdqstkA" target="_blank">Learn English Pronunciation Course for Beginners</a>
+        <br>
+        After you learn this, let's do the post test! <br><br>
+        <a class="btn btn-primary" href="{{ url_for('beginner') }}" role="button">Posttest</a>
+
+    {% elif score > 3 and score <=6 %}
+        <p class="h4"> Now you're on intermidiate level 
+            We suggest you to learn this course
+        </p>
+        <a href="https://www.youtube.com/watch?v=l2QMvJ51CXo" target="_blank">Learn English Pronunciation Course for Intermediate </a>
+        <br>
+        After you learn this, let's do the post test! <br><br>
+        <a class="btn btn-primary" href="{{ url_for('intermediate') }}" role="button">Posttest</a>
+
+    {% else %}
+        <p class="h4"> Now you're on anvanced level 
+            We suggest you to learn this course
+        </p>
+        <a href="https://www.youtube.com/watch?v=TjwZPtjtGJg" target="_blank">Learn English Pronunciation Course for Advanced </a>
+        <br>
+        After you learn this, let's do the post test! <br><br>
+        <a class="btn btn-primary" href="{{ url_for('expert') }}" role="button">Posttest</a>
+    {% endif %}
+
 </div>
+    {% block level %} {% endblock %}
+    {% else %} 
+    <p class="h3">Haven't done a pretest yet?</p>
+    <a class="btn btn-primary" href="{{ url_for('pretest') }}" role="button">Pretest</a>
+    {% endif %}
+
+</div>
+
+
+    
+
 {% endblock %}

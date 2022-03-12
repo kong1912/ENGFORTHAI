@@ -3,10 +3,10 @@
 {% block title %}Profile{% endblock %}
  
 {% block content %}
-<h1>Profile Page</h1>
-<div>
+<h1 class="text-center">Profile Page</h1>
+<div class="text-center">
     <p>Your account details are below:</p>
-    <table>
+    <table align="center">
         <tr>
             <td>Name:</td>
             <td>{{ user['fullname'] }}</td>
@@ -21,8 +21,12 @@
         </tr>
         <tr>
             <td>Email:</td>
-            <td>{{ user['email_address'] }}</td>
-        </tr>
+            <td>{{ user['email'] }}</td>
+            <tr>
+                <td>Score:</td>
+                <td>{{ user['score'] }}</td>
+            </tr
+        
     </table>
 </div>
 {% endblock %}
