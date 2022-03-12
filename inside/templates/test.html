@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+ 
+{% block title %}Pretest{% endblock %}
+ 
+{% block content %}
+<h1>Pretest</h1>
+<div>
+    <p>Pretest</p>
+    
+    <table> 
+            { {% for pretest in datas %} }
+            <tr>
+                <td>idpretest:</td>
+                <td>{{ pretest['id_pretest'] }}</td>
+            </tr>
+            <tr>
+                <td>detail:</td>
+                <td>{{ pretest['detail'] }}</td>
+            </tr>
+            <tr>
+                <td>answer :</td>
+                <td>{{ pretest['answer'] }}</td>
+            </tr>
+            <tr>
+                <td>level:</td>
+                <td>{{ pretest['level'] }}</td>
+            </tr>
+            { {% endfor %} }        
+    </table>
+</div>
+{% endblock %}
