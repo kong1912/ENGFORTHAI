@@ -69,7 +69,7 @@ def register():
             msg = 'Please fill out the form!'
         else:
             # Account doesnt exists and the form data is valid, now insert new account into accounts table
-            cursor.execute('INSERT INTO user VALUES (NULL, %s, %s, %s, %s)', (fullname, username, password, email)) 
+            cursor.execute('INSERT INTO user VALUES (NULL, %s, %s, %s, %s, NULL)', (fullname, username, password, email)) 
             conn.commit()
    
             msg = 'You have successfully registered!'
@@ -186,11 +186,12 @@ def intermediate():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        cursor.execute('SELECT * FROM intermediate')
+        cursor.execute('SELECT * FROM intermediate_')
         data = cursor.fetchall()
         
         if request.method == 'POST':
             score = request.form.get('score')
+            print(score)
             cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
             conn.commit()
             
@@ -204,7 +205,7 @@ def intermediate():
   
     return redirect(url_for('login'))
 
-@app.route('/posttest-advanced', methods=['POST','GET'])
+@app.route('/posttest-expert', methods=['POST','GET'])
 def expert():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
@@ -223,9 +224,14 @@ def expert():
         
 
        
-        return render_template('posttest_advanced.html',data=data)
+        return render_template('posttest_expert.html',data=data)
   
     return redirect(url_for('login'))
+
+
+@app.route('/test')
+def test():
+    return render_template('slide.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)

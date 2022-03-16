@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="text-center" id="test-1"> Hello 
+        <form id="answer" name="answer" action="{{ url_for('expert') }}" method="post" >
+          <div class="text-center">       
+              
+              <textarea disabled  placeholder="ํYour result will be there" id="output-textarea" name="xxx" rows="1" cols="50"></textarea><br>
+              
+              <button class="btn btn-success" id="start-btn" type="button" name="start-btn" onclick= "disable()" >start</button><br>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      
+    </div>
+    <div class="carousel-item">
+      <div class="text-center" id="test-1"> Die
+        <form id="answer" name="answer" action="{{ url_for('expert') }}" method="post" >
+          <div class="text-center">       
+              
+              <textarea disabled  placeholder="ํYour result will be there" id="output-textarea" name="xxx" rows="1" cols="50"></textarea><br>
+              
+              <button class="btn btn-success" id="start-btn" type="button" name="start-btn" onclick= "disable()" >start</button><br>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-bs-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="text-center" id="test-1"> Hello 
+        <form id="answer" name="answer" action="{{ url_for('expert') }}" method="post" >
+          <div class="text-center">       
+              
+              <textarea disabled  placeholder="ํYour result will be there" id="output-textarea" name="xxx" rows="1" cols="50"></textarea><br>
+              
+              <button class="btn btn-success" id="start-btn" type="button" name="start-btn" onclick= "disable()" >start</button><br>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="text-center" id="test-1"> Die </div>
+        <div class="text-center">       
+              
+              <textarea disabled  placeholder="ํYour result will be there" id="output-textarea" name="xxx" rows="1" cols="50"></textarea><br>
+              
+              <button class="btn btn-success" id="start-btn" type="button" name="start-btn" onclick= "disable()" >start</button><br>
+        </div> 
+     </div>
+   </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+ {% endblock %}

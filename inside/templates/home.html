@@ -7,10 +7,8 @@
     <p class="h1">Welcome {{ username }} to EngForAll! </p>
     
     {% if score %}
-    <div class="text-center">
-        <p class="h3"> Your score : {{ score }}</p>
 
-    {% if score <= 3 %}
+    {% if score <= 2 %}
         <p class="h4"> Now you're on beginner level 
             We suggest you to learn this course
         </p>
@@ -19,7 +17,7 @@
         After you learn this, let's do the post test! <br><br>
         <a class="btn btn-primary" href="{{ url_for('beginner') }}" role="button">Posttest</a>
 
-    {% elif score > 3 and score <=6 %}
+    {% elif score > 2 and score <5 %}
         <p class="h4"> Now you're on intermidiate level 
             We suggest you to learn this course
         </p>

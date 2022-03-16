@@ -16,7 +16,7 @@
 
 
 <div class="text-center" id="words-{{ loop.index }}"> {{x['word']}} </div>
-<form id="answer" name="answer" action="{{ url_for('intermediate') }}" method="post" >
+<form id="answer" name="answer" action="{{ url_for('expert') }}" method="post" >
     <div class="text-center">       
         
         <textarea disabled  placeholder="ํYour result will be there" id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="50"></textarea><br>
