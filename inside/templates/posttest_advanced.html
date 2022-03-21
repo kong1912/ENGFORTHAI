@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/styleForPretest.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleFortest.css') }}">
 <div class="text-center">
   <h1>Pretest</h1>       
 <h2>Speak these words  </h2> 
@@ -12,10 +12,10 @@
 <script>
      i = 0;
 </script>
-{% for x in data %}
+{% for count in data %}
 
 
-<div class="text-center" id="words-{{ loop.index }}"> {{x['word']}} </div>
+<div class="text-center" id="words-{{ loop.index }}"> {{count['word']}} </div>
 <form id="answer" name="answer" action="{{ url_for('expert') }}" method="post" >
     <div class="text-center">       
         

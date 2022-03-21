@@ -2,8 +2,28 @@ from ctypes.wintypes import MSG
 from flask import request, session, redirect, url_for, render_template, jsonify
 import pymysql 
 import re 
-from inside import app
+from app import app
 from inside import mysql
+
+
+@app.route('/login2')
+def login2():
+
+
+    return render_template('login2.html')
+
+
+
+
+
+
+@app.route('/')
+def intro():
+    
+    return render_template('intro.html')
+
+
+
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -37,7 +57,7 @@ def login():
             # Account doesnt exist or username/password incorrect
             msg = 'Incorrect username/password!'
     
-    return render_template('index.html', msg=msg)
+    return render_template('login.html', msg=msg)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -80,7 +100,7 @@ def register():
     return render_template('register.html', msg=msg)
   
 
-@app.route('/')
+@app.route('/home')
 def home():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)
@@ -101,7 +121,7 @@ def logout():
    session.pop('id', None)
    session.pop('username', None)
    # Redirect to login page
-   return redirect(url_for('login'))
+   return redirect(url_for('intro'))
  
 
 @app.route('/profile')
@@ -229,9 +249,224 @@ def expert():
     return redirect(url_for('login'))
 
 
-@app.route('/test')
-def test():
-    return render_template('slide.html')
+@app.route('/lesson1')
+def lesson1():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson1 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('lesson1.html',data=data)
+
+
+@app.route('/lesson2')
+def lesson2():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson2 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('lesson2.html',data=data)
+
+
+@app.route('/lesson3')
+def lesson3():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson3 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('lesson2.html',data=data)
+
+@app.route('/lesson4')
+def lesson4():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson4 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('lesson2.html',data=data)
+    
+
+@app.route('/lesson5')
+def lesson5():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson1 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('lesson2.html',data=data)
+    
+    
+@app.route('/exercise_lesson1')
+def exercise_lesson1():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson1 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('exercise_lesson1.html',data=data)
+
+@app.route('/exercise_lesson2')
+def exercise_lesson2():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson1 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('exercise_lesson2.html',data=data)
+
+@app.route('/exercise_lesson3')
+def exercise_lesson3():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson1 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('exercise_lesson3.html',data=data)
+
+@app.route('/exercise_lesson4')
+def exercise_lesson4():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson1 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('exercise_lesson4.html',data=data)
+
+@app.route('/exercise_lesson5')
+def exercise_lesson5():
+    
+    conn = mysql.connect()
+    cursor = conn.cursor(pymysql.cursors.DictCursor)   
+    if 'loggedin' in session:
+        cursor.execute('SELECT * FROM lesson1 ')
+        data = cursor.fetchall()
+        
+        if request.method == 'POST':
+            score = request.form.get('score')
+            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            conn.commit()
+            
+           
+            return redirect(url_for('result'))
+    
+    
+    
+    return render_template('exercise_lesson5.html',data=data)
+
+
+
+
+
 
 if __name__ == '__main__':
 	app.run(debug=True)
