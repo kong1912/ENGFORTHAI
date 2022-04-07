@@ -8,10 +8,6 @@
 
 
 {% if score == 0 %}
-    
-    <p class="h1">Your pretest score is {{ score }}</p>
-    
-{% else %}
     <p class="h1">You have not taken the pretest yet!</p>
     <a href="{{ url_for('test.pretest') }}">
             <button type="button" class="btn btn-primary btn-lg">
@@ -19,6 +15,16 @@
                 Pretest
             </button>
         </a>
+    
+{% else %}
+    
+    <a href="{{url_for('test.exercise_lesson1')}}">lesson 1</a>
+    <a href="{{url_for('test.exercise_lesson2')}}">lesson 2</a>
+    <a href="{{url_for('test.exercise_lesson3')}}">lesson 3</a>
+    <a href="{{url_for('test.exercise_lesson4')}}">lesson 4</a>
+    <a href="{{url_for('test.exercise_lesson5')}}">lesson 5</a>
+
+
 
 {% endif %}
 

@@ -12,11 +12,14 @@ def exercise_lesson1():
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
         
-        return render_template('login.html')
+        return render_template('exercise_lesson1.html')
+        
+        
+    return render_template('login.html')
     
     
     
-    return render_template('exercise_lesson1.html')
+    
 
 @test_bp.route('/exercise_lesson2')
 def exercise_lesson2():
