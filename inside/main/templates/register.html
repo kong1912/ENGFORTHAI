@@ -16,7 +16,7 @@
    <div class="row main">
     <div class="main-login main-center">
     <h5 class="register-header" align="center">Register </h5>
-     <form action="{{ url_for('register') }}" method="post" autocomplete="off"> 
+     <form action="{{ url_for('main.register') }}" method="post" autocomplete="off"> 
       <div class="form-group">
        <label for="name" class="cols-sm-2 control-label">Your Name</label>
        <div class="cols-sm-10">
@@ -60,7 +60,7 @@
        <div id="msg">{{ msg }}</div>
        <input type="submit" value="Register" class="form-control btn btn-primary " name="">
        <p style="padding:5px;">
-       <a href="{{ url_for('login') }}" class="btn btn-dark ">Login</a></p>
+       <a href="{{ url_for('main.login') }}" class="btn btn-dark ">Login</a></p>
        
       </div>
        
