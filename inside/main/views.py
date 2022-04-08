@@ -9,6 +9,11 @@ main_bp = Blueprint('main',__name__,template_folder='templates')
 
 @main_bp.route('/')
 def intro():
+    if session.get('loggedin'):
+
+        return redirect(url_for('main.home'))
+        
+
     return render_template('intro.html')
 
 
@@ -84,7 +89,7 @@ def register():
         # Form is empty... (no POST data)
         msg = 'Please fill out the form!'
     # Show registration form with message (if any)
-    return render_template('register.html', msg=msg)
+    return render_template('main.register', msg=msg)
   
 
 @main_bp.route('/home')
