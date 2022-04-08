@@ -12,16 +12,9 @@ def lesson1():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        cursor.execute('SELECT * FROM lesson1 ')
+        cursor.execute('SELECT * FROM word_list WHERE l_id = 1 ')
         data = cursor.fetchall()
-        
-        if request.method == 'POST':
-            score = request.form.get('score')
-            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
-            conn.commit()
-            
-           
-            return redirect(url_for('result'))
+
     
     
     
@@ -34,20 +27,10 @@ def lesson2():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        cursor.execute('SELECT * FROM lesson2 ')
-        data = cursor.fetchall()
         
-        if request.method == 'POST':
-            score = request.form.get('score')
-            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
-            conn.commit()
-            
-           
-            return redirect(url_for('result'))
+        return redirect(url_for('result'))
     
-    
-    
-    return render_template('lesson2.html',data=data)
+    return render_template('lesson2.html')
 
 
 @lesson_bp.route('/lesson3')
@@ -56,20 +39,12 @@ def lesson3():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        cursor.execute('SELECT * FROM lesson3 ')
-        data = cursor.fetchall()
-        
-        if request.method == 'POST':
-            score = request.form.get('score')
-            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
-            conn.commit()
-            
-           
-            return redirect(url_for('result'))
+        pass
+
     
     
     
-    return render_template('lesson2.html',data=data)
+    return render_template('lesson2.html')
 
 @lesson_bp.route('/lesson4')
 def lesson4():
@@ -77,20 +52,10 @@ def lesson4():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        cursor.execute('SELECT * FROM lesson4 ')
-        data = cursor.fetchall()
-        
-        if request.method == 'POST':
-            score = request.form.get('score')
-            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
-            conn.commit()
-            
-           
-            return redirect(url_for('result'))
+        pass
+
     
-    
-    
-    return render_template('lesson2.html',data=data)
+    return render_template('lesson2.html')
     
 
 @lesson_bp.route('/lesson5')
@@ -99,20 +64,11 @@ def lesson5():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        cursor.execute('SELECT * FROM lesson1 ')
-        data = cursor.fetchall()
+        pass
         
-        if request.method == 'POST':
-            score = request.form.get('score')
-            cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
-            conn.commit()
-            
-           
-            return redirect(url_for('result'))
+
     
-    
-    
-    return render_template('lesson2.html',data=data)
+    return render_template('lesson2.html')
 
 
 

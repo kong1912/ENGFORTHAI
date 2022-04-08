@@ -10,7 +10,7 @@ main_bp = Blueprint('main',__name__,template_folder='templates')
 @main_bp.route('/')
 def intro():
     if session.get('loggedin'):
-
+        #return to home page if user has logged in
         return redirect(url_for('main.home'))
         
 
