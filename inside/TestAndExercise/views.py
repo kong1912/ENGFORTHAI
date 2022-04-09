@@ -12,9 +12,11 @@ def exercise_lesson1():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
+        cursor.execute('SELECT * FROM word_list WHERE l_id = 1 ')
+        data = cursor.fetchall()
+
         
-        return render_template('exercise_lesson1.html')
-        
+        return render_template('exercise_lesson1.html',data=data)
         
     return render_template('login.html')
     
@@ -28,8 +30,11 @@ def exercise_lesson2():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)  
     if 'loggedin' in session:
+        cursor.execute('SELECT * FROM word_list WHERE l_id = 2 ')
+        data = cursor.fetchall()
+
         
-        return render_template('exercise_lesson2.html')
+        return render_template('exercise_lesson2.html',data=data)
        
     return render_template('login.html')
     
@@ -43,8 +48,12 @@ def exercise_lesson3():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
+        cursor.execute('SELECT * FROM word_list WHERE l_id = 3 ')
+        data = cursor.fetchall()
+
         
-        return render_template('exercise_lesson3.html')
+        return render_template('exercise_lesson3.html',data=data)
+
     return render_template('login.html')
     
     
@@ -57,10 +66,12 @@ def exercise_lesson4():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        cursor.execute('SELECT lesson4 FROM user')
+        cursor.execute('SELECT * FROM word_list WHERE l_id = 4 ')
+        data = cursor.fetchall()
+
         
         
-        return render_template('exercise_lesson4.html')
+        return render_template('exercise_lesson4.html',data=data)
     
     return render_template('login.html')
     
@@ -74,12 +85,10 @@ def exercise_lesson5():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)   
     if 'loggedin' in session:
-        # execute mysql query from lesson1
-        cursor.execute('SELECT lesson5 FROM user')
+        cursor.execute('SELECT * FROM word_list WHERE l_id = 5 ')
         data = cursor.fetchall()
 
-
-        return render_template('exercise_lesson5.html')
+        return render_template('exercise_lesson5.html',data=data)
     return render_template('login.html')
 
 
@@ -92,13 +101,12 @@ def pretest():
             cursor.execute('SELECT * FROM pretest ')
             data = cursor.fetchall()
             
-            if request.method == 'POST':
-                score = request.form.get('score')
-                cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
-                conn.commit()
+            # if request.method == 'POST':
+            #     score = request.form.get('score')
+            #     cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
+            #     conn.commit()
                 
-            
-                return redirect(url_for('result'))
+            #     return redirect(url_for('result'))
         
         
         

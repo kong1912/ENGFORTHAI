@@ -1,0 +1,17 @@
+ในส่วนของการทำระบบ เราได้สร้างเป็นweb app โดยใช้ flask ซึ่งเป็น web framework ของภาษา python
+ 
+ในส่วนของ speech recognition เราได้ใช้อัลกอริทึม end-to-end
+ 
+ซึ่งเป็นอัลกอริทึมหนึ่งของ deep learning ในการ map ไฟล์เสียงและข้อความกลายเป็นโมเดล speech recognition แบบอัตโนมัติ
+หลังจากนั้นก็นำมาทำเป็น api โดยใช้ flask
+
+ 
+ในการใช้ speech recognition เราได้แบ่ง dataset ออกเป็น 2 แบบ คือ dataset ของ native accent และ thai accent
+ 
+เพื่อใช้ในการวิเคราะห์เสียงของ user สำหรับการให้คะแนน และให้คำแนะนำในการออกเสียง
+ 
+โดย native accent คือ dataset ของการออกเสียงที่ถูกต้อง
+ 
+Thai accent คือ dataset ของการออกเสียงที่ผิดพลาดของคนไทย
+ 
+ซึ่งหากผลลัพธ์ของ speech recognition เข้าข่าย thai accent ก็จะชี้ให้เห็นถึงข้อผิดพลาดพร้อมทั้งบอกคำแนะนำในการออกเสียงที่ถูก
