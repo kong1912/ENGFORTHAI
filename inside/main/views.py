@@ -5,7 +5,9 @@ from app import app
 from inside import mysql
 from flask import Blueprint
 
-main_bp = Blueprint('main',__name__,template_folder='templates')
+main_bp = Blueprint('main',__name__,
+                    template_folder='templates',
+                    static_folder='static')
 
 @main_bp.route('/')
 def intro():
@@ -89,7 +91,7 @@ def register():
         # Form is empty... (no POST data)
         msg = 'Please fill out the form!'
     # Show registration form with message (if any)
-    return render_template('main.register', msg=msg)
+    return render_template('register.html', msg=msg)
   
 
 @main_bp.route('/home')
@@ -97,10 +99,10 @@ def home():
     conn = mysql.connect()
     cursor = conn.cursor(pymysql.cursors.DictCursor)
     if 'loggedin' in session:
-        cursor.execute('SELECT pretest_score FROM user WHERE id = %s ',(session['id']))
+        cursor.execute('SELECT * FROM user WHERE id = %s ',(session['id']))
         score = cursor.fetchone()
         # User is loggedin show them the home page
-        return render_template('home.html', username=session['username'],score=score)
+        return render_template('home.html', username=session['username'])
     # User is not loggedin redirect to login page
     return redirect(url_for('main.login'))
   

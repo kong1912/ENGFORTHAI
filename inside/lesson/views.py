@@ -3,7 +3,10 @@ import pymysql
 from inside import mysql
 from flask import  Blueprint
 
-lesson_bp = Blueprint('lesson',__name__,template_folder='templates')
+lesson_bp = Blueprint('lesson',__name__,
+                        template_folder='templates',
+                        static_folder='static',)
+
 
 
 @lesson_bp.route('/lesson1')

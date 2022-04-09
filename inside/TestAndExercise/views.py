@@ -2,7 +2,8 @@ from flask import Blueprint, request, session, redirect, url_for, render_templat
 import pymysql
 from inside import mysql
 test_bp = Blueprint('test', __name__,
-        template_folder='templates')
+                    template_folder='templates',
+                    static_folder='static')
 
 
 @test_bp.route('/exercise_lesson1')
