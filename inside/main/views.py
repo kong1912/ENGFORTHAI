@@ -1,8 +1,8 @@
 from flask import request, session, redirect, url_for, render_template
 import re 
 from app import app
+from inside import mysql,conn,cursor
 from inside.function import user_has_loggedin
-from inside import *
 from flask import Blueprint
 
 main_bp = Blueprint('main',__name__,
@@ -12,7 +12,7 @@ main_bp = Blueprint('main',__name__,
 @main_bp.route('/')
 def intro():
     if user_has_loggedin():
-        #return to home page if user has logged in
+        
         return redirect(url_for('main.home'))
         
 
@@ -43,8 +43,6 @@ def login():
             session['loggedin'] = True
             session['id'] = account['id']
             session['username'] = account['username']
-            # Redirect to home page
-            #return 'Logged in successfully!'
             return redirect(url_for('main.home'))
         else:
             # Account doesnt exist or username/password incorrect

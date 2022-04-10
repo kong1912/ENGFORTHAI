@@ -1,6 +1,7 @@
 from flask import Blueprint, request, session, redirect, url_for, render_template
 import pymysql
-from inside import mysql
+from inside import mysql,conn,cursor
+from inside.function import user_has_loggedin
 test_bp = Blueprint('test', __name__,
                     template_folder='templates',
                     static_folder='static')
@@ -9,9 +10,8 @@ test_bp = Blueprint('test', __name__,
 @test_bp.route('/exercise_lesson1')
 def exercise_lesson1():
     
-    conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)   
-    if 'loggedin' in session:
+
+    if user_has_loggedin():
         cursor.execute('SELECT * FROM word_list WHERE l_id = 1 ')
         data = cursor.fetchall()
 
@@ -27,9 +27,8 @@ def exercise_lesson1():
 @test_bp.route('/exercise_lesson2')
 def exercise_lesson2():
     
-    conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)  
-    if 'loggedin' in session:
+ 
+    if user_has_loggedin():
         cursor.execute('SELECT * FROM word_list WHERE l_id = 2 ')
         data = cursor.fetchall()
 
@@ -45,9 +44,8 @@ def exercise_lesson2():
 @test_bp.route('/exercise_lesson3')
 def exercise_lesson3():
     
-    conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)   
-    if 'loggedin' in session:
+
+    if user_has_loggedin():
         cursor.execute('SELECT * FROM word_list WHERE l_id = 3 ')
         data = cursor.fetchall()
 
@@ -63,9 +61,8 @@ def exercise_lesson3():
 @test_bp.route('/exercise_lesson4')
 def exercise_lesson4():
     
-    conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)   
-    if 'loggedin' in session:
+  
+    if user_has_loggedin():
         cursor.execute('SELECT * FROM word_list WHERE l_id = 4 ')
         data = cursor.fetchall()
 
@@ -82,35 +79,27 @@ def exercise_lesson4():
 @test_bp.route('/exercise_lesson5')
 def exercise_lesson5():
     
-    conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)   
-    if 'loggedin' in session:
+
+    if user_has_loggedin():
         cursor.execute('SELECT * FROM word_list WHERE l_id = 5 ')
         data = cursor.fetchall()
 
         return render_template('exercise_lesson5.html',data=data)
+    
     return render_template('login.html')
 
 
 @test_bp.route('/pretest')
 def pretest():
         
-        conn = mysql.connect()
-        cursor = conn.cursor(pymysql.cursors.DictCursor)   
-        if 'loggedin' in session:
-            cursor.execute('SELECT * FROM pretest ')
-            data = cursor.fetchall()
-            
-            # if request.method == 'POST':
-            #     score = request.form.get('score')
-            #     cursor.execute('UPDATE user SET score = %s WHERE id = %s', (score, session['id']))
-            #     conn.commit()
-                
-            #     return redirect(url_for('result'))
-        
-        
-        
+
+    if user_has_loggedin():
+        cursor.execute('SELECT * FROM pretest ')
+        data = cursor.fetchall()
+
         return render_template('pretest.html',data=data)
+    
+    return render_template('login.html')
 
 
 
