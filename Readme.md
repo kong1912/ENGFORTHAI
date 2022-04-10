@@ -1,6 +1,3 @@
-End-to-End Speech recogniotion project
+End-to-End Speech recogniotion web application project for teaching & analyzing Thai people's English pronunciation.
 
 
-
-
-ค่อยเอา abstact มาวาง
