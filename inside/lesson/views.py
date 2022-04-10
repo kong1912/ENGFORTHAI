@@ -16,7 +16,8 @@ def lesson1():
     if user_has_loggedin():
         
         return render_template('lesson1.html')
-    return render_template('login.html')
+    
+    return redirect('main.login')
 
 
 
@@ -28,7 +29,7 @@ def lesson2():
     
         return render_template('lesson2.html')
     
-    return render_template('login.html')
+    return redirect('main.login')
 
 
 @lesson_bp.route('/lesson3')
@@ -39,7 +40,7 @@ def lesson3():
         
         return render_template('lesson3.html')  
 
-    return render_template('login.html')
+    return redirect('main.login')
 
 @lesson_bp.route('/lesson4')
 def lesson4():
@@ -47,7 +48,7 @@ def lesson4():
     if user_has_loggedin():
        return render_template('lesson2.html')
     
-    return render_template('login.html')
+    return redirect('main.login')
 
     
     
@@ -60,7 +61,7 @@ def lesson5():
         
         return render_template('lesson2.html')
 
-    return render_template('login.html')
+    return redirect('main.login')
 
 
 

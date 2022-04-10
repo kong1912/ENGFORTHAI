@@ -18,7 +18,7 @@ def exercise_lesson1():
         
         return render_template('exercise_lesson1.html',data=data)
         
-    return render_template('login.html')
+    return redirect('main.login')
     
     
     
@@ -35,7 +35,7 @@ def exercise_lesson2():
         
         return render_template('exercise_lesson2.html',data=data)
        
-    return render_template('login.html')
+    return redirect('main.login')
     
     
     
@@ -52,7 +52,7 @@ def exercise_lesson3():
         
         return render_template('exercise_lesson3.html',data=data)
 
-    return render_template('login.html')
+    return redirect('main.login')
     
     
     
@@ -70,7 +70,7 @@ def exercise_lesson4():
         
         return render_template('exercise_lesson4.html',data=data)
     
-    return render_template('login.html')
+    return redirect('main.login')
     
     
     
@@ -86,7 +86,7 @@ def exercise_lesson5():
 
         return render_template('exercise_lesson5.html',data=data)
     
-    return render_template('login.html')
+    return redirect('main.login')
 
 
 @test_bp.route('/pretest')
@@ -99,7 +99,7 @@ def pretest():
 
         return render_template('pretest.html',data=data)
     
-    return render_template('login.html')
+    return redirect('main.login')
 
 
 
