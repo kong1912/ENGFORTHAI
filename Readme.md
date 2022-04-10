@@ -4,7 +4,7 @@ Collab with - Nattapol kritsuthikul (NECTEC researcher)
 
 Demo - soon
 
-Paper - soon
+Paper - soon?
 
 
 
