@@ -1,9 +1,7 @@
 from flask import request, session, redirect, url_for, render_template
-from flask_login import user_logged_in
-import pymysql 
 import re 
 from app import app
-from function import user_has_loggedin
+from function_page import user_has_loggedin
 from inside import *
 from flask import Blueprint
 
