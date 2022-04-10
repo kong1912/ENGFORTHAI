@@ -1,7 +1,7 @@
 from flask import request, session, redirect, url_for, render_template
 import re 
 from app import app
-from function_page import user_has_loggedin
+from inside.function import user_has_loggedin
 from inside import *
 from flask import Blueprint
 
