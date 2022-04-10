@@ -1,8 +1,10 @@
 from flask import request, session, redirect, url_for, render_template
+from flask_login import user_logged_in
 import pymysql 
 import re 
 from app import app
-from inside import mysql
+from function import user_has_loggedin
+from inside import *
 from flask import Blueprint
 
 main_bp = Blueprint('main',__name__,
@@ -11,7 +13,7 @@ main_bp = Blueprint('main',__name__,
 
 @main_bp.route('/')
 def intro():
-    if session.get('loggedin'):
+    if user_has_loggedin():
         #return to home page if user has logged in
         return redirect(url_for('main.home'))
         
@@ -23,8 +25,7 @@ def intro():
 @main_bp.route('/login', methods=['GET', 'POST'])
 def login():
  # connect
-    conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
+
     
     # Output message if something goes wrong...
     msg = ''
@@ -55,9 +56,7 @@ def login():
 
 @main_bp.route('/register', methods=['GET', 'POST'])
 def register():
- # connect
-    conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
+
   
     # Output message if something goes wrong...
     msg = ''
@@ -96,9 +95,8 @@ def register():
 
 @main_bp.route('/home')
 def home():
-    conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
-    if 'loggedin' in session:
+
+    if user_has_loggedin():
         cursor.execute('SELECT * FROM user WHERE id = %s ',(session['id']))
         score = cursor.fetchone()
         # User is loggedin show them the home page
@@ -119,12 +117,9 @@ def logout():
 
 @main_bp.route('/profile')
 def profile(): 
- # Check if account exists using MySQL
-    conn = mysql.connect()
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
-  
+
     # Check if user is loggedin
-    if 'loggedin' in session:
+    if user_has_loggedin():
         # We need all the account info for the user so we can display it on the profile page
         cursor.execute('SELECT * FROM user WHERE id = %s', [session['id']])
         user = cursor.fetchone()

@@ -1,12 +1,16 @@
 import MySQLdb
 from flask import Flask
 from flaskext.mysql import MySQL
+import pymysql
 
 app = Flask(__name__)
 app.secret_key = 'ec9439cfc6c796ae2029594d'
 
 mysql = MySQL()
-   
+
+conn = mysql.connect()
+cursor = conn.cursor(pymysql.cursors.DictCursor)
+
 # MySQL configurations
 connection = MySQLdb.connect(host="localhost", user="root",password="123456",database="project_2")
 app.config['MYSQL_DATABASE_USER'] = 'root'
@@ -22,3 +26,4 @@ from .TestAndExercise.views import test_bp
 app.register_blueprint(main_bp)
 app.register_blueprint(lesson_bp)
 app.register_blueprint(test_bp)
+
