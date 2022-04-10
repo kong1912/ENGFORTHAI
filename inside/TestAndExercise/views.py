@@ -1,3 +1,4 @@
+import json
 from flask import Blueprint, request, session, redirect, url_for, render_template
 import pymysql
 from inside import mysql,conn,cursor
@@ -12,11 +13,11 @@ def exercise_lesson1():
     
 
     if user_has_loggedin():
-        cursor.execute('SELECT * FROM word_list WHERE l_id = 1 ')
+        cursor.execute('SELECT word FROM word_list WHERE l_id = 1 ')
         data = cursor.fetchall()
 
         
-        return render_template('exercise_lesson1.html',data=data)
+        return render_template('exercise_lesson1.html',data=json.dumps(data))
         
     return redirect('main.login')
     
