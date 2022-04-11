@@ -16,30 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `user`
+-- Table structure for table `score`
 --
 
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `score`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `fullname` varchar(100) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `password` varchar(16) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `score` (
+  `u_id` int NOT NULL AUTO_INCREMENT,
+  `pre_s` varchar(45) DEFAULT NULL,
+  `post_s` varchar(45) DEFAULT NULL,
+  `l1_s` varchar(45) DEFAULT NULL,
+  `l2_s` varchar(45) DEFAULT NULL,
+  `l3_s` varchar(45) DEFAULT NULL,
+  `l4_s` varchar(45) DEFAULT NULL,
+  `l5_s` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`u_id`),
+  CONSTRAINT `u_id` FOREIGN KEY (`u_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `score`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'test1','test1','123456'),(2,'test2','test2','123456'),(3,'test3','test3','123456'),(4,'test4','test4','123456'),(5,'ojojojh','test45','123456'),(6,'kong2004','kongpop','123456'),(7,'ewfgweg','test155','123456'),(8,'test1111','test1111','123456'),(9,'test10000','test1000','123456');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+LOCK TABLES `score` WRITE;
+/*!40000 ALTER TABLE `score` DISABLE KEYS */;
+/*!40000 ALTER TABLE `score` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

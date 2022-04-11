@@ -26,7 +26,9 @@ CREATE TABLE `word_list` (
   `id` int NOT NULL AUTO_INCREMENT,
   `word` varchar(45) NOT NULL,
   `l_id` int NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `l_id_idx` (`l_id`),
+  CONSTRAINT `l_id` FOREIGN KEY (`l_id`) REFERENCES `lesson_list` (`l_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -49,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-07 15:55:56
+-- Dump completed on 2022-04-11 23:36:09
