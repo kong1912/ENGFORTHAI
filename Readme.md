@@ -1,4 +1,4 @@
-E-learning web application for teaching & analyzing Thai students' English pronunciation using End-to-end Automatic speech recognition and Intelligent tutoring system
+E-learning web application for teaching & analyzing Thai students's English pronunciation using End-to-end Automatic speech recognition and Intelligent tutoring system
 
 Collab with - Nattapol kritsuthikul (NECTEC researcher)
 
