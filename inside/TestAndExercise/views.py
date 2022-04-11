@@ -17,7 +17,7 @@ def exercise_lesson1():
         data = cursor_dict.fetchall()
 
         
-        return render_template('exercise_lesson1.html.jinja',data=json.dumps(data))
+        return render_template('exercise_lesson1.jinja',data=json.dumps(data))
         
     return redirect('main.login')
     
@@ -34,7 +34,7 @@ def exercise_lesson2():
         data = cursor_dict.fetchall()
 
         
-        return render_template('exercise_lesson2.html.jinja',data=data)
+        return render_template('exercise_lesson2.jinja',data=data)
        
     return redirect('main.login')
     
@@ -51,7 +51,7 @@ def exercise_lesson3():
         data = cursor.fetchall()
 
         
-        return render_template('exercise_lesson3.html.jinja',data=data)
+        return render_template('exercise_lesson3.jinja',data=data)
 
     return redirect('main.login')
     
@@ -69,7 +69,7 @@ def exercise_lesson4():
 
         
         
-        return render_template('exercise_lesson4.html.jinja',data=data)
+        return render_template('exercise_lesson4.jinja',data=data)
     
     return redirect('main.login')
     
@@ -85,7 +85,7 @@ def exercise_lesson5():
         cursor.execute('SELECT * FROM word_list WHERE l_id = 5 ')
         data = cursor.fetchall()
 
-        return render_template('exercise_lesson5.html.jinja',data=data)
+        return render_template('exercise_lesson5.jinja',data=data)
     
     return redirect('main.login')
 
@@ -98,7 +98,7 @@ def pretest():
         cursor_dict.execute('SELECT * FROM pretest ')
         data = cursor.fetchall()
 
-        return render_template('pretest.html.jinja',data=data)
+        return render_template('pretest.jinja',data=data)
     
     return redirect('main.login')
 

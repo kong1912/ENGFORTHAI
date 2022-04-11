@@ -1,14 +1,16 @@
 import MySQLdb
 from flask import Flask
 from flaskext.mysql import MySQL
+from flask_login import LoginManager
 import pymysql
 
 app = Flask(__name__)
 app.secret_key = 'ec9439cfc6c796ae2029594d'
 
-mysql = MySQL()
+db = MySQL()
 
-
+login_manager=LoginManager()
+login_manager.login_view='main.login'
 
 # MySQL configurations
 connection = MySQLdb.connect(host="localhost", user="root",password="123456",database="project_2")
@@ -16,10 +18,10 @@ app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = '123456'
 app.config['MYSQL_DATABASE_DB'] = 'project_2'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-mysql.init_app(app)
+db.init_app(app)
 
 
-conn = mysql.connect()
+conn = db.connect()
 cursor = conn.cursor() # execute as list
 cursor_dict = conn.cursor(pymysql.cursors.DictCursor) # execute as dict
 
