@@ -16,7 +16,7 @@ def intro():
         return redirect(url_for('main.home'))
         
 
-    return render_template('intro.html')
+    return render_template('intro.html.jinja')
 
 
 
@@ -48,7 +48,7 @@ def login():
             # Account doesnt exist or username/password incorrect
             msg = 'Incorrect username/password!'
     
-    return render_template('login.html', msg=msg)
+    return render_template('login.html.jinja', msg=msg)
 
 @main_bp.route('/register', methods=['GET', 'POST'])
 def register():
@@ -86,7 +86,7 @@ def register():
         # Form is empty... (no POST data)
         msg = 'Please fill out the form!'
     # Show registration form with message (if any)
-    return render_template('register.html', msg=msg)
+    return render_template('register.html.jinja', msg=msg)
   
 
 @main_bp.route('/home')
@@ -96,7 +96,7 @@ def home():
         cursor.execute('SELECT * FROM user WHERE id = %s ',(session['id']))
         score = cursor.fetchone()
         # User is loggedin show them the home page
-        return render_template('home.html', username=session['username'])
+        return render_template('home.html.jinja', username=session['username'])
     # User is not loggedin redirect to login page
     return redirect(url_for('main.login'))
   
@@ -120,7 +120,7 @@ def profile():
         cursor.execute('SELECT * FROM user WHERE id = %s', [session['id']])
         user = cursor.fetchone()
         # Show the profile page with account info
-        return render_template('profile.html', user=user)
+        return render_template('profile.jinja', user=user)
     # User is not loggedin redirect to login page
     return redirect(url_for('main.login'))
 

@@ -15,7 +15,7 @@ def lesson1():
       
     if user_has_loggedin():
         
-        return render_template('lesson1.html')
+        return render_template('lesson1.html.jinja')
     
     return redirect('main.login')
 
@@ -27,7 +27,7 @@ def lesson2():
     if user_has_loggedin():
         
     
-        return render_template('lesson2.html')
+        return render_template('lesson2.html.jinja')
     
     return redirect('main.login')
 
@@ -38,7 +38,7 @@ def lesson3():
     if user_has_loggedin():
         
         
-        return render_template('lesson3.html')  
+        return render_template('lesson3.html.jinja')  
 
     return redirect('main.login')
 
@@ -46,7 +46,7 @@ def lesson3():
 def lesson4():
     
     if user_has_loggedin():
-       return render_template('lesson2.html')
+       return render_template('lesson2.html.jinja')
     
     return redirect('main.login')
 
@@ -59,7 +59,7 @@ def lesson5():
     
     if user_has_loggedin():
         
-        return render_template('lesson2.html')
+        return render_template('lesson2.html.jinja')
 
     return redirect('main.login')
 

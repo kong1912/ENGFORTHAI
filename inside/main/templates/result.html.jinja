@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html.jinja' %}
 
 {% block title %}result{% endblock %}
 
@@ -7,7 +7,7 @@
         <div class="text-center">
             <p class="h3"> Your score : {{ score }}</p>
 
-        {% if score <= 2 %} 
+        {% if score <= 2 %}
             <p class="h4"> Now you're on beginner level 
                 We suggest you to learn this course
             </p>
