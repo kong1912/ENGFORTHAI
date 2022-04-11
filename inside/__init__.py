@@ -20,7 +20,9 @@ mysql.init_app(app)
 
 
 conn = mysql.connect()
-cursor = conn.cursor(pymysql.cursors.DictCursor)
+cursor = conn.cursor() # execute as list
+cursor_dict = conn.cursor(pymysql.cursors.DictCursor) # execute as dict
+
 
 
 from .main.views import main_bp

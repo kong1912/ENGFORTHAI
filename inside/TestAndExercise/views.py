@@ -1,7 +1,7 @@
 import json
 from flask import Blueprint, request, session, redirect, url_for, render_template
 import pymysql
-from inside import mysql,conn,cursor
+from inside import conn, cursor, cursor_dict
 from inside.function import user_has_loggedin
 test_bp = Blueprint('test', __name__,
                     template_folder='templates',
@@ -13,8 +13,8 @@ def exercise_lesson1():
     
 
     if user_has_loggedin():
-        cursor.execute('SELECT word FROM word_list WHERE l_id = 1 ')
-        data = cursor.fetchall()
+        cursor_dict.execute('SELECT word FROM word_list WHERE l_id = 1 ')
+        data = cursor_dict.fetchall()
 
         
         return render_template('exercise_lesson1.html.jinja',data=json.dumps(data))
@@ -30,8 +30,8 @@ def exercise_lesson2():
     
  
     if user_has_loggedin():
-        cursor.execute('SELECT * FROM word_list WHERE l_id = 2 ')
-        data = cursor.fetchall()
+        cursor_dict.execute('SELECT * FROM word_list WHERE l_id = 2 ')
+        data = cursor_dict.fetchall()
 
         
         return render_template('exercise_lesson2.html.jinja',data=data)
@@ -95,7 +95,7 @@ def pretest():
         
 
     if user_has_loggedin():
-        cursor.execute('SELECT * FROM pretest ')
+        cursor_dict.execute('SELECT * FROM pretest ')
         data = cursor.fetchall()
 
         return render_template('pretest.html.jinja',data=data)
