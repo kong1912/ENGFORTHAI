@@ -6,7 +6,7 @@ from inside.function import user_has_loggedin
 
 lesson_bp = Blueprint('lesson',__name__,
                         template_folder='templates',
-                        static_folder='static')
+                        static_folder='static',static_url_path='/lesson/static')
 
 
 

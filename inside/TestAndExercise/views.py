@@ -5,7 +5,7 @@ from inside import conn, cursor, cursor_dict
 from inside.function import user_has_loggedin
 test_bp = Blueprint('test', __name__,
                     template_folder='templates',
-                    static_folder='static')
+                    static_folder='static', static_url_path='/TestAndExercise/static')
 
 
 @test_bp.route('/exercise_lesson1')
@@ -15,6 +15,7 @@ def exercise_lesson1():
     if user_has_loggedin():
         cursor_dict.execute('SELECT word FROM word_list WHERE l_id = 1 ')
         data = cursor_dict.fetchall()
+
 
         
         return render_template('exercise_lesson1.jinja',data=json.dumps(data))
