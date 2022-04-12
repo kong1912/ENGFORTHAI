@@ -29,7 +29,8 @@ class User(UserMixin):
     def insert_user(self,username,password,email):
 
         cursor.execute(f'INSERT INTO users (username,password,email) VALUES({username},{password},{email})')
-        db.connection.commit()
+        conn.commit()
+
 
 
 @login_manager.user_loader

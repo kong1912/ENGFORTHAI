@@ -11,8 +11,6 @@ app.secret_key = 'ec9439cfc6c796ae2029594d'
 
 
 
-
-
 # MySQL configurations
 db = MySQL()
 connection = MySQLdb.connect(host="localhost", user="root",password="123456",database="project_2")
