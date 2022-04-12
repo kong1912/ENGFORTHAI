@@ -19,8 +19,6 @@ class RegisterForm(FlaskForm):
         if data:
             raise ValidationError('ขออภัย email นี้มีอยู่แล้ว โปรดใช้ email อื่น')
         
-
-    
     firstname = StringField(Label='ชื่อจริง', validators=[DataRequired()])
     lastname = StringField(Label='นามสกุล', validators=[DataRequired()])
     email = StringField(Label='E-mail', validators=[DataRequired(), validators.Email()])
