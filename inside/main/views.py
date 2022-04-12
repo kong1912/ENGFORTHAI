@@ -1,5 +1,5 @@
 from flask import request, session, redirect, url_for, render_template
-from flask_login import login_required, login_user, logout_user, current_user
+from flask_login import login_required, login_user, logout_user, current_user,flash
 from app import app
 from inside import conn ,cursor, cursor_dict
 from ..forms import LoginForm, RegisterForm
@@ -24,61 +24,50 @@ def login():
     form = LoginForm()
 
     if form.validate_on_submit():
-        user = User
+        user = User.select_user(form.username.data)
+        if user is not None and user.validate_password(form.password.data):
+            login_user(user)
+            return redirect(url_for('main.intro'))
 
+    return render_template('login.jinja', form=form)
 
-    
-
-
-
-    
-    
-    
-    return render_template('login.jinja')
 
 @main_bp.route('/register', methods=['GET', 'POST'])
 def register():
 
     form = RegisterForm()
+    if form.validate_on_submit():
+        user = User(form.username.data, form.password.data, form.email.data)
+        user.insert_user()
+        login_user(user)
+        return redirect('main.login')
 
-
-
-
-  
-    return render_template('register.jinja')
-  
+    return render_template('register.jinja', form=form)
+ 
 @login_required
 @main_bp.route('/home')
 def home():
 
    
-    cursor.execute('SELECT * FROM user WHERE id = %s ',(session['id']))
-        score = cursor.fetchone()
-        return render_template('home.jinja', username=session['username'])
+    return render_template('home.jinja')
 
 
   
-
 @main_bp.route('/logout')
 def logout():
-    # Remove session data, this will log the user out
-   session.pop('loggedin', None)
-   session.pop('id', None)
-   session.pop('username', None)
-   # Redirect to login page
-   return redirect(url_for('main.intro'))
+
+    logout_user()
+    flash('You have been logged out')
+
+    return redirect(url_for('main.intro'))
  
 @login_required
 @main_bp.route('/profile')
 def profile(): 
 
-    
-        cursor.execute('SELECT * FROM user WHERE id = %s', [session['id']])
-        user = cursor.fetchone()
-        # Show the profile page with account info
-        return render_template('profile.jinja', user=user)
-    # User is not loggedin redirect to login page
-    return redirect(url_for('main.login'))
+
+    return render_template('profile.jinja', user=user)
+
 
 
 

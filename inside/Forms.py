@@ -1,22 +1,23 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, validators, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, validators, PasswordField, SubmitField, BooleanField, ValidationError
 from wtforms.validators import DataRequired
 from inside import cursor
 
 
 
 class RegisterForm(FlaskForm):
-    def check_username(self, username_to_check):
-        cursor.execute(f'SELECT username FROM user WHERE username = {username_to_check}')
+    
+    def validate_username(self, username):
+        cursor.execute(f'SELECT username FROM user WHERE username = {username}')
         data = cursor.fetchone()
         if data:
-            raise validators.ValidationError('ขออภัย ชื่อผู้ใช้นี้มีอยู่แล้ว โปรดใช้ชื่ออื่น')
+            raise ValidationError('ขออภัย ชื่อผู้ใช้นี้มีอยู่แล้ว โปรดใช้ชื่ออื่น')
 
-    def check_email(self, email_to_check):
-        cursor.execute(f'SELECT email FROM user WHERE email = {email_to_check}')
+    def validate_email(self, email):
+        cursor.execute(f'SELECT email FROM user WHERE email = {email}')
         data = cursor.fetchone()
         if data:
-            raise validators.ValidationError('ขออภัย email นี้มีอยู่แล้ว โปรดใช้ email อื่น')
+            raise ValidationError('ขออภัย email นี้มีอยู่แล้ว โปรดใช้ email อื่น')
         
 
     
