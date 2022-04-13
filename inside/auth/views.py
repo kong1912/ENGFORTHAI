@@ -40,3 +40,9 @@ def register():
         login_user(user)
         return redirect(url_for('main.home'))
     return render_template('register.jinja', form=form)
+
+
+@auth_bp.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('main.intro'))

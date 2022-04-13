@@ -23,8 +23,8 @@ class User(UserMixin):
     
     def get_id(self):
     
-        cursor.execute(f'SELECT id FROM user' )
-        user_id=cursor.fetchall()
+        cursor.execute(f'SELECT id FROM user WHERE email = %s',(self.email))
+        user_id=cursor.fetchone()
         return user_id
 
 

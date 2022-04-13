@@ -19,8 +19,9 @@ def intro():
 
 
  
-@login_required
+
 @main_bp.route('/home')
+@login_required
 def home():
 
    

@@ -28,7 +28,7 @@ cursor_dict = conn.cursor(pymysql.cursors.DictCursor) # execute as dict
 
 from .auth.user import User
 #login manager
-login_manager=LoginManager()
+login_manager=LoginManager(app)
 login_manager.init_app(app)
 login_manager.login_view = 'auth.login'
 @login_manager.user_loader

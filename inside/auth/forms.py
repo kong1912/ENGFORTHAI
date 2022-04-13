@@ -8,13 +8,13 @@ from inside import cursor
 class RegisterForm(FlaskForm):
     
     def validate_username(self, username):
-        cursor.execute(f'SELECT username FROM user WHERE username = %s',(username))
+        cursor.execute(f'SELECT username FROM user WHERE username = %s',(username.data))
         data = cursor.fetchone()
         if data:
             raise ValidationError('ขออภัย ชื่อผู้ใช้นี้มีอยู่แล้ว โปรดใช้ชื่ออื่น')
 
     def validate_email(self, email):
-        cursor.execute(f'SELECT email FROM user WHERE email = %s',(email))
+        cursor.execute(f'SELECT email FROM user WHERE email = %s',(email.data))
         data = cursor.fetchone()
         if data:
             raise ValidationError('ขออภัย email นี้มีอยู่แล้ว โปรดใช้ email อื่น')
