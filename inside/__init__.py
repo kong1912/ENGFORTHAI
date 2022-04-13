@@ -34,8 +34,11 @@ login_manager.init_app(app)
 from .main.views import main_bp
 from .lesson.views import lesson_bp
 from .TestAndExercise.views import test_bp
+from .auth.views import auth_bp
 
 app.register_blueprint(main_bp)
 app.register_blueprint(lesson_bp)
 app.register_blueprint(test_bp)
+app.register_blueprint(auth_bp)
+
 

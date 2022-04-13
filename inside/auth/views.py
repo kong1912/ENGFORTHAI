@@ -23,10 +23,12 @@ def login():
 
     return render_template('login.jinja', form=form)
 
+
 @auth_bp.route('/register', methods=['GET', 'POST'])
 def register():
 
     form = RegisterForm()
+    
     if form.validate_on_submit():
         user = User(form.username.data, form.password.data, form.email.data)
         user.insert_user()

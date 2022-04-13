@@ -1,5 +1,5 @@
 from flask_login import UserMixin
-from . import conn, cursor, login_manager
+from .. import conn, cursor, login_manager
 
 
 class User(UserMixin):
@@ -11,10 +11,9 @@ class User(UserMixin):
 
 
     def validate_password(self,password):
-        cursor.execute(f'SELECT password FROM users WHERE password={password}')
+        cursor.execute(f'SELECT password FROM user WHERE password={password}')
         user_password=cursor.fetchone()
-        if user_password:
-            return user_password
+        return user_password
 
 
     def select_user(self,username):
@@ -23,9 +22,9 @@ class User(UserMixin):
         if user:
             return user
     
-    def get_id(self,email):
+    def get_id(self,user_id):
 
-        cursor.execute(f'SELECT id FROM users WHERE email={email}')
+        cursor.execute(f'SELECT id FROM user')
         user_id=cursor.fetchone()
         if user_id:
             return user_id
