@@ -3,6 +3,7 @@ from flask import Flask
 from flaskext.mysql import MySQL
 from flask_login import LoginManager
 import pymysql
+from .auth.user import User
 
 #app
 app = Flask(__name__)
@@ -28,6 +29,10 @@ cursor_dict = conn.cursor(pymysql.cursors.DictCursor) # execute as dict
 #login
 login_manager=LoginManager()
 login_manager.init_app(app)
+login_manager.login_view = 'auth.login'
+@login_manager.user_loader
+def load_user(user_id):
+    return User.get_id(user_id)
 
 
 #blueprints

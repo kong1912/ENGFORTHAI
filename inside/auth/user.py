@@ -1,5 +1,5 @@
 from flask_login import UserMixin
-from .. import conn, cursor, login_manager
+from . import conn, cursor
 
 
 class User(UserMixin):
@@ -23,9 +23,9 @@ class User(UserMixin):
             return user
     
     def get_id(self,user_id):
-
+    
         cursor.execute(f'SELECT id FROM user')
-        user_id=cursor.fetchone()
+        user_id=cursor.fetchall()
         if user_id:
             return user_id
 
@@ -36,8 +36,6 @@ class User(UserMixin):
 
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.get_id(user_id)
+
 
 
