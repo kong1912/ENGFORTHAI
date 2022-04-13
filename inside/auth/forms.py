@@ -33,7 +33,7 @@ class LoginForm(FlaskForm):
     username = StringField(label='ชื่อผู้ใช้', validators=[DataRequired()])
     password = PasswordField(label='รหัสผ่าน', validators=[DataRequired()])
     submit = SubmitField(label='เข้าสู่ระบบ')
-    remember_me = BooleanField(label='จดจำฉัน')
+    remember = BooleanField(label='จดจำฉัน')
 
 
 

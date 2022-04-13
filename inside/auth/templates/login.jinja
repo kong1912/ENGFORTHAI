@@ -17,20 +17,25 @@
      <div class="row main">
         <div class="main-login main-center">
             <h5 class="register-header" align="center">Login </h5>
-            <form  method="post" > 
+            <form  method="POST"  > 
+                {{ form.hidden_tag() }}
                 <div class="form-group">
                     
+                    {{ form.username.label() }}
+                    {{ form.username(class="form-control", placeholder="ชื่อผู้ใช้") }}
 
+                    {{ form.password.label() }}
+                    {{ form.password(class="form-control", placeholder="รหัสผ่าน") }}
 
+                    {{ form.remember(class="form-check-input") }}
+                    {{ form.remember.label(class="form-check-label") }}
+                    
+                    {{ form.submit(class="btn btn-primary btn-lg btn-block login-button", value="เข้าสู่ระบบ") }}
+                
                 </div>
-
-                
-                
-                
-            
-            
+            </form>
         </div>
-         </form>
+         
         </div>
      </div>
     </div>

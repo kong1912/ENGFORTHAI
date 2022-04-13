@@ -14,8 +14,6 @@ main_bp = Blueprint('main',__name__,
 @main_bp.route('/')
 def intro():
     #return to home page if user has logged in
-    if current_user.is_authenticated:
-        return redirect(url_for('main.home'))
 
     return render_template('intro.jinja')
 
