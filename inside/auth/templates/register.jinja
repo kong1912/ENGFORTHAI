@@ -10,7 +10,42 @@
    <div class="row main">
     <div class="main-login main-center">
     <h5 class="register-header" align="center">Register </h5>
-     <form action="{{ url_for('auth.register') }}" method="post" autocomplete="off"> 
+     <form method="POST" > 
+      <div class="container">
+        <div class="row main">
+           <div class="main-login main-center">
+               <h5 class="register-header" align="center">Login </h5>
+               <form  method="POST"  > 
+                   {{ form.hidden_tag() }}
+                   <div class="form-group">
+
+                    {{ form.email.label() }}
+                    {{ form.email(class="form-control", placeholder="E-mail") }}
+
+                    {{ form.firstname.label() }}
+                    {{ form.firstname()(class="form-control", placeholder="ชื่อจริง") }}
+
+                    {{ form.lastname.label() }}
+                    {{ form.firstname()(class="form-control", placeholder="นามสกุล") }}
+           
+                    {{ form.username.label() }}
+                    {{ form.username(class="form-control", placeholder="ชื่อผู้ใช้") }}
+                        
+                    {{ form.password.label() }}
+                    {{ form.password(class="form-control", placeholder="รหัสผ่าน") }}
+                    <br>
+                    {{ form.submit(class="btn btn-primary btn-lg btn-block login-button", value="สมัครสมาชิก") }}
+                        
+
+                    
+                   
+                   </div>
+               </form>
+           </div>
+            
+           </div>
+        </div>
+       </div>
      
        
      </form>
