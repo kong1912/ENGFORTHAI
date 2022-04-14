@@ -3,7 +3,7 @@ from inside import conn, cursor, db
 
 
 class User(UserMixin):
-
+    
     def __init__(self,username,password):
         self.username = username
         self.password = password
@@ -16,7 +16,7 @@ class User(UserMixin):
         return user_password
 
 
-    def select_user(self,username):
+    def select_user(self):
         cursor.execute('SELECT * FROM user WHERE username= %s',(username))
         user=cursor.fetchone()
         return user
