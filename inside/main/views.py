@@ -3,7 +3,7 @@ from flask_login import login_required, login_user, logout_user, current_user
 from app import app
 from inside import conn ,cursor, cursor_dict
 from ..auth.forms import LoginForm, RegisterForm
-from ..auth.user import User
+from ..user import User
 
 from flask import Blueprint
 
@@ -21,23 +21,14 @@ def intro():
  
 
 @main_bp.route('/home')
-@login_required
+
 def home():
 
    
     return render_template('home.jinja')
 
 
-  
-@main_bp.route('/logout')
-def logout():
 
-    logout_user()
-    flash('You have been logged out')
-
-    return redirect(url_for('main.intro'))
- 
-@login_required
 @main_bp.route('/profile')
 def profile(): 
 

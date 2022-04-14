@@ -7,33 +7,47 @@ from inside import cursor
 
 class RegisterForm(FlaskForm):
     
-    def validate_username(self, username):
-        cursor.execute(f'SELECT username FROM user WHERE username = %s',(username.data))
+
+        
+    firstname = StringField('ชื่อจริง', validators=[DataRequired()])
+    lastname = StringField('นามสกุล', validators=[DataRequired()])
+    email = StringField('E-mail', validators=[DataRequired(), validators.Email()])
+    username = StringField('ชื่อผู้ใช้', validators=[DataRequired()])
+    password = PasswordField('รหัสผ่าน', validators=[DataRequired()])
+    submit = SubmitField('สมัครสมาชิก')
+
+    def validate_username(self,field):
+        cursor.execute('SELECT username FROM user WHERE username = %s',(field.data))
         data = cursor.fetchone()
         if data:
             raise ValidationError('ขออภัย ชื่อผู้ใช้นี้มีอยู่แล้ว โปรดใช้ชื่ออื่น')
 
-    def validate_email(self, email):
-        cursor.execute(f'SELECT email FROM user WHERE email = %s',(email.data))
+    def validate_email(self,field):
+        cursor.execute('SELECT email FROM user WHERE email = %s',(field.data))
         data = cursor.fetchone()
         if data:
             raise ValidationError('ขออภัย email นี้มีอยู่แล้ว โปรดใช้ email อื่น')
-        
-    firstname = StringField(Label='ชื่อจริง', validators=[DataRequired()])
-    lastname = StringField(Label='นามสกุล', validators=[DataRequired()])
-    email = StringField(Label='E-mail', validators=[DataRequired(), validators.Email()])
-    username = StringField(Label='ชื่อผู้ใช้', validators=[DataRequired()])
-    password = PasswordField(Label='รหัสผ่าน', validators=[DataRequired()])
-    submit = SubmitField(Label='สมัครสมาชิก')
 
 
 
 class LoginForm(FlaskForm):
 
-    username = StringField(label='ชื่อผู้ใช้', validators=[DataRequired()])
-    password = PasswordField(label='รหัสผ่าน', validators=[DataRequired()])
-    submit = SubmitField(label='เข้าสู่ระบบ')
-    remember = BooleanField(label='จดจำฉัน')
+    username = StringField('ชื่อผู้ใช้', validators=[DataRequired()])
+    password = PasswordField('รหัสผ่าน', validators=[DataRequired()])
+    submit = SubmitField('เข้าสู่ระบบ')
+    remember = BooleanField('จดจำฉัน')
+
+    def validate_username(self,field):
+        cursor.execute('SELECT username FROM user WHERE username = %s',(field.data))
+        data = cursor.fetchone()
+        if data:
+            raise ValidationError('ชื่อผู้ใช้ไม่ถูกต้อง! กรุณาลองใหม่อีกครั้ง')
+
+    def validate_password(self,field):
+        cursor.execute('SELECT password FROM user WHERE password = %s',(field.data))
+        data = cursor.fetchone()
+        if data:
+            raise ValidationError('รหัสผ่านไม่ถูกต้อง! กรุณาลองใหม่อีกครั้ง')
 
 
 
