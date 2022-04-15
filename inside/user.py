@@ -6,10 +6,7 @@ class User():
     def __init__(self, username, password):
         self.username = username
         self.password = password
-        self.id = None
-        self.firstname = None
-        self.lastname = None
-        self.email = None
+
 
         
     def select_user(self):
@@ -27,9 +24,7 @@ class User():
         
         return True
 
-    def is_authenticated(self):
-        if session['loggedin'] == True:
-            return True
+    
 
 def logout_user():
     session.pop('loggedin', None)
@@ -44,7 +39,9 @@ def login_required():
     else:
         return redirect(url_for('auth.login'))
 
-
+def is_authenticated():
+    return session['loggedin']
+            
 
     
 

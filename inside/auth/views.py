@@ -19,12 +19,12 @@ def register():
     form = RegisterForm()
     
     if form.validate_on_submit():
-        cursor.execute('INSERT INTO users (email,firstname,lastname,username,password) VALUES(%s,%s,%s,%s,%s)',
+        cursor.execute('INSERT INTO user (email,firstname,lastname,username,password) VALUES(%s,%s,%s,%s,%s)',
         (form.email.data,form.firstname.data,form.lastname.data,form.username.data,form.password.data))
         conn.commit()
         user = User(form.username.data, form.password.data)
-        user.select_user
-        user.login_user
+        user.select_user()
+        user.login_user()
         return redirect(url_for('main.home'))
     return render_template('register.jinja', form=form)
 

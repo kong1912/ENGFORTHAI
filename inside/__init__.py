@@ -5,11 +5,10 @@ from flask_login import LoginManager
 import pymysql
 
 
+
 #app
 app = Flask(__name__)
 app.secret_key = 'ec9439cfc6c796ae2029594d'
-
-
 
 
 # MySQL configurations
