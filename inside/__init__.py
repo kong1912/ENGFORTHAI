@@ -26,15 +26,6 @@ conn = db.connect()
 cursor = conn.cursor() # execute as list
 cursor_dict = conn.cursor(pymysql.cursors.DictCursor) # execute as dict
 
-from .auth.user import User
-#login manager
-login_manager=LoginManager(app)
-login_manager.init_app(app)
-login_manager.login_view = 'auth.login'
-@login_manager.user_loader
-def load_user(user_id):
-    return User.get_id(user_id)
-
 
 #blueprints
 from .main.views import main_bp
