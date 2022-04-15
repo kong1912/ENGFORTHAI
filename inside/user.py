@@ -12,9 +12,9 @@ class User():
         self.email = None
 
         
-    def select_user(self,username):
-        cursor_dict.execute('SELECT * FROM user WHERE username = %s', (username))
-        user = cursor.fetchone()
+    def select_user(self):
+        cursor_dict.execute('SELECT * FROM user WHERE username = %s', (self.username))
+        user = cursor_dict.fetchone()
 
         return user
 

@@ -1,10 +1,9 @@
 from colorama import Cursor
 from flask import request, redirect, url_for, render_template,flash,Blueprint
-from flask_login import login_required, login_user, logout_user, current_user
 from app import app
 from inside import conn , cursor
 from ..auth.forms import LoginForm, RegisterForm
-from ..user import User
+from ..user import User, logout_user
 
 
 auth_bp = Blueprint('auth',__name__,
@@ -25,7 +24,7 @@ def register():
         conn.commit()
         user = User(form.username.data, form.password.data)
         user.select_user
-        login_user(user)
+        user.login_user
         return redirect(url_for('main.home'))
     return render_template('register.jinja', form=form)
 
@@ -35,14 +34,15 @@ def login():
     form = LoginForm()
 
     if form.validate_on_submit():
-        user = User(form.username.data, form.password.data)
-        user.select_user(form.username.data)
-        login_user(user)
+        user = User(form.username.data,form.password.data)
+        user.select_user()
+        user.login_user()
         return redirect(url_for('main.home'))
 
     return render_template('login.jinja', form=form)
 
 @auth_bp.route('/logout')
 def logout():
+
     logout_user()
     return redirect(url_for('main.intro'))

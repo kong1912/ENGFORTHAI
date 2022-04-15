@@ -1,3 +1,4 @@
+from flask import flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, validators, PasswordField, SubmitField, BooleanField, ValidationError
 from wtforms.validators import DataRequired
@@ -8,7 +9,6 @@ from inside import cursor
 class RegisterForm(FlaskForm):
     
 
-        
     firstname = StringField('ชื่อจริง', validators=[DataRequired()])
     lastname = StringField('นามสกุล', validators=[DataRequired()])
     email = StringField('E-mail', validators=[DataRequired(), validators.Email()])
@@ -37,17 +37,17 @@ class LoginForm(FlaskForm):
     submit = SubmitField('เข้าสู่ระบบ')
     remember = BooleanField('จดจำฉัน')
 
-    def validate_username(self,field):
-        cursor.execute('SELECT username FROM user WHERE username = %s',(field.data))
-        data = cursor.fetchone()
-        if data:
-            raise ValidationError('ชื่อผู้ใช้ไม่ถูกต้อง! กรุณาลองใหม่อีกครั้ง')
+    # def validate_username(self,username):
+    #     cursor.execute('SELECT username FROM user WHERE username = %s',(username))
+    #     data = cursor.fetchone()
+    #     if not data:
+    #         raise ValidationError('ชื่อผู้ใช้ไม่ถูกต้อง! กรุณาลองใหม่อีกครั้ง')
 
-    def validate_password(self,field):
-        cursor.execute('SELECT password FROM user WHERE password = %s',(field.data))
-        data = cursor.fetchone()
-        if data:
-            raise ValidationError('รหัสผ่านไม่ถูกต้อง! กรุณาลองใหม่อีกครั้ง')
+    # def validate_password(self,password):
+    #     cursor.execute('SELECT password FROM user WHERE password = %s',(password))
+    #     data = cursor.fetchone()
+    #     if not data:
+    #         raise ValidationError('รหัสผ่านไม่ถูกต้อง! กรุณาลองใหม่อีกครั้ง')
 
 
 
