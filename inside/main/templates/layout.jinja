@@ -21,7 +21,6 @@
 
 
   <body class="loggedin">
-    {% if  True %}
       <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
           <a class="navbar-brand" href="#">EngForThai</a>
@@ -47,41 +46,11 @@
           </div>
         
       </nav>
-    {% else %}
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-          <a class="navbar-brand" href="#">EngForThai</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('main.home') }}"><i class="fas fa-home"></i>Home </a>
-                </li>
-            </ul>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('main.profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
-                </li>
-            </ul>    
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item" >
-                  <a class="nav-link" href="{{ url_for('auth.login') }}"><i class="fas fa-sign-out-alt"></i>Login/register</a>
-              </li>
-            </ul>
-          </div>
-
-      </nav>
-    {% endif %}
+   
 {% endblock %} 
  
- 
-       
    {% block content %}
-   
-
-   
+  
    {% endblock %}
 
 </body>
