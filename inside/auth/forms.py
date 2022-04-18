@@ -29,7 +29,6 @@ class RegisterForm(FlaskForm):
             raise ValidationError('ขออภัย email นี้มีอยู่แล้ว โปรดใช้ email อื่น')
 
 
-
 class LoginForm(FlaskForm):
 
     username = StringField('ชื่อผู้ใช้', validators=[DataRequired()])

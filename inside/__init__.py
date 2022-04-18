@@ -1,5 +1,5 @@
 import MySQLdb
-from flask import Flask
+from flask import Flask, redirect, session, url_for
 from flaskext.mysql import MySQL
 from flask_login import LoginManager
 import pymysql
@@ -36,5 +36,6 @@ app.register_blueprint(main_bp)
 app.register_blueprint(lesson_bp)
 app.register_blueprint(test_bp)
 app.register_blueprint(auth_bp)
+
 
 

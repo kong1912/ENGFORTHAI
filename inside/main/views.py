@@ -1,9 +1,9 @@
-from flask import request, redirect, url_for, render_template,flash
+from flask import request, redirect, url_for, render_template,flash, session
 from flask_login import login_required, login_user, logout_user, current_user
 from app import app
 from inside import conn ,cursor, cursor_dict
 from ..auth.forms import LoginForm, RegisterForm
-from ..user import User
+from ..user import user_is_authenticated,get_user
 
 from flask import Blueprint
 
@@ -13,27 +13,34 @@ main_bp = Blueprint('main',__name__,
 
 @main_bp.route('/')
 def intro():
-    #return to home page if user has logged in
-
+    if user_is_authenticated():
+        
+        return render_template('intro.jinja')
+    
     return render_template('intro.jinja')
 
 
  
 
 @main_bp.route('/home')
-
 def home():
+    if user_is_authenticated():
 
-   
-    return render_template('home.jinja')
+
+    
+        return render_template('home.jinja')
+    else:
+        return redirect(url_for('auth.login'))
 
 
 
 @main_bp.route('/profile')
 def profile(): 
+    if user_is_authenticated():
 
-
-    return render_template('profile.jinja')
+        return render_template('profile.jinja')
+    else:
+        return redirect(url_for('auth.login'))
 
 
 

@@ -7,7 +7,7 @@
     <p class="h1">ยินดีต้อนรับสู่ ENGFORTHAI </p>
 
 
-{% if session['loggedin'] %}
+{% if session['pre_s'] == -1 %}
     <p class="h5"> ทำ pretest เพื่อวัดระดับของตัวเอง </p>
     <a href="{{ url_for('test.pretest') }}">
             <button type="button" class="btn btn-primary btn-lg">
@@ -18,11 +18,11 @@
     
 {% else %}
     
-    <a href="{{url_for('test.exercise_lesson1')}}">lesson 1</a>
-    <a href="{{url_for('test.exercise_lesson2')}}">lesson 2</a>
-    <a href="{{url_for('test.exercise_lesson3')}}">lesson 3</a>
-    <a href="{{url_for('test.exercise_lesson4')}}">lesson 4</a>
-    <a href="{{url_for('test.exercise_lesson5')}}">lesson 5</a>
+    <a href="{{url_for('test.exercise_lesson1')}}">lesson 1</a><br>
+    <a href="{{url_for('test.exercise_lesson2')}}">lesson 2</a><br>
+    <a href="{{url_for('test.exercise_lesson3')}}">lesson 3</a><br>
+    <a href="{{url_for('test.exercise_lesson4')}}">lesson 4</a><br>
+    <a href="{{url_for('test.exercise_lesson5')}}">lesson 5</a><br>
 
 
 

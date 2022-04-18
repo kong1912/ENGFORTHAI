@@ -35,7 +35,6 @@ def login():
 
     if form.validate_on_submit():
         user = User(form.username.data,form.password.data)
-        user.select_user()
         user.login_user()
         return redirect(url_for('main.home'))
 
