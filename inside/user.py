@@ -18,6 +18,7 @@ class User():
         session['username'] = user['username']
         session['firstname'] = user['firstname']
         session['lastname'] = user['lastname']
+        session['fullname'] = user['firstname'] + ' ' + user['lastname']
         session['email'] = user['email']
         session['pre_s'] = score['pre_s']
         session['post_s'] = score['post_s']

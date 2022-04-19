@@ -5,14 +5,15 @@ from inside import conn, cursor, cursor_dict
 
 test_bp = Blueprint('test', __name__,
                     template_folder='templates',
-                    static_folder='static', static_url_path='/TestAndExercise/static')
+                    static_folder='static', 
+                    static_url_path='/TestAndExercise/static')
 
 
 @test_bp.route('/exercise_lesson1')
 def exercise_lesson1():
     
-    cursor.execute("SELECT word FROM word_list WHERE l_id = 1")
-    words = cursor.fetchall()
+    cursor_dict.execute("SELECT word FROM word_list WHERE l_id = 1")
+    words = cursor_dict.fetchall()
 
 
     return render_template('exercise_lesson1.html.jinja',words=words)

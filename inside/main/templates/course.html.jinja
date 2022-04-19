@@ -1,9 +1,66 @@
 {% extends 'layout.html.jinja' %}
  
 {% block title %}Course{% endblock %}
- 
+
+{% block head %}
+    {#<link rel="stylesheet" href="{{ url_for('main.static', filename='css/style.css') }}">#}
+{% endblock %}
+
 {% block content %}
 
+    <div class="container text-center">
+       
+        <p class="h1">คอร์สเรียนทั้งหมดของ ENGFORTHAI</p>
+        <div class="d-flex position-relative">
+            <img src="{{ url_for('main.static', filename='img/test.png') }}" class="flex-shrink-0 me-3" alt="...">
+            <div class="card-body">
+              <h5 class="mt-0">Lesson 1 การออกเสียง /ð/ - /θ/ - /tθ/</h5>
+              <p>บทเรียนนี้สอนเรื่องการออกเสียง/ð/ - /θ/ - /tθ/</p>
+              <a href="{{ url_for('lesson.lesson1') }}" class="stretched-link btn btn-info" role="button">เรียนเลย</a>
+            </div>
+        </div>
 
+        <div class="d-flex position-relative">
+            <img src="{{ url_for('main.static', filename='img/test2.jpg') }}" class="flex-shrink-0 me-3" alt="...">
+            <div class="card-body">
+              <h5 class="mt-0">Lesson 2 การออกเสียง /ð/ - /θ/ - /tθ/</h5>
+              <p>บทเรียนนี้สอนเรื่องการออกเสียง/ð/ - /θ/ - /tθ/</p>
+              <a href="{{ url_for('lesson.lesson2') }}" class="stretched-link btn btn-info" role="button">เรียนเลย</a>
+            </div>
+        </div>
+
+        <div class="d-flex position-relative">
+            <img src="{{ url_for('main.static', filename='img/test3.jpg') }}" class="flex-shrink-0 me-3" alt="...">
+            <div class="card-body">
+              <h5 class="mt-0">Lesson 3 การออกเสียง /ʒ/ - /ʃ/</h5>
+              <p>บทเรียนนี้สอนเรื่องการออกเสียง /ʒ/ - /ʃ/</p>
+              <a href="{{ url_for('lesson.lesson3') }}" class="stretched-link btn btn-info" role="button">เรียนเลย</a>
+            </div>
+        </div>
+
+        <div class="d-flex position-relative">
+            <img src="{{ url_for('main.static', filename='img/test4.jpg') }}" class="flex-shrink-0 me-3" alt="...">
+            <div class="card-body">
+              <h5 class="mt-0">Lesson 4 การออกเสียง /z/  - /s/ </h5>
+              <p>บทเรียนนี้สอนเรื่องการออกเสียง /z/  - /s/ </p>
+              <a href="{{ url_for('lesson.lesson4') }}" class="stretched-link btn btn-info" role="button">เรียนเลย</a>
+            </div>
+        </div>
+
+        <div class="d-flex position-relative">
+            <img src="{{ url_for('main.static', filename='img/test5.jpg') }}" class="flex-shrink-0 me-3" alt="...">
+            <div class="card-body">
+              <h5 class="mt-0">Lesson 5 การออกเสียง /b/ - /p/ </h5>
+              <p>บทเรียนนี้สอนเรื่องการออกเสียง /b/ - /p/ </p>
+              <a href="{{ url_for('lesson.lesson5') }}" class="stretched-link btn btn-info" role="button">เรียนเลย</a>
+            </div>
+        </div>
+
+
+
+        
+    </div>
+
+    
 
 {% endblock %}

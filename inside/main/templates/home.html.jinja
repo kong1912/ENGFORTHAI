@@ -4,39 +4,37 @@
  
 {% block content %}
 
-    <p class="h1 text-center">ยินดีต้อนรับคุณ {{ session['firstname'] }} {{ session['lastname'] }} สู่ ENGFORTHAI </p>
+    <p class="h1 text-center">ยินดีต้อนรับคุณ {{ session['fullname'] }} สู่ ENGFORTHAI </p>
 
-
-
-{% if session['pre_s'] == -1 %}
-    
-    <div class="container text-center">
-        <p class="h5"> ทำ pretest เพื่อวัดระดับของตัวเอง </p>
-        <a href="{{ url_for('test.pretest') }}">
+    {% if session['pre_s'] == -1 %}
+        
+        <div class="container text-center">
+            <p class="h5"> ทำ pretest เพื่อวัดระดับของตัวเอง </p>
+            <a href="{{ url_for('test.pretest') }}">
+                    <button type="button" class="btn btn-primary btn-lg">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                        Pretest
+                    </button>
+            </a>
+            <p class="h3"> อยากเรียนตามใจ? คลิกเพื่อดูคอร์สเรียนที่นี่เลย!</p>
+            <a href="{{ url_for('main.course') }}">
                 <button type="button" class="btn btn-primary btn-lg">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    Pretest
+                    คอร์สเรียน
                 </button>
         </a>
-        <p class="h3"> อยากเรียนตามใจ? คลิกเพื่อดูคอร์สเรียนที่นี่เลย!</p>
-        <a href="{{ url_for('main.course') }}">
-            <button type="button" class="btn btn-primary btn-lg">
-                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                คอร์สเรียน
-            </button>
-    </a>
 
+            
+
+
+        </div>
+            
         
-
-
-    </div>
-        
-    
-{% else %}
+    {% else %}
 
 
 
-{% endif %}
+    {% endif %}
 
 
 {% endblock %}

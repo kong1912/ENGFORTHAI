@@ -8,7 +8,8 @@ from ..user import User, logout_user
 
 auth_bp = Blueprint('auth',__name__,
                     template_folder='templates',
-                    static_folder='static',static_url_path='/auth/static')
+                    static_folder='static',
+                    static_url_path='/auth/static')
 
 
 

@@ -7,7 +7,8 @@ from ..user import user_is_authenticated
 
 lesson_bp = Blueprint('lesson',__name__,
                         template_folder='templates',
-                        static_folder='static',static_url_path='/lesson/static')
+                        static_folder='static',
+                        static_url_path='/lesson/static')
 
 
 
@@ -52,7 +53,7 @@ def lesson4():
     if user_is_authenticated():
     
 
-        return render_template('lesson2.html.jinja')
+        return render_template('lesson4.html.jinja')
     else:
         return redirect(url_for('auth.login'))
 
@@ -64,7 +65,7 @@ def lesson5():
 
     if user_is_authenticated():
     
-        return render_template('lesson2.html.jinja')
+        return render_template('lesson5.html.jinja')
     else:
         return redirect(url_for('auth.login'))
 
