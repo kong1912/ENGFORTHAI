@@ -15,7 +15,7 @@ def exercise_lesson1():
     words = cursor.fetchall()
 
 
-    return render_template('exercise_lesson1.jinja',words=words)
+    return render_template('exercise_lesson1.html.jinja',words=words)
         
 
     
@@ -29,7 +29,7 @@ def exercise_lesson2():
     words = cursor.fetchall()
     
     
-    return render_template('exercise_lesson2.jinja',words=words)
+    return render_template('exercise_lesson2.html.jinja',words=words)
        
 
     
@@ -43,7 +43,7 @@ def exercise_lesson3():
     words = cursor.fetchall()
 
         
-    return render_template('exercise_lesson3.jinja',words=words)
+    return render_template('exercise_lesson3.html.jinja',words=words)
 
 
     
@@ -57,7 +57,7 @@ def exercise_lesson4():
     words = cursor.fetchall()
     
   
-    return render_template('exercise_lesson4.jinja',words=words)
+    return render_template('exercise_lesson4.html.jinja',words=words)
     
 
     
@@ -72,18 +72,16 @@ def exercise_lesson5():
     
 
 
-    return render_template('exercise_lesson5.jinja',words=words)
+    return render_template('exercise_lesson5.html.jinja',words=words)
     
 
 
 @test_bp.route('/pretest')
 def pretest():
     
-    cursor.execute("SELECT word FROM word_list WHERE l_id = 1")
-    words = cursor.fetchall()
 
 
-    return render_template('pretest.jinja',words=words)
+    return render_template('pretest.html.jinja',words=words)
     
 
 

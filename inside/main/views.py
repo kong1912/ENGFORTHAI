@@ -15,9 +15,9 @@ main_bp = Blueprint('main',__name__,
 def intro():
     if user_is_authenticated():
         
-        return render_template('intro.jinja')
+        return render_template('intro.html.jinja')
     
-    return render_template('intro.jinja')
+    return render_template('intro.html.jinja')
 
 
  
@@ -28,7 +28,7 @@ def home():
 
 
     
-        return render_template('home.jinja')
+        return render_template('home.html.jinja')
     else:
         return redirect(url_for('auth.login'))
 
@@ -38,7 +38,7 @@ def home():
 def profile(): 
     if user_is_authenticated():
 
-        return render_template('profile.jinja')
+        return render_template('profile.html.jinja')
     else:
         return redirect(url_for('auth.login'))
 
@@ -47,7 +47,7 @@ def profile():
 def course():
     if user_is_authenticated():
 
-        return render_template('course.jinja')
+        return render_template('course.html.jinja')
     else:
         return redirect(url_for('auth.login'))
 

@@ -36,17 +36,6 @@ class LoginForm(FlaskForm):
     submit = SubmitField('เข้าสู่ระบบ')
     remember = BooleanField('จดจำฉัน')
 
-    # def validate_username(self,username):
-    #     cursor.execute('SELECT username FROM user WHERE username = %s',(username))
-    #     data = cursor.fetchone()
-    #     if not data:
-    #         raise ValidationError('ชื่อผู้ใช้ไม่ถูกต้อง! กรุณาลองใหม่อีกครั้ง')
-
-    # def validate_password(self,password):
-    #     cursor.execute('SELECT password FROM user WHERE password = %s',(password))
-    #     data = cursor.fetchone()
-    #     if not data:
-    #         raise ValidationError('รหัสผ่านไม่ถูกต้อง! กรุณาลองใหม่อีกครั้ง')
 
 
 

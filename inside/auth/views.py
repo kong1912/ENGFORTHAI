@@ -22,11 +22,12 @@ def register():
         cursor.execute('INSERT INTO user (email,firstname,lastname,username,password) VALUES(%s,%s,%s,%s,%s)',
         (form.email.data,form.firstname.data,form.lastname.data,form.username.data,form.password.data))
         conn.commit()
+        cursor.execute("INSERT INTO score (u_id) SELECT u_id FROM user WHERE username = %s", (form.username.data))
+        conn.commit()
         user = User(form.username.data, form.password.data)
-        user.select_user()
         user.login_user()
         return redirect(url_for('main.home'))
-    return render_template('register.jinja', form=form)
+    return render_template('register.html.jinja', form=form)
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -38,7 +39,7 @@ def login():
         user.login_user()
         return redirect(url_for('main.home'))
 
-    return render_template('login.jinja', form=form)
+    return render_template('login.html.jinja', form=form)
 
 @auth_bp.route('/logout')
 def logout():

@@ -15,7 +15,7 @@ lesson_bp = Blueprint('lesson',__name__,
 def lesson1():
     if user_is_authenticated():
 
-        return render_template('lesson1.jinja')
+        return render_template('lesson1.html.jinja')
     else:
         return redirect(url_for('auth.login'))
 
@@ -29,7 +29,7 @@ def lesson2():
 
     if user_is_authenticated():
     
-        return render_template('lesson2.jinja')
+        return render_template('lesson2.html.jinja')
     else:
         return redirect(url_for('auth.login'))
     
@@ -39,7 +39,7 @@ def lesson2():
 def lesson3():
     if user_is_authenticated():
   
-        return render_template('lesson3.jinja')  
+        return render_template('lesson3.html.jinja')  
     else:
         return redirect(url_for('auth.login'))
 
@@ -52,7 +52,7 @@ def lesson4():
     if user_is_authenticated():
     
 
-        return render_template('lesson2.jinja')
+        return render_template('lesson2.html.jinja')
     else:
         return redirect(url_for('auth.login'))
 
@@ -64,7 +64,7 @@ def lesson5():
 
     if user_is_authenticated():
     
-        return render_template('lesson2.jinja')
+        return render_template('lesson2.html.jinja')
     else:
         return redirect(url_for('auth.login'))
 
