@@ -43,6 +43,15 @@ def profile():
         return redirect(url_for('auth.login'))
 
 
+@main_bp.route('/course')
+def course():
+    if user_is_authenticated():
+
+        return render_template('course.jinja')
+    else:
+        return redirect(url_for('auth.login'))
+
+
 
 
 
