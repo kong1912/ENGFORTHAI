@@ -8,9 +8,12 @@
 {% block content %}
 
 <div class="text-center">
-  <p class="h1">This is Lesson 4 page</p>  
+  <p class="h1">This is Lesson 4 page</p> 
+  <br><br><br><br>
 
-  <button type="button" class="btn btn-primary">Exercise</button>
+  <p class="h3">เรียนเสร็จแล้ว ทำแบบฝีกหัดที่นี่</p> 
+
+  <a href="{{ url_for('test.exercise_lesson4') }}" class="stretched-link btn btn-info" role="button">Exercise</a>
 
 </div>
 

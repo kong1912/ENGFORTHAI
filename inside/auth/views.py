@@ -39,7 +39,7 @@ def login():
         user = User(form.username.data,form.password.data)
         user.login_user()
         return redirect(url_for('main.home'))
-
+        
     return render_template('login.html.jinja', form=form)
 
 @auth_bp.route('/logout')
