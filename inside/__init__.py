@@ -8,7 +8,7 @@ import pymysql
 
 #app
 app = Flask(__name__)
-app.secret_key = 'ec9439cfc6c796ae2029594d'
+app.config['SECRET_KEY'] = 'UGWEGYWEY#(*T@#(*#@Y*(EFHEIGWHG'
 
 
 # MySQL configurations

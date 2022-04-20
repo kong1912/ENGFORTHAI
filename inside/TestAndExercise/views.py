@@ -82,7 +82,7 @@ def pretest():
     
 
 
-    return render_template('pretest.html.jinja',words=words)
+    return render_template('pretest.html.jinja')
     
 
 

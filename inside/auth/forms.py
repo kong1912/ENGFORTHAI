@@ -9,10 +9,10 @@ from inside import cursor, cursor_dict
 
 class RegisterForm(FlaskForm):
     
-    firstname = StringField('ชื่อจริง', validators=[DataRequired(message="กรุณากรอกชื่อจริง"),
-                                                 Length(min=2, max=45, message="ชื่อจริงต้องมีความยาว 2-45 ตัวอักษร")])
+    firstname = StringField('ชื่อจริง') 
+    """, validators=[DataRequired(message="กรุณากรอกชื่อจริง"),Length(min=2, max=45, message="ชื่อจริงต้องมีความยาว 2-45 ตัวอักษร")] """
     lastname = StringField('นามสกุล', validators=[DataRequired(message="กรุณากรอกนามสกุล"),
-                                                 Length(min=2, max=45, message="นามสกุลตเองมีความยาว 2-45 ตัวอักษร")])
+                                                 Length(min=2, max=45, message="นามสกุลต้องมีความยาว 2-45 ตัวอักษร")])
     email = StringField('E-mail', validators=[DataRequired(message="กรุณากรอกEmail"), Email()])
     username = StringField('ชื่อผู้ใช้', validators=[DataRequired(message="กรุณากรอกชื่อผู้ใช้"),Length(min=6, max=20, 
                                                                                               message="ชื่อผู้ใช้ต้องมีความยาว 6-20 ตัวอักษร")])
@@ -25,18 +25,9 @@ class RegisterForm(FlaskForm):
 
     def validate_user(self):
 
-        cursor_dict.execute("SELECT * FROM user")
-        data = cursor.fetchall()
+        pass
 
-        errors = {}
         
-        if self.username in data['username']:
-            errors += flash('username นี้มีอยู่ในระบบแล้ว')
-        
-        if self.email in data['email']:
-            errors += flash('email นี้มีอยู่ในระบบแล้ว')
-
-        return errors
 
         
 
