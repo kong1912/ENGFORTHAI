@@ -1,3 +1,4 @@
+from dataclasses import field
 from colorama import Cursor
 from flask import request, redirect, url_for, render_template,flash,Blueprint
 from app import app
@@ -28,6 +29,7 @@ def register():
         user = User(form.username.data, form.password.data)
         user.login_user()
         return redirect(url_for('main.home'))
+
     
     return render_template('register.html.jinja', form=form)
 
