@@ -2,7 +2,7 @@ from dataclasses import field
 from colorama import Cursor
 from flask import request, redirect, url_for, render_template,flash,Blueprint
 from app import app
-from inside import conn , cursor
+from app import conn , cursor
 from ..auth.forms import LoginForm, RegisterForm
 from ..user import User, logout_user
 
@@ -47,6 +47,7 @@ def login():
 
 @auth_bp.route('/logout')
 def logout():
-
+    
     logout_user()
     return redirect(url_for('main.intro'))
+    

@@ -1,9 +1,9 @@
 import re
 from flask import flash, request
 from flask_wtf import FlaskForm
-from wtforms import StringField, validators, PasswordField, SubmitField
-from wtforms.validators import DataRequired, EqualTo, Length, Email, InputRequired, ValidationError
-from inside import cursor, cursor_dict
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, EqualTo, Length, Email, ValidationError
+from app import cursor, cursor_dict
 
 
 class RegisterForm(FlaskForm):
@@ -18,8 +18,8 @@ class RegisterForm(FlaskForm):
                                                 Length(min=6, max=20, message="ชื่อผู้ใช้ต้องมีความยาว 6-20 ตัวอักษร")])
     password = PasswordField('รหัสผ่าน', validators=[DataRequired(message="กรุณากรอกรหัสผ่าน"),
                                                     Length(min=4, max=16, message="รหัสผ่านต้องมีความยาว 4-16 ตัวอักษร")])
-    confirm_password = PasswordField('ยืนยันรหัสผ่าน', validators=[EqualTo('password',message="รหัสผ่านยืนยันไม่เหมือนกับรหัสผ่าน"),
-                                                            InputRequired(message="กรุณากรอกรหัสผ่านยืนยัน")])
+    confirm_password = PasswordField('ยืนยันรหัสผ่าน', validators=[EqualTo('password',message="รหัสผ่านยืนยันไม่ถูกต้อง"),
+                                                            DataRequired(message="กรุณากรอกรหัสผ่านยืนยัน")])
     submit = SubmitField('สมัครสมาชิก')
 
     def validate_user(self):
@@ -39,22 +39,24 @@ class RegisterForm(FlaskForm):
 
 class LoginForm(FlaskForm):
 
-    username = StringField('ชื่อผู้ใช้', validators=[DataRequired()])
-    password = PasswordField('รหัสผ่าน', validators=[DataRequired()])
+    username = StringField('ชื่อผู้ใช้', validators=[DataRequired(message="กรุณากรอกชื่อผู้ใช้")])
+    password = PasswordField('รหัสผ่าน', validators=[DataRequired(message="กรุณากรอกรหัสผ่าน")])
     submit = SubmitField('เข้าสู่ระบบ')
 
     def validate_user(self):
         # check username
         cursor.execute(f"SELECT username FROM user WHERE username = {self.username.data}")
-        data = cursor_dict.fetchone()
-        if not data:
-            flash("ไม่มีชื่อผู้ใช้นี้ในระบบ")
+        data = cursor.fetchone()
+        if data is None:
+            raise ValidationError("ไม่มีชื่อผู้ใช้นี้ในระบบ")
         
         # check email
-        cursor.execute(f"SELECT email FROM user WHERE email = {self.email.data}")
-        data = cursor_dict.fetchone()
-        if data:
-            flash("ไม่มีE-mailนี้ในระบบ")
+        cursor.execute(f"SELECT password FROM user WHERE username = {self.username.data}")
+        data = cursor.fetchone()
+        if data != self.password.data:
+            raise ValidationError("รหัสผ่านไม่ถูกต้อง")
+
+            
 
 
 

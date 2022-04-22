@@ -1,5 +1,5 @@
 from flask import Blueprint, request,redirect, url_for, render_template
-from inside import conn,cursor
+from app import conn,cursor
 from flask import  Blueprint
 
 from ..user import user_is_authenticated
@@ -17,8 +17,8 @@ def lesson1():
     if user_is_authenticated():
 
         return render_template('lesson1.html.jinja')
-    else:
-        return redirect(url_for('auth.login'))
+
+    return redirect(url_for('auth.login'))
 
     
 
@@ -31,8 +31,8 @@ def lesson2():
     if user_is_authenticated():
     
         return render_template('lesson2.html.jinja')
-    else:
-        return redirect(url_for('auth.login'))
+
+    return redirect(url_for('auth.login'))
     
 
 
@@ -41,8 +41,8 @@ def lesson3():
     if user_is_authenticated():
   
         return render_template('lesson3.html.jinja')  
-    else:
-        return redirect(url_for('auth.login'))
+
+    return redirect(url_for('auth.login'))
 
 
 
@@ -54,8 +54,8 @@ def lesson4():
     
 
         return render_template('lesson4.html.jinja')
-    else:
-        return redirect(url_for('auth.login'))
+
+    return redirect(url_for('auth.login'))
 
  
     
@@ -66,8 +66,8 @@ def lesson5():
     if user_is_authenticated():
     
         return render_template('lesson5.html.jinja')
-    else:
-        return redirect(url_for('auth.login'))
+
+    return redirect(url_for('auth.login'))
 
 
 

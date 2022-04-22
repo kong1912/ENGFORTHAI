@@ -14,14 +14,14 @@
 </head>
 <body>
     <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp'); width : 100%;">
-        <div class="mask d-flex align-items-center h-100 gradient-custom-">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-4">
           <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="card" style="border-radius: 15px;">
                   <div class="card-body p-5">
                     <h2 class="text-uppercase text-center mb-5">Create an account</h2>      
-                    <form method="POST" novalidate> 
+                    <form method="POST" novalidate autocomplete="off"> 
                       {{ form.hidden_tag() }}    
                       <div class="form-outline mb-4">
                         <div class="input-group">
@@ -31,6 +31,7 @@
                         </div>
                           {{ render_field(form.firstname) }}
                           {{ render_field(form.lastname) }} 
+                          <br>
                         
 
                         {{ form.email(class="form-control form-control-lg", placeholder="E-mail") }}

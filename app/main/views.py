@@ -1,7 +1,7 @@
 from flask import request, redirect, url_for, render_template,flash, session
 from flask_login import login_required, login_user, logout_user, current_user
 from app import app
-from inside import conn ,cursor, cursor_dict
+from app import conn ,cursor, cursor_dict
 from ..auth.forms import LoginForm, RegisterForm
 from ..user import user_is_authenticated,get_user
 
@@ -15,7 +15,7 @@ main_bp = Blueprint('main',__name__,
 def intro():
     if user_is_authenticated():
         
-        return render_template('intro.html.jinja')
+        return render_template('home.html.jinja')
     
     return render_template('intro.html.jinja')
 
@@ -26,11 +26,9 @@ def intro():
 def home():
     if user_is_authenticated():
 
-
-    
         return render_template('home.html.jinja')
-    else:
-        return redirect(url_for('auth.login'))
+    
+    return redirect(url_for('auth.login'))
 
 
 
@@ -39,17 +37,17 @@ def profile():
     if user_is_authenticated():
 
         return render_template('profile.html.jinja')
-    else:
-        return redirect(url_for('auth.login'))
+    
+    return redirect(url_for('auth.login'))
 
 
 @main_bp.route('/course')
 def course():
     if user_is_authenticated():
-
+        
         return render_template('course.html.jinja')
-    else:
-        return redirect(url_for('auth.login'))
+    
+    return redirect(url_for('auth.login'))
 
 
 

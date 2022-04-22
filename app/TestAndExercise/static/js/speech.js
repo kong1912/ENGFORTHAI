@@ -8,13 +8,14 @@ function attachEvents() {
 function getWorkingEls() {
     return [
         {
-            id_start_btn: "#start-btn-{{ loop.index }}",
-            id_output_txta: "#output-textarea-{{ loop.index }}"
+            id_start_btn: "#start-btn",
+            id_output_txta: "#output-textarea"
         },
     ]
 }
 
 function attachEvent(element, index, array) {
+    
     let startBtnEl = document.querySelector(element.id_start_btn);
     let outputTextAreaEl = document.querySelector(element.id_output_txta);
 
