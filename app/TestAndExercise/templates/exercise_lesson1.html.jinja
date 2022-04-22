@@ -7,14 +7,19 @@
 
 {% block content %}
         
-<br>
-    <div class="container">
-        <p class="h1 text-left"> จงพูดคำที่ปรากฎขึ้น </p>  
-    </div>
-    
+    <br>
+      <div class="container justify text-center">
+          <p class="h1"> จงพูดคำต่อไปนี้ </p>
+            {% for word in words %}
+              
+            {% endfor %}
+          
+      </div>
+      <br>
+{% endblock %}
 
-   
-  
+{% block javascript %}
+ <script src="{{ url_for('main.static', filename='js/speech.js') }}"></script>
 {% endblock %}
 
 

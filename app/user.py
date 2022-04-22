@@ -21,9 +21,6 @@ class User():
         for key, value in score.items():
             session[key] = value
     
-        
-
-        
 def logout_user():
     user = get_user()
     session.pop('loggedin', None)

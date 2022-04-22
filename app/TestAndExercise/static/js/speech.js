@@ -25,7 +25,6 @@ function attachEvent(element, index, array) {
 
     // captures single result each time
     recognition.continuous = false
-    startBtnEl.disable = true;
 
     startBtnEl.onclick = function () {
         startBtnEl.disabled = true;
