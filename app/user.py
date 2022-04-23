@@ -1,5 +1,6 @@
-from flask import session
+from flask import session, url_for, redirect, flash
 from app import conn, cursor, cursor_dict
+from functools import wraps
 
 
 class User():
@@ -26,6 +27,16 @@ def logout_user():
     session.pop('loggedin', None)
     for key in user.items():
         session.pop(key, None)
+
+def login_required(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if 'loggedin' in session:
+            return f(*args, **kwargs)
+        else:
+            flash('กรุณา login', 'danger')
+            return redirect(url_for('auth.login'))
+    return wrap
 
 def user_is_authenticated():
     return 'loggedin' in session

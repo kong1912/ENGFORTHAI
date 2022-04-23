@@ -2,7 +2,7 @@ from flask import Blueprint, request,redirect, url_for, render_template
 from app import conn,cursor
 from flask import  Blueprint
 
-from ..user import user_is_authenticated
+from ..user import login_required
 
 
 lesson_bp = Blueprint('lesson',__name__,
@@ -13,61 +13,47 @@ lesson_bp = Blueprint('lesson',__name__,
 
 
 @lesson_bp.route('/lesson1')
+@login_required
 def lesson1():
-    if user_is_authenticated():
-
-        return render_template('lesson1.html.jinja')
-
-    return redirect(url_for('auth.login'))
-
-    
-
+   
+       return render_template('lesson1.html.jinja')
 
 
 
 @lesson_bp.route('/lesson2')
+@login_required
 def lesson2():
 
-    if user_is_authenticated():
-    
-        return render_template('lesson2.html.jinja')
 
-    return redirect(url_for('auth.login'))
     
+    return render_template('lesson2.html.jinja')
 
 
 @lesson_bp.route('/lesson3')
+@login_required
 def lesson3():
-    if user_is_authenticated():
+
   
-        return render_template('lesson3.html.jinja')  
-
-    return redirect(url_for('auth.login'))
-
-
-
+    return render_template('lesson3.html.jinja')  
 
 
 @lesson_bp.route('/lesson4')
+@login_required
 def lesson4():
-    if user_is_authenticated():
+
     
 
-        return render_template('lesson4.html.jinja')
+    return render_template('lesson4.html.jinja')
 
-    return redirect(url_for('auth.login'))
-
- 
-    
 
 @lesson_bp.route('/lesson5')
+@login_required
 def lesson5():
 
-    if user_is_authenticated():
-    
-        return render_template('lesson5.html.jinja')
+   
+    return render_template('lesson5.html.jinja')
 
-    return redirect(url_for('auth.login'))
+
 
 
 
