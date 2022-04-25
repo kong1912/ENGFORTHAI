@@ -25,7 +25,7 @@ function attachEvent(element, index, array) {
 
     // captures single result each time
     recognition.continuous = false
-
+    
     startBtnEl.onclick = function () {
         startBtnEl.disabled = true;
         outputTextAreaEl.value = "";
@@ -39,6 +39,6 @@ function attachEvent(element, index, array) {
     recognition.onresult = function (event) {
         let current = event.resultIndex;
         outputTextAreaEl.value = `${event.results[current][0].transcript}`;
+        
     }
-
 }

@@ -23,14 +23,13 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
-  `u_id` int NOT NULL AUTO_INCREMENT,
-  `email` varchar(100) NOT NULL,
-  `firstname` varchar(100) NOT NULL,
-  `lastname` varchar(100) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `fullname` varchar(100) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(16) NOT NULL,
-  PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +38,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (2,'kongpopboonma1912@gmail.com','Kongpop','Boonma','kong1912','12345678'),(3,'test@gmail.com','John','Cena','test123','12345678'),(4,'randy@gmail.com','Randy','Orton','test321','123456'),(5,'test3333@gmail.com','vachi','ralong','test333','12345678'),(7,'kongpopboonma1912@gmail.com','Kongpop','Boonma','kong1912','123456'),(8,'test32122@gmail.com','Hello','Goodbye','test543','123456');
+INSERT INTO `user` VALUES (1,'test1','test1','123456'),(2,'test2','test2','123456'),(3,'test3','test3','123456'),(4,'test4','test4','123456'),(5,'ojojojh','test45','123456'),(6,'kong2004','kongpop','123456'),(7,'ewfgweg','test155','123456'),(8,'test1111','test1111','123456'),(9,'test10000','test1000','123456');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-25 11:26:40
+-- Dump completed on 2022-04-11 23:36:09

@@ -24,16 +24,16 @@ DROP TABLE IF EXISTS `score`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `score` (
   `u_id` int NOT NULL AUTO_INCREMENT,
-  `pre_s` varchar(45) DEFAULT NULL,
-  `post_s` varchar(45) DEFAULT NULL,
-  `l1_s` varchar(45) DEFAULT NULL,
-  `l2_s` varchar(45) DEFAULT NULL,
-  `l3_s` varchar(45) DEFAULT NULL,
-  `l4_s` varchar(45) DEFAULT NULL,
-  `l5_s` varchar(45) DEFAULT NULL,
+  `pre_s` int DEFAULT '-1',
+  `post_s` int DEFAULT '-1',
+  `l1_s` int DEFAULT '-1',
+  `l2_s` int DEFAULT '-1',
+  `l3_s` int DEFAULT '-1',
+  `l4_s` int DEFAULT '-1',
+  `l5_s` int DEFAULT '-1',
   PRIMARY KEY (`u_id`),
-  CONSTRAINT `u_id` FOREIGN KEY (`u_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `u_id` FOREIGN KEY (`u_id`) REFERENCES `user` (`u_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ CREATE TABLE `score` (
 
 LOCK TABLES `score` WRITE;
 /*!40000 ALTER TABLE `score` DISABLE KEYS */;
+INSERT INTO `score` VALUES (2,-1,-1,-1,-1,-1,-1,-1),(3,-1,-1,-1,-1,-1,-1,-1),(4,-1,-1,-1,-1,-1,-1,-1),(5,-1,-1,-1,-1,-1,-1,-1),(8,-1,-1,-1,-1,-1,-1,-1);
 /*!40000 ALTER TABLE `score` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-11 23:36:09
+-- Dump completed on 2022-04-25 11:26:40

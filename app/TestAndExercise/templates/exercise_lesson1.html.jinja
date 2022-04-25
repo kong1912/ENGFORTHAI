@@ -10,12 +10,12 @@
     <br>
       <div class="container justify text-center">
           <p class="h1"> จงพูดคำต่อไปนี้ </p>
-            {% for word in words %}
-              
-            {% endfor %}
-          
+          <p class="h3">{{word}}</p>
       </div>
       <br>
+      <form action="{{url_for('test.exercise_lesson1')}}" method="POST">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 {% endblock %}
 
 {% block javascript %}

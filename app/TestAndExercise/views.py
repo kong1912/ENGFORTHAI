@@ -1,5 +1,6 @@
 import json
 from flask import Blueprint, redirect, url_for, render_template, jsonify
+from requests import request
 from app import conn, cursor, cursor_dict
 from ..user import login_required
 
@@ -9,14 +10,18 @@ test_bp = Blueprint('test', __name__,
                     static_url_path='/TestAndExercise/static')
 
 
-@test_bp.route('/exercise_lesson1')
+@test_bp.route('/exercise_lesson1',methods=['GET', 'POST'])
 @login_required
 def exercise_lesson1():
 
     cursor_dict.execute("SELECT word FROM word_list WHERE lesson = 1")
     words = cursor_dict.fetchall()
-
-    return render_template('exercise_lesson1.html.jinja',words=words)
+    print(words)
+    for word in words():
+        if request.form.method == "POST":         
+            return render_template('exercise_lesson1.html.jinja',word=word.values())
+    
+    return render_template('exercise_lesson1.html.jinja',word=words[0])
     
     
 
@@ -37,7 +42,6 @@ def exercise_lesson3():
     cursor.execute("SELECT word FROM word_list WHERE lesson = 3")
     words = cursor.fetchall()
 
-        
     return render_template('exercise_lesson3.html.jinja',words=words)
 
 
