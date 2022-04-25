@@ -1,25 +1,110 @@
 {% extends 'layout.html.jinja' %}
 {% block head %}
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styleFortest.css') }}">
 {% endblock %}
 
 
 {% block content %}
-        
-    <br>
-      <div class="container justify text-center">
-          <p class="h1"> จงพูดคำต่อไปนี้ </p>
-          <p class="h3">{{word}}</p>
-      </div>
-      <br>
-      <form action="{{url_for('test.exercise_lesson1')}}" method="POST">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-{% endblock %}
+   
+  
+    <div class="text-center">
+        <h1>Exercise1</h1>       
+        <h2> จงพูดคำต่อไปนี้ </h2> 
+    </div>
 
-{% block javascript %}
- <script src="{{ url_for('main.static', filename='js/speech.js') }}"></script>
+    <script>
+        i = 0;
+   </script>
+   {% for word in words %}
+   
+   <div class="text-center" id="words-{{ loop.index }}"> {{word| first}} </div>
+   <form id="answer" name="answer"  method="post" >
+       <div class="text-center">       
+           
+           <textarea disabled  placeholder="ํYour result will be there" id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="50"></textarea><br>
+    
+           <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" onclick= "disable()" >start</button><br>
+       </div>
+           
+   
+   
+    <script>
+       
+       attachEvents();
+   
+   function attachEvents() {
+       let workingEls = getWorkingEls();
+       workingEls.forEach(attachEvent);
+   }
+   
+   function getWorkingEls() {
+       return [
+           {
+               id_start_btn: "#start-btn-{{ loop.index }}",
+               id_output_txta: "#output-textarea-{{ loop.index }}",
+           }
+           
+       ]
+   }
+   
+   function attachEvent(element, index, array) {
+       let cnt = 0;
+       let startBtnEl = document.querySelector(element.id_start_btn);
+       let outputTextAreaEl = document.querySelector(element.id_output_txta);
+       // new speech recognition object
+       let speechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
+       let recognition = new speechRecognition();
+   
+       // captures single result each time
+       recognition.continuous = false
+
+       
+       startBtnEl.onclick = function () {
+           ++cnt;
+           console.log(cnt);
+           outputTextAreaEl.value = "";
+           
+           recognition.start();
+           if (cnt == 4) {
+            startBtnEl.disabled = true;
+            recognition.stop();
+           }
+       };
+   
+     /*  recognition.onend = function() {
+           startBtnEl.disabled = false;
+       } */
+   
+       recognition.onresult = function (event) {
+           let current = event.resultIndex;
+           outputTextAreaEl.value = `${event.results[current][0].transcript}`;
+           let prob = document.querySelector("#words-{{ loop.index }}").innerHTML;
+           let resultText = document.querySelector("#output-textarea-{{ loop.index }}").value;
+           let result1 = prob.trim();
+           let result2 = resultText.trim();
+           let rLower = result1.toLowerCase();
+           let pLower = result2.toLowerCase();
+           let score = document.querySelector("#score"); 
+           if ( rLower === pLower){
+               i += 1;
+               score.value = i;
+               }
+          }
+   }    
+   
+   
+    </script>
+   
+    {% endfor %}
+    
+   <input hidden type="text" name="score" id="score">
+    <hr>
+       <div class="text-center">
+           <button class="btn btn-primary" type="submit" id="submit"  form="answer" name="score">Submit </button>
+       </div>    
+   </form>
+   
+   
 {% endblock %}
 
 
