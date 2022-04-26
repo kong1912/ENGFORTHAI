@@ -58,22 +58,19 @@ def exercise_lesson5():
 @test_bp.route('/pre-test')
 def pretest():
     words = []
-    cursor.execute("SELECT word FROM word_list WHERE stress = 1 ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = 1  LIMIT 3") #ORDER BY RAND()
     w1 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = 2 ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = 2 LIMIT 3")
     w2 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = 3 ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = 3 LIMIT 3")
     w3 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = 4 ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = 4 LIMIT 3")
     w4 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = 5 ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = 5 LIMIT 3")
     w5 = cursor.fetchall()
     words = w1 + w2 + w3 + w4 + w5
-    print(words)
-    words = random.sample(words,len(words))
-    print(words)
-
-    return render_template('pretest.html.jinja')
+    # words = random.sample(words,len(words))
+    return render_template('pretest.html.jinja',words=words)
 
 @test_bp.route('/post-test')
 def postteset():

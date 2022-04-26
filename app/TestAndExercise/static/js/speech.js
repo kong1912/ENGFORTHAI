@@ -8,8 +8,8 @@ function attachEvents() {
 function getWorkingEls() {
     return [
         {
-            id_start_btn: "#start-btn",
-            id_output_txta: "#output-textarea"
+            id_start_btn: "#start-btn-{{ loop.index }}",
+            id_output_txta: "#output-textarea-{{ loop.index }}"
         },
     ]
 }
@@ -18,11 +18,9 @@ function attachEvent(element, index, array) {
     
     let startBtnEl = document.querySelector(element.id_start_btn);
     let outputTextAreaEl = document.querySelector(element.id_output_txta);
-
     // new speech recognition object
     let speechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
     let recognition = new speechRecognition();
-
     // captures single result each time
     recognition.continuous = false
     
@@ -39,6 +37,5 @@ function attachEvent(element, index, array) {
     recognition.onresult = function (event) {
         let current = event.resultIndex;
         outputTextAreaEl.value = `${event.results[current][0].transcript}`;
-        
     }
 }
