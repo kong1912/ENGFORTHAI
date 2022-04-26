@@ -2,6 +2,10 @@ import json
 from flask import Blueprint, redirect, url_for, render_template, jsonify, request
 from app import conn, cursor, cursor_dict
 from ..user import login_required
+import random
+
+
+
 
 test_bp = Blueprint('test', __name__,
                     template_folder='templates',
@@ -12,8 +16,8 @@ test_bp = Blueprint('test', __name__,
 @test_bp.route('/exercise_lesson1',methods=['GET', 'POST'])
 @login_required
 def exercise_lesson1():
-    cursor_dict.execute("SELECT word FROM word_list WHERE lesson = 1")
-    words = cursor_dict.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE lesson = 1")
+    words = cursor.fetchall()
     return render_template('exercise_lesson1.html.jinja', words=words)
     
 @test_bp.route('/exercise_lesson2')
@@ -25,7 +29,6 @@ def exercise_lesson2():
         
     return render_template('exercise_lesson2.html.jinja',words=words)
   
-
 @test_bp.route('/exercise_lesson3')
 @login_required
 def exercise_lesson3():
@@ -54,8 +57,21 @@ def exercise_lesson5():
     
 @test_bp.route('/pre-test')
 def pretest():
-    
-
+    words = []
+    cursor.execute("SELECT word FROM word_list WHERE stress = 1 ORDER BY RAND() LIMIT 3")
+    w1 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = 2 ORDER BY RAND() LIMIT 3")
+    w2 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = 3 ORDER BY RAND() LIMIT 3")
+    w3 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = 4 ORDER BY RAND() LIMIT 3")
+    w4 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = 5 ORDER BY RAND() LIMIT 3")
+    w5 = cursor.fetchall()
+    words = w1 + w2 + w3 + w4 + w5
+    print(words)
+    words = random.sample(words,len(words))
+    print(words)
 
     return render_template('pretest.html.jinja')
 

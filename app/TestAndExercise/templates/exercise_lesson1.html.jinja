@@ -21,7 +21,7 @@
    <form id="answer" name="answer"  method="post" >
        <div class="text-center">       
            
-           <textarea disabled  placeholder="ํYour result will be there" id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="50"></textarea><br>
+           <textarea disabled   id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="50"></textarea><br>
     
            <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" onclick= "disable()" >start</button><br>
        </div>
@@ -54,6 +54,9 @@
        // new speech recognition object
        let speechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
        let recognition = new speechRecognition();
+       if (cnt == 4) {
+           startBtnEl.disabled = true;
+       }
    
        // captures single result each time
        recognition.continuous = false
@@ -63,12 +66,10 @@
            ++cnt;
            console.log(cnt);
            outputTextAreaEl.value = "";
-           
            recognition.start();
            if (cnt == 4) {
             startBtnEl.disabled = true;
-            recognition.stop();
-           }
+        }
        };
    
      /*  recognition.onend = function() {
@@ -76,6 +77,9 @@
        } */
    
        recognition.onresult = function (event) {
+        if (cnt == 4) {
+            startBtnEl.disabled = true;
+        }
            let current = event.resultIndex;
            outputTextAreaEl.value = `${event.results[current][0].transcript}`;
            let prob = document.querySelector("#words-{{ loop.index }}").innerHTML;
