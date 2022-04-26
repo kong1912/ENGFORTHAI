@@ -34,6 +34,7 @@ class RegisterForm(FlaskForm):
         data = cursor_dict.fetchone()
         if data:
             raise ValidationError(f'มี E-mail {data[0]} อยู่ในระบบแล้ว')
+
         
 
 
@@ -43,18 +44,21 @@ class LoginForm(FlaskForm):
     password = PasswordField('รหัสผ่าน', validators=[DataRequired(message="กรุณากรอกรหัสผ่าน")])
     submit = SubmitField('เข้าสู่ระบบ')
 
-    def validate_user(self):
-        # check username
-        cursor.execute(f"SELECT username FROM user WHERE username = {self.username.data}")
-        data = cursor.fetchone()
-        if data is None:
-            raise ValidationError("ไม่มีชื่อผู้ใช้นี้ในระบบ")
-        
-        # check email
-        cursor.execute(f"SELECT password FROM user WHERE username = {self.username.data}")
-        data = cursor.fetchone()
-        if data != self.password.data:
-            raise ValidationError("รหัสผ่านไม่ถูกต้อง")
+    def validate_username(self, username):
+        cursor.execute("SELECT username FROM user WHERE username = %s", (username.data))
+        data = cursor_dict.fetchone()
+        if not data:
+            raise ValidationError('ไม่พบชื่อผู้ใช้นี้ในระบบ')
+
+    def validate_password(self, password):
+        cursor.execute("SELECT password FROM user WHERE username = %s", (self.username.data))
+        data = cursor_dict.fetchone()
+        if not data:
+            raise ValidationError('ไม่พบชื่อผู้ใช้นี้ในระบบ')
+        if not data[0] == password.data:
+            raise ValidationError('รหัสผ่านไม่ถูกต้อง')
+
+    
 
             
 
