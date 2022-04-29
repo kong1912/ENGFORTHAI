@@ -1,5 +1,5 @@
 import json
-from flask import Blueprint, redirect, url_for, render_template, jsonify, request
+from flask import Blueprint, redirect, url_for, render_template, jsonify, request, session
 from app import conn, cursor, cursor_dict
 from ..user import login_required
 import random
@@ -77,6 +77,18 @@ def postteset():
 
     return render_template('posttest.html.jinja')
 
+@test_bp.route('/result',methods=['GET', 'POST'])
+def result():
+    if request.method == 'POST':
+        data = request.get_json()
+        print(data)
+        cursor.execute("INSERT INTO score (score) VALUES (%s) WHERE user_id = %s", (data['score'], session['u_id']))
+        conn.commit()
+        return jsonify(data)
+    
+    
+    
+        
 
     
 

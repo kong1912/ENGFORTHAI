@@ -22,16 +22,17 @@ class RegisterForm(FlaskForm):
                                                             DataRequired(message="กรุณากรอกรหัสผ่านยืนยัน")])
     submit = SubmitField('สมัครสมาชิก')
 
-    def validate_user(self):
+    def validate_username(self,username):
         # check username
-        cursor.execute(f"SELECT username FROM user WHERE username = {self.username.data}")
-        data = cursor_dict.fetchone()
+        cursor.execute(f"SELECT username FROM user WHERE username = %s", (username.data))
+        data = cursor.fetchone()
+        print(data)
         if data:
             raise ValidationError(f'มีชื่อผู้ใช้ {data[0]} อยู่ในระบบแล้ว')
-        
-        # check email
-        cursor.execute(f"SELECT email FROM user WHERE email = {self.email.data}")
-        data = cursor_dict.fetchone()
+    
+    def validate_email(self,email):
+        cursor.execute(f"SELECT email FROM user WHERE email = %s",(email.data))
+        data = cursor.fetchone()
         if data:
             raise ValidationError(f'มี E-mail {data[0]} อยู่ในระบบแล้ว')
 
@@ -44,24 +45,18 @@ class LoginForm(FlaskForm):
     password = PasswordField('รหัสผ่าน', validators=[DataRequired(message="กรุณากรอกรหัสผ่าน")])
     submit = SubmitField('เข้าสู่ระบบ')
 
-    def validate_username(self, username):
+    def validate_username(self,username):
         cursor.execute("SELECT username FROM user WHERE username = %s", (username.data))
-        data = cursor_dict.fetchone()
+        data = cursor.fetchone()
         if not data:
-            raise ValidationError('ไม่พบชื่อผู้ใช้นี้ในระบบ')
+            raise ValidationError('ชื่อผู้ใช้ไม่ถูกต้อง')
 
-    def validate_password(self, password):
-        cursor.execute("SELECT password FROM user WHERE username = %s", (self.username.data))
-        data = cursor_dict.fetchone()
+    def validate_password(self,password):
+        cursor.execute("SELECT password FROM user WHERE username = %s and password = %s", (self.username.data,password.data))
+        data = cursor.fetchone()
         if not data:
-            raise ValidationError('ไม่พบชื่อผู้ใช้นี้ในระบบ')
-        if not data[0] == password.data:
             raise ValidationError('รหัสผ่านไม่ถูกต้อง')
-
-    
-
-            
-
+        
 
 
     
