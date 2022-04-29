@@ -5,7 +5,6 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, EqualTo, Length, Email, ValidationError
 from app import cursor, cursor_dict
 
-
 class RegisterForm(FlaskForm):
     
     firstname = StringField('ชื่อจริง', validators=[DataRequired(message="กรุณากรอกชื่อจริง"),
@@ -21,23 +20,17 @@ class RegisterForm(FlaskForm):
     confirm_password = PasswordField('ยืนยันรหัสผ่าน', validators=[EqualTo('password',message="รหัสผ่านยืนยันไม่ถูกต้อง"),
                                                             DataRequired(message="กรุณากรอกรหัสผ่านยืนยัน")])
     submit = SubmitField('สมัครสมาชิก')
-
     def validate_username(self,username):
-        # check username
         cursor.execute(f"SELECT username FROM user WHERE username = %s", (username.data))
         data = cursor.fetchone()
         print(data)
         if data:
             raise ValidationError(f'มีชื่อผู้ใช้ {data[0]} อยู่ในระบบแล้ว')
-    
     def validate_email(self,email):
         cursor.execute(f"SELECT email FROM user WHERE email = %s",(email.data))
         data = cursor.fetchone()
         if data:
             raise ValidationError(f'มี E-mail {data[0]} อยู่ในระบบแล้ว')
-
-        
-
 
 class LoginForm(FlaskForm):
 

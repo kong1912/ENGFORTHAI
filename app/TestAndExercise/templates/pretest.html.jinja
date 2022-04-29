@@ -54,7 +54,11 @@
                 let recognition = new speechRecognition();
                 let score = 100;
                 if (cnt >= 4) {
+
                     startBtnEl.disabled = true;
+                    result = score;
+                    scoreTextAreaEl.value = result;
+                    
                 }
             
                 // captures single result each time
@@ -95,11 +99,13 @@
                    
                     if (cnt >= 4) {
                         startBtnEl.disabled = true;
-                        result = 0;
+                        result = score;
+                        scoreTextAreaEl.value = result;
                     }
                     console.log(`score =  ${score}`);
                     console.log(`result =  ${result}`);
                 }
+                
                 recognition.onnomatch = function() 
                 {
                     console.log('Speech not recognized');
@@ -116,9 +122,9 @@
         <button class="btn btn-primary" type="submit" id="submit"  form="answer" name="score">Submit </button>
     </div>    
     </form>
-    <script type="text/javascript"
+   <script type="text/javascript"
             src="{{ url_for('test.static', filename='js/scoring.js') }}">
-    </script>   
+    </script> 
 {% endblock %}
 
 

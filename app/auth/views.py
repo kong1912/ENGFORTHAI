@@ -37,7 +37,6 @@ def register():
 def login():
 
     form = LoginForm()
-
     if form.validate_on_submit():
         user = User(form.username.data,form.password.data)
         user.login_user()
@@ -47,7 +46,6 @@ def login():
 
 @auth_bp.route('/logout')
 def logout():
-    
     logout_user()
     return redirect(url_for('main.intro'))
     

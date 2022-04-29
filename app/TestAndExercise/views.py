@@ -2,8 +2,6 @@ import json
 from flask import Blueprint, redirect, url_for, render_template, jsonify, request, session
 from app import conn, cursor, cursor_dict
 from ..user import login_required
-import random
-
 
 test_bp = Blueprint('test', __name__,
                     template_folder='templates',
@@ -21,10 +19,9 @@ def exercise_lesson1():
 @test_bp.route('/exercise_lesson2')
 @login_required
 def exercise_lesson2():
-
     cursor.execute("SELECT word FROM word_list WHERE lesson = 2")
     words = cursor.fetchall()
-        
+
     return render_template('exercise_lesson2.html.jinja',words=words)
   
 @test_bp.route('/exercise_lesson3')
@@ -76,7 +73,7 @@ def postteset():
     return render_template('posttest.html.jinja')
 
 @test_bp.route('/insert_score',methods=['GET,POST'])
-def result():
+def insert_score():
     if request.method == 'POST':
         data = request.get_json()
         print(data)
@@ -84,3 +81,15 @@ def result():
                          VALUES ({data[0].score},{data[1].score},{data[2].score},{data[3].score},{data[4].score})")
         conn.commit()
         return jsonify(data)
+
+@test_bp.route('/result')
+def result():
+    cursor.execute("SELECT pre_s FROM score WHERE u_id = %s", (session['u_id']))
+    pre_s = cursor.fetchone()
+    cursor_dict.execute("SELECT s1_s,s2_s,s3_s,s4_s,s5_s FROM score WHERE u_id = %s", (session['u_id']))
+    stress = cursor_dict.fetchone()
+    print(stress)
+    # sort stress ascending
+    stress = sorted(stress, key=lambda x: x[1:])
+    print(stress)
+    return render_template('result.html.jinja',stress=stress,pre_s=pre_s)
