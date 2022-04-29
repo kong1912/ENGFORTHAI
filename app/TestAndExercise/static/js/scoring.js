@@ -30,12 +30,8 @@ let result = [{
         }
 ];
 
-result.sort(function(a, b) {
-        return a.score - b.score;
-});
-                 
 let xhr = new XMLHttpRequest();
-xhr.open("POST", "/result");
+xhr.open("POST", "/insert_score");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.send(JSON.stringify(result));
 

@@ -5,8 +5,6 @@ from ..user import login_required
 import random
 
 
-
-
 test_bp = Blueprint('test', __name__,
                     template_folder='templates',
                     static_folder='static', 
@@ -77,27 +75,12 @@ def postteset():
 
     return render_template('posttest.html.jinja')
 
-@test_bp.route('/result',methods=['GET', 'POST'])
+@test_bp.route('/insert_score',methods=['GET,POST'])
 def result():
     if request.method == 'POST':
         data = request.get_json()
         print(data)
-        cursor.execute("INSERT INTO score (score) VALUES (%s) WHERE user_id = %s", (data['score'], session['u_id']))
+        cursor.execute(f"INSERT INTO score (s1_s,s2_s,s3_s,s4_s,s5_s) \
+                         VALUES ({data[0].score},{data[1].score},{data[2].score},{data[3].score},{data[4].score})")
         conn.commit()
         return jsonify(data)
-    
-    
-    
-        
-
-    
-
-
-
-
-
-
-
-
-
-
