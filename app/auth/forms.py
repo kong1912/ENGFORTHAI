@@ -50,20 +50,3 @@ class LoginForm(FlaskForm):
         if not data:
             raise ValidationError('รหัสผ่านไม่ถูกต้อง')
         
-
-
-    
-
-
-   
-
-
-
-
-
-
-
-
-
-
-

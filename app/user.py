@@ -9,7 +9,6 @@ class User():
         self.username = username
         self.password = password
 
-
     def login_user(self):
         cursor_dict.execute('SELECT * FROM user WHERE username = %s AND password = %s',(self.username, self.password))
         user = cursor_dict.fetchone()
@@ -42,35 +41,11 @@ def user_is_authenticated():
     return 'loggedin' in session
 
 def get_user():
-        cursor_dict.execute('SELECT * FROM user WHERE u_id = %s', (session['u_id']))
-        user = cursor_dict.fetchone()
-        return user
+    cursor_dict.execute('SELECT * FROM user WHERE u_id = %s', (session['u_id']))
+    user = cursor_dict.fetchone()
+    return user
 
-
-
-
-
-
-
-
-
-        
-    
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
+def get_score():
+    cursor_dict.execute('SELECT * FROM score WHERE u_id = %s', (session['u_id']))
+    score = cursor_dict.fetchone()
+    return score

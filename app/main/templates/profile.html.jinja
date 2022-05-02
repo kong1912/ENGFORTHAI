@@ -3,31 +3,15 @@
 {% block title %}Profile{% endblock %}
  
 {% block content %}
-<div class="text-center"></div>
-    <h1>Profile Page</h1>
-    <div class="h3">
-        <p>Your account details are below:</p>
-        <table >
-            <tr>
-                <td>Name:</td>
-                <td>{{ session['fullname'] }}</td>
-            </tr>
-            <tr>
-                <td>Username:</td>
-                <td>{{ session['username'] }}</td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td>{{ session['password'] }}</td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td>{{ session['email'] }}</td>
-                <tr>
-                    <td>Score:</td>
-                    <td>{{ session['score'] }}</td>
-                </tr
-            
-        </table>
-</div>
+    <div class="justify container text-center">
+        <p class="h1">Profile</p>
+        <p class="h2">ชื่อ : {{ user.firstname + " " +  user.lastname }} </p>
+        <p class="h2"> คะแนน pretest : {{ score.pre_s }} </p>
+        <p class="h2"> คะแนน posttest : {{ score.post_s }} </p>
+        <p class="h2"> คะแนนการออกเสียง /ð/ - /θ/ - /tθ/  : {{ score.s1_s }} </p>
+        <p class="h2"> คะแนนการออกเสียง /ʒ/ - /ʃ/  : {{ score.s2_s }} </p>
+        <p class="h2"> คะแนนการออกเสียง /dʒ/ - /tʃ/ : {{ score.s3_s }} </p>
+        <p class="h2"> คะแนนการออกเสียง /z/  - /s/  : {{ score.s4_s }} </p>
+        <p class="h2"> คะแนนการออกเสียง /b/ - /p/  : {{ score.s5_s }} </p>
+    </div>
 {% endblock %}
