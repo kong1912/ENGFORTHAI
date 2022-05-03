@@ -29,7 +29,7 @@ import torchaudio
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"C:\_temp\iSAI-NLP-2021")
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\\SciUsProject_ENGFORTHAI\\iSAI-NLP-2021")
 ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
 ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
 AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"
@@ -274,9 +274,8 @@ def predict(tensor):
 
 
 def load_audio():
-    TEST_FILE: pathlib.Path = pathlib.Path("C:\_temp\iSAI-NLP-2021\wav\2017\M0000000002_0041.wav")
 
-    return torchaudio.load("C:\\_temp\\iSAI-NLP-2021\\wav\\2017\\M0000000002_0041.wav")
+    return torchaudio.load("E:\\SciUsProject_ENGFORTHAI\\iSAI-NLP-2021\\wav\\2017\\M0000000002_0041.wav")
 
 
 # waveform, sample_rate = record()

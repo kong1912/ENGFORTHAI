@@ -28,10 +28,10 @@ import torchaudio
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"C:\_temp\iSAI-NLP-2021")
-ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\\SciUsProject_ENGFORTHAI\\ไฟล์เสียง ใส่ app")
+ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb1.txt"
 ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
-AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"
+AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "Word level"
 
 APP_DIR: pathlib.Path = pathlib.Path.cwd()
 VAR_DIR: pathlib.Path = APP_DIR / "var"
@@ -154,11 +154,11 @@ def index_to_label(index):
     return labels[index]
 
 
-word_start = "ปิดโปรแกรม"
-index = label_to_index(word_start)
-word_recovered = index_to_label(index)
+# word_start = "ปิดโปรแกรม"
+# index = label_to_index(word_start)
+# word_recovered = index_to_label(index)
 
-print(word_start, "-->", index, "-->", word_recovered)
+# print(word_start, "-->", index, "-->", word_recovered)
 
 """To turn a list of data point made of audio recordings and utterances
 into two batched tensors for the model, we implement a collate function
