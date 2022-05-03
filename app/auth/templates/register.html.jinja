@@ -8,16 +8,16 @@
       <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-            <div class="card" style="border-radius: 15px;">
+            <div class="card border border-5" style="border-radius: 15px;">
               <div class="card-body p-5">
                 <h2 class="text-uppercase text-center mb-5">Create an account</h2>      
                 <form method="POST" novalidate autocomplete="off"> 
                   {{ form.hidden_tag() }}    
                   <div class="form-outline mb-4">
                     <div class="input-group">
-                      <span class="input-group-text">ชื่อ-นามสกุล</span>
-                      {{ form.firstname(class="form-control form-control-lg",placeholder="ชื่อจริง") }}                       
-                      {{ form.lastname(class="form-control form-control-lg",placeholder="นามสกุล") }}
+                      <span class="input-group-text">Name-Surname</span>
+                      {{ form.firstname(class="form-control form-control-lg",placeholder="Name") }}                       
+                      {{ form.lastname(class="form-control form-control-lg",placeholder="Surname") }}
                     </div>
                       {{ render_field(form.firstname) }}
                       {{ render_field(form.lastname) }} 
@@ -27,20 +27,20 @@
                     {{ form.email(class="form-control form-control-lg", placeholder="E-mail") }}
                     {{ render_field(form.email) }} <br>
 
-                    {{ form.username(class="form-control form-control-lg", placeholder="ชื่อผู้ใช้") }}
+                    {{ form.username(class="form-control form-control-lg", placeholder="Username") }}
                     {{ render_field(form.username) }} <br>
 
-                    {{ form.password(class="form-control form-control-lg", placeholder="รหัสผ่าน") }}
+                    {{ form.password(class="form-control form-control-lg", placeholder="Password") }}
                     {{ render_field(form.password) }} <br>
 
-                    {{ form.confirm_password(class="form-control form-control-lg", placeholder="ยืนยันรหัสผ่าน") }}
+                    {{ form.confirm_password(class="form-control form-control-lg", placeholder="Confirm Password") }}
                     {{ render_field(form.confirm_password) }} 
                   </div>
                   <div class="d-flex justify-content-center">
                     {{ form.submit(class="btn btn-success",value="Register") }}
                   </div>      
-                  <p class="text-center text-muted mt-5 mb-0">มีบัญชีอยู่แล้ว? 
-                    <a href="{{url_for('auth.login')}}" class="fw-bold text-body"><u>Login ที่นี่</u></a>
+                  <p class="text-center text-muted mt-5 mb-0">Already have an account? 
+                    <a href="{{url_for('auth.login')}}" class="fw-bold text-body"><u>login here</u></a>
                   </p> 
                       
                 </form>      
