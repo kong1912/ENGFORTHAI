@@ -1,0 +1,14 @@
+{% extends "layout.html.jinja" %}
+{% block title %} Coach {% endblock %}
+{% block content %}
+    <div class="text-center">
+        {% if score['pre_s'] == -1  %}
+        <p class="h1">Please do pretest first</p>
+        <a href="{{url_for('test.pretest')}}" class="btn btn-success">Pretest</a>
+    </div>   
+    {% else %}
+   
+    
+
+    {% endif %}
+{% endblock %}

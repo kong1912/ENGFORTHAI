@@ -16,10 +16,6 @@ class User():
         for key, value in user.items():
             session[key] = value
             
-        cursor_dict.execute("SELECT * FROM score WHERE u_id = %s", (session['u_id']))   
-        score = cursor_dict.fetchone()
-        for key, value in score.items():
-            session[key] = value
     
 def logout_user():
     user = get_user()

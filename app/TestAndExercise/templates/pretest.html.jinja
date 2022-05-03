@@ -15,7 +15,7 @@
     {% for word in words %}
 
         <div class="text-center" id="words-{{ loop.index }}"> {{word| first}} </div>
-        <form id="answer" name="answer"  method="post" >
+        <form id="answer" name="answer"  method="post" action="{{url_for('test.insert_score')}}" >
         <div class="text-center">       
             
             <textarea disabled  style="resize: none;"  id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="25"></textarea><br>
@@ -142,6 +142,7 @@
                 let result = {"s1": s1_s, "s2": s2_s, "s3": s3_s, "s4": s4_s, "s5": s5_s, "total": total};
               return result;                  
             }
+            
         </script>
        
     {% endfor %}
@@ -152,9 +153,8 @@
         <button class="btn btn-primary" type="submit" id="submit"  form="answer" name="score">Submit </button>
     </div>    
     </form>
-   <script type="text/javascript"
-            src="{{ url_for('test.static', filename='js/scoring.js') }}">
-    </script> 
+    <script type="text" src="{url_for('test.static', filename='js/scoring.js')}}"></script>
+
 {% endblock %}
 
 

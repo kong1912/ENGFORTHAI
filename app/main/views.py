@@ -40,6 +40,14 @@ def about():
 
     return render_template('about.html.jinja')
 
+@main_bp.route('/coach')
+@login_required
+def coach():
+    score = get_score()
+    print(score['pre_s'])
+    
+    return render_template('coach.html.jinja',score=score)  
+
     
 
 

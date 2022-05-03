@@ -4,5 +4,3 @@ from app import mysql
 
 
 #ASR  models here
-
-

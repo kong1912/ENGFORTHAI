@@ -21,22 +21,20 @@ let s5_s  = Number(document.getElementById("score-13").value) +
             Number(document.getElementById("score-15").value);
 
 let total = s1_s + s2_s + s3_s + s4_s + s5_s;
-let result = {"s1": s1_s, "s2": s2_s, "s3": s3_s, "s4": s4_s, "s5": s5_s, "total": total};
+let result = {"s1": s1_s, 
+              "s2": s2_s,
+              "s3": s3_s, 
+              "s4": s4_s, 
+              "s5": s5_s, 
+              "total": total};
 // let xhr = new XMLHttpRequest();
 // xhr.open("POST", "/insert_score");
 // xhr.setRequestHeader("Content-Type", "application/json");
 // xhr.send(JSON.stringify(result));
-$.ajax({
-        type: "POST",
-        url: "/insert_score",
-        data: JSON.stringify(result),
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        success: function(data){
-                console.log(data);
-                }
-        });
-
-
-
-
+fetch('/test')
+      .then(function (response) {
+          return response.json();
+      }).then(function (text) {
+          console.log('GET response:');
+          console.log(text.greeting); 
+      });
