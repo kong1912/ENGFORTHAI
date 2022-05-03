@@ -1,70 +1,56 @@
+{% extends "layout.html.jinja" %}
 {% from "form_field.jinja" import render_field %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-          rel="stylesheet" 
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('auth.static', filename='css/style.css') }}">
-</head>
-<body>
-  <section class="vh-100 bg-image" style="background: #FFFFFF url({{ url_for('main.static', filename='img/test6.jpg') }}) center center/cover no-repeat local;">
-        <div class="mask d-flex align-items-center h-100 gradient-custom-4">
-          <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                <div class="card" style="border-radius: 15px;">
-                  <div class="card-body p-5">
-                    <h2 class="text-uppercase text-center mb-5">Create an account</h2>      
-                    <form method="POST" novalidate autocomplete="off"> 
-                      {{ form.hidden_tag() }}    
-                      <div class="form-outline mb-4">
-                        <div class="input-group">
-                          <span class="input-group-text">ชื่อ-นามสกุล</span>
-                          {{ form.firstname(class="form-control form-control-lg",placeholder="ชื่อจริง") }}                       
-                          {{ form.lastname(class="form-control form-control-lg",placeholder="นามสกุล") }}
-                        </div>
-                          {{ render_field(form.firstname) }}
-                          {{ render_field(form.lastname) }} 
-                          <br>
-                        
 
-                        {{ form.email(class="form-control form-control-lg", placeholder="E-mail") }}
-                        {{ render_field(form.email) }} <br>
+{% block content %}
+<br>
+  <div class="position-relative">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-4">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">Create an account</h2>      
+                <form method="POST" novalidate autocomplete="off"> 
+                  {{ form.hidden_tag() }}    
+                  <div class="form-outline mb-4">
+                    <div class="input-group">
+                      <span class="input-group-text">ชื่อ-นามสกุล</span>
+                      {{ form.firstname(class="form-control form-control-lg",placeholder="ชื่อจริง") }}                       
+                      {{ form.lastname(class="form-control form-control-lg",placeholder="นามสกุล") }}
+                    </div>
+                      {{ render_field(form.firstname) }}
+                      {{ render_field(form.lastname) }} 
+                      <br>
+                    
 
-                        {{ form.username(class="form-control form-control-lg", placeholder="ชื่อผู้ใช้") }}
-                        {{ render_field(form.username) }} <br>
+                    {{ form.email(class="form-control form-control-lg", placeholder="E-mail") }}
+                    {{ render_field(form.email) }} <br>
 
-                        {{ form.password(class="form-control form-control-lg", placeholder="รหัสผ่าน") }}
-                        {{ render_field(form.password) }} <br>
+                    {{ form.username(class="form-control form-control-lg", placeholder="ชื่อผู้ใช้") }}
+                    {{ render_field(form.username) }} <br>
 
-                        {{ form.confirm_password(class="form-control form-control-lg", placeholder="ยืนยันรหัสผ่าน") }}
-                        {{ render_field(form.confirm_password) }} 
-                      </div>
-                      <div class="d-flex justify-content-center">
-                        {{ form.submit(class="btn btn-success btn-block btn-lg gradient-custom-4 text-body",value="Register") }}
-                      </div>      
-                      <p class="text-center text-muted mt-5 mb-0">มีบัญชีอยู่แล้ว? 
-                        <a href="{{url_for('auth.login')}}" class="fw-bold text-body"><u>Login ที่นี่</u></a>
-                      </p> 
-                           
-                    </form>      
+                    {{ form.password(class="form-control form-control-lg", placeholder="รหัสผ่าน") }}
+                    {{ render_field(form.password) }} <br>
+
+                    {{ form.confirm_password(class="form-control form-control-lg", placeholder="ยืนยันรหัสผ่าน") }}
+                    {{ render_field(form.confirm_password) }} 
                   </div>
-                </div>
+                  <div class="d-flex justify-content-center">
+                    {{ form.submit(class="btn btn-success",value="Register") }}
+                  </div>      
+                  <p class="text-center text-muted mt-5 mb-0">มีบัญชีอยู่แล้ว? 
+                    <a href="{{url_for('auth.login')}}" class="fw-bold text-body"><u>Login ที่นี่</u></a>
+                  </p> 
+                      
+                </form>      
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+{% endblock %}
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
-   crossorigin="anonymous"></script>
-</body>
-</html>
+    

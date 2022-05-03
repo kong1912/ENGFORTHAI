@@ -10,17 +10,15 @@ main_bp = Blueprint('main',__name__,
                     static_folder='static',static_url_path='/main/static')
 
 @main_bp.route('/')
-def intro():
-    if user_is_authenticated():
-        return redirect(url_for('main.home'))
-
-    return render_template('index.html')
-    
-@main_bp.route('/home')
-@login_required
 def home():
 
     return render_template('home.html.jinja')
+    
+# @main_bp.route('/home')
+# @login_required
+# def home():
+
+#     return render_template('home.html.jinja')
     
 @main_bp.route('/profile')
 @login_required
@@ -35,6 +33,13 @@ def profile():
 def course():
 
     return render_template('course.html.jinja')
+
+@main_bp.route('/about')
+@login_required
+def about():
+
+    return render_template('about.html.jinja')
+
     
 
 
