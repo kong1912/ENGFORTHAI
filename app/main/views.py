@@ -14,7 +14,7 @@ def intro():
     if user_is_authenticated():
         return redirect(url_for('main.home'))
 
-    return render_template('intro.html.jinja')
+    return render_template('index.html')
     
 @main_bp.route('/home')
 @login_required
