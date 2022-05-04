@@ -14,12 +14,6 @@ def home():
 
     return render_template('home.html.jinja')
     
-# @main_bp.route('/home')
-# @login_required
-# def home():
-
-#     return render_template('home.html.jinja')
-    
 @main_bp.route('/profile')
 @login_required
 def profile(): 
@@ -35,7 +29,6 @@ def course():
     return render_template('course.html.jinja')
 
 @main_bp.route('/about')
-@login_required
 def about():
 
     return render_template('about.html.jinja')
