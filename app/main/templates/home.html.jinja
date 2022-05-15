@@ -11,9 +11,7 @@
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown"></h5>
-                                <h1 class="display-3 text-white animated slideInDown">Best English pronunciation practice platform</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">This platform provides an AI to guide you to speak like a native speaker just like you have your own tutors!</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <h1 class="display-3 text-white animated slideInDown">Let's do Pre-test to test your skills!</h1>
                                 <a href="{{ url_for('test.pretest') }}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Pre-test</a>
                             </div>
                         </div>
@@ -59,7 +57,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
                             <h5 class="mb-3">Tons of words to practice</h5>
-                            <p>There are countless words or sentences in our speech, we have compiled them for practice 
+                            <p>There are countless words in this platform, we have compiled them for practice 
                                 to be able to bring it to life correctly.</p>
                         </div>
                     </div>
@@ -181,7 +179,7 @@
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown"></h5>
                                 <h1 class="display-3 text-white animated slideInDown">Best English pronunciation practice platform</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">This platform provides an AI to guide you to speak like a native speaker just like you have your own tutors!</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="{{ url_for('main.info') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="{{ url_for('auth.register') }}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                             </div>
                         </div>
@@ -227,7 +225,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
                             <h5 class="mb-3">Tons of words to practice</h5>
-                            <p>There are countless words or sentences in our speech, we have compiled them for practice 
+                            <p>There are countless words in this platform, we have compiled them for practice 
                                 to be able to bring it to life correctly.</p>
                         </div>
                     </div>
@@ -266,7 +264,7 @@
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Education Learning</p>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="{{ url_for('main.info') }}">Read More</a>
                 </div>
             </div>
         </div>

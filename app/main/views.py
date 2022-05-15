@@ -41,6 +41,12 @@ def coach():
     
     return render_template('coach.html.jinja',score=score)  
 
+@main_bp.route('/info')
+def info():
+    
+    return render_template('info.html.jinja')
+
+
     
 
 
