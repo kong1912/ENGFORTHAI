@@ -1,19 +1,13 @@
-import MySQLdb
 from flask import Flask, redirect, session, url_for
 from flaskext.mysql import MySQL
-from flask_login import LoginManager
 import pymysql
 
-
-
-#app
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'UGWEGYWEY#(*T@#(*#@Y*(EFHEIGWHG'
 
 
 # MySQL configurations
 db = MySQL()
-connection = MySQLdb.connect(host="localhost", user="root",password="123456",database="project_2")
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = '123456'
 app.config['MYSQL_DATABASE_DB'] = 'project_2'

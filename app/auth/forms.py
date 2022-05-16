@@ -7,35 +7,38 @@ from app import cursor, cursor_dict
 
 class RegisterForm(FlaskForm):
     
-    firstname = StringField('ชื่อจริง', validators=[DataRequired(message="กรุณากรอกชื่อจริง"),
-                                                Length(min=2, max=45, message="ชื่อจริงต้องมีความยาว 2-45 ตัวอักษร")]) 
-    lastname = StringField('นามสกุล', validators=[DataRequired(message="กรุณากรอกนามสกุล"),
-                                                Length(min=2, max=45, message="นามสกุลต้องมีความยาว 2-45 ตัวอักษร")] )
-    email = StringField('E-mail', validators=[DataRequired(message="กรุณากรอกEmail"),
-                                             Email(message="รูปแบบ E-mail ไม่ถูกต้อง")])
-    username = StringField('ชื่อผู้ใช้', validators=[DataRequired(message="กรุณากรอกชื่อผู้ใช้"),
-                                                Length(min=6, max=20, message="ชื่อผู้ใช้ต้องมีความยาว 6-20 ตัวอักษร")])
-    password = PasswordField('รหัสผ่าน', validators=[DataRequired(message="กรุณากรอกรหัสผ่าน"),
-                                                    Length(min=4, max=16, message="รหัสผ่านต้องมีความยาว 4-16 ตัวอักษร")])
-    confirm_password = PasswordField('ยืนยันรหัสผ่าน', validators=[EqualTo('password',message="รหัสผ่านยืนยันไม่ถูกต้อง"),
-                                                            DataRequired(message="กรุณากรอกรหัสผ่านยืนยัน")])
+    firstname = StringField('firstname', validators=[DataRequired(message="Please enter your firstname"),
+                                                Length(min=2, max=45, message="Firstname must be between 2 and 45 characters long")])
+    lastname = StringField('lastname', validators=[DataRequired(message="Please enter your lastname"),
+                                                Length(min=2, max=45, message="Lastname must be between 2 and 45 characters long")] )
+    email = StringField('E-mail', validators=[DataRequired(message="Please enter your email"),
+                                             Email(message="Invalid email form")])
+    username = StringField('username', validators=[DataRequired(message="Please enter your username"),
+                                                Length(min=6, max=20, message="Username must be between 6 and 20 characters long")])
+    password = PasswordField('password', validators=[DataRequired(message="Please enter your password"),
+                                                    Length(min=4, max=16, message="Password must be between 4 and 16 characters long")])
+    confirm_password = PasswordField('confirm password', validators=[EqualTo('password',message="Passwords must match"),
+                                                            DataRequired(message="Please enter your confirm-password")])
     submit = SubmitField('สมัครสมาชิก')
+    def validateName(self,firstname,lastname):
+        if not re.match(r'^[a-zA-Z]+$', firstname.data) or not re.match(r'^[a-zA-Z]+$', lastname.data):
+            raise ValidationError('Please enter your name in English.')
     def validate_username(self,username):
         cursor.execute(f"SELECT username FROM user WHERE username = %s", (username.data))
         data = cursor.fetchone()
         print(data)
         if data:
-            raise ValidationError(f'มีชื่อผู้ใช้ {data[0]} อยู่ในระบบแล้ว')
+            raise ValidationError(f'There is a username "{data[0]}" in the system.')
     def validate_email(self,email):
         cursor.execute(f"SELECT email FROM user WHERE email = %s",(email.data))
         data = cursor.fetchone()
         if data:
-            raise ValidationError(f'มี E-mail {data[0]} อยู่ในระบบแล้ว')
+            raise ValidationError(f'There is a email "{data[0]}" in the system.')
 
 class LoginForm(FlaskForm):
 
-    username = StringField('ชื่อผู้ใช้', validators=[DataRequired(message="กรุณากรอกชื่อผู้ใช้")])
-    password = PasswordField('รหัสผ่าน', validators=[DataRequired(message="กรุณากรอกรหัสผ่าน")])
+    username = StringField('ชื่อผู้ใช้', validators=[DataRequired(message="Please enter your username")])
+    password = PasswordField('รหัสผ่าน', validators=[DataRequired(message="Please enter your password")])
     submit = SubmitField('เข้าสู่ระบบ')
 
     def validate_username(self,username):
