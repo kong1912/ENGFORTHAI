@@ -18,7 +18,7 @@ import os
 import pathlib
 
 # import IPython.display as ipd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import pandas as pd
 import torch
 import torch.nn as nn
@@ -104,7 +104,7 @@ the speaker, the number of the utterance.
 print("Shape of waveform: {}".format(waveform.size()))
 print("Sample rate of waveform: {}".format(sample_rate))
 
-plt.plot(waveform.t().numpy())
+# plt.plot(waveform.t().numpy())
 """Let’s find the list of labels available in the dataset.
 
 

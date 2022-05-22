@@ -20,13 +20,15 @@ class RegisterForm(FlaskForm):
     confirm_password = PasswordField('confirm password', validators=[EqualTo('password',message="Passwords must match"),
                                                             DataRequired(message="Please enter your confirm-password")])
     submit = SubmitField('สมัครสมาชิก')
-    def validateName(self,firstname,lastname):
-        if not re.match(r'^[a-zA-Z]+$', firstname.data) or not re.match(r'^[a-zA-Z]+$', lastname.data):
+    def validateName(self,firstname):
+        if not re.match(r'^[a-zA-Z]+$', firstname.data):
+            raise ValidationError('Please enter your name in English.')
+    def validateSurname(self,lastname):
+        if not re.match(r'^[a-zA-Z]+$', lastname.data):
             raise ValidationError('Please enter your name in English.')
     def validate_username(self,username):
         cursor.execute(f"SELECT username FROM user WHERE username = %s", (username.data))
         data = cursor.fetchone()
-        print(data)
         if data:
             raise ValidationError(f'There is a username "{data[0]}" in the system.')
     def validate_email(self,email):

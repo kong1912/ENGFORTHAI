@@ -1,0 +1,18 @@
+{% extends 'layout.html.jinja' %}
+{% block title %} lesson1 {% endblock %}
+{% block content %}
+
+<div class="text-center">
+  <p class="h1"></p>  
+  <br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/b4Aj3k65HSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p class="h3">You can do this exercise after finishing this lesson</p>
+  <a href="{{ url_for('test.exercise_lesson1') }}" class=" btn btn-info" role="button">Exercise</a>
+
+  
+
+</div>
+
+
+
+ {% endblock %}
