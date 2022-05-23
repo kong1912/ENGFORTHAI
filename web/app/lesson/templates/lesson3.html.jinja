@@ -1,21 +1,12 @@
 {% extends 'layout.html.jinja' %}
 {% block head %}
-
-
- 
-
 {% endblock %}
 {% block content %}
-
 <div class="text-center">
-  <p class="h1">This is Lesson 3 page</p>  
-  <br><br><br><br>
-
-  <p class="h3">เรียนเสร็จแล้ว ทำแบบฝีกหัดที่นี่</p>
-
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/0IeQmGdo7gQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/PykxZ5kkrjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p class="h3">You can do exercise after finishing this lesson</p>
   <a href="{{ url_for('test.exercise_lesson3') }}" class=" btn btn-info" role="button">Exercise</a>
 
 </div>
-
-
- {% endblock %}
+{% endblock %}

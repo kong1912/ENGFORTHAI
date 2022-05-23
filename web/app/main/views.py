@@ -1,5 +1,4 @@
 from flask import request, redirect, url_for, render_template,flash, session
-from app import app
 from app import conn ,cursor, cursor_dict
 from ..user import login_required,get_user, user_is_authenticated, get_score
 
@@ -11,13 +10,12 @@ main_bp = Blueprint('main',__name__,
 
 @main_bp.route('/')
 def home():
-
-    return render_template('home.html.jinja')
+    score = get_score()
+    return render_template('home.html.jinja',score=score)
     
 @main_bp.route('/profile')
 @login_required
 def profile(): 
-
     user = get_user()
     score = get_score()
     return render_template('profile.html.jinja',user=user,score=score)
@@ -25,7 +23,7 @@ def profile():
 @main_bp.route('/course')
 @login_required
 def course():
-
+    
     return render_template('course.html.jinja')
 
 @main_bp.route('/about')
@@ -38,21 +36,9 @@ def about():
 def coach():
     score = get_score()
     print(score['pre_s'])
-    
     return render_template('coach.html.jinja',score=score)  
 
 @main_bp.route('/info')
 def info():
     
     return render_template('info.html.jinja')
-
-
-    
-
-
-
-
-
-
-
-    

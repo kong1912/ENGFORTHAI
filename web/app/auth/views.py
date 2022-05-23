@@ -1,7 +1,6 @@
 from dataclasses import field
 from colorama import Cursor
 from flask import request, redirect, url_for, render_template,flash,Blueprint, session
-from app import app
 from app import conn , cursor
 from ..auth.forms import LoginForm, RegisterForm
 from ..user import User, logout_user, user_is_authenticated

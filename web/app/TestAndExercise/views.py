@@ -49,7 +49,7 @@ def exercise_lesson5():
     words = cursor.fetchall()
 
     return render_template('exercise_lesson5.html.jinja',words=words)
-    
+     
 @test_bp.route('/pre-test')
 def pretest():
     # if 'pre_w' in session:

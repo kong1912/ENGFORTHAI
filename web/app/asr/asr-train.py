@@ -28,9 +28,10 @@ import torchaudio
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\\SciUsProject_ENGFORTHAI\\iSAI-NLP-2021")
-ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
-ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\\SciUsProject_ENGFORTHAI\\ไฟล์เสียง ใส่ app")
+ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb1.csv"
+ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb1.csv"
 AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"
 
 APP_DIR: pathlib.Path = pathlib.Path.cwd()
