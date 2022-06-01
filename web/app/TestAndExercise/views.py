@@ -1,6 +1,8 @@
 import json
-from flask import Blueprint, redirect, url_for, render_template, jsonify, request, session
-from app import conn, cursor, cursor_dict
+import os
+import uuid
+from flask import Blueprint, redirect, url_for, render_template, jsonify, request, session, flash
+from app import conn, cursor, cursor_dict, app
 from ..user import login_required
 
 test_bp = Blueprint('test', __name__,
@@ -52,24 +54,9 @@ def exercise_lesson5():
      
 @test_bp.route('/pre-test')
 def pretest():
-    # if 'pre_w' in session:
-    #     return render_template('pretest.html.jinja',words=session['pre_w'])
+    cursor.execute("SELECT word FROM word_list WHERE lesson = 1")
+    words = cursor.fetchall()
 
-    words = []
-    cursor.execute("SELECT word FROM word_list WHERE stress = 1  LIMIT 3") 
-    w1 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = 2  LIMIT 3 ")
-    w2 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = 3 LIMIT 3 ")
-    w3 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = 4 LIMIT 3 ")
-    w4 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = 5 LIMIT 3 ")
-    w5 = cursor.fetchall()
-    words = w1 + w2 + w3 + w4 + w5
-    session['pre_w'] = words
-    # if request.form.method == 'POST':
-    #     session.pop('pre_w', None)
     return render_template('pretest.html.jinja',words=words)
 
 @test_bp.route('/post-test')
@@ -77,15 +64,15 @@ def postteset():
 
     return render_template('posttest.html.jinja')
 
-@test_bp.route('/insert_score',methods=['POST'])
-def insert_score():
-    if request.method == 'POST':
-        data = request.get_json()
-        print(data)
-        cursor.execute(f"INSERT INTO score (s1_s,s2_s,s3_s,s4_s,s5_s) \
-                         VALUES ({data[0].score},{data[1].score},{data[2].score},{data[3].score},{data[4].score})")
-        conn.commit()
-        return jsonify({})
+# @test_bp.route('/insert_score',methods=['POST'])
+# def insert_score():
+#     if request.method == 'POST':
+#         data = request.get_json()
+#         print(data)
+#         cursor.execute(f"INSERT INTO score (s1_s,s2_s,s3_s,s4_s,s5_s) \
+#                          VALUES ({data[0].score},{data[1].score},{data[2].score},{data[3].score},{data[4].score})")
+#         conn.commit()
+#         return jsonify({})
 
 @test_bp.route('/result')
 def result():
@@ -98,3 +85,20 @@ def result():
     stress = sorted(stress, key=lambda x: x[1:])
     print(stress)
     return render_template('result.html.jinja',stress=stress,pre_s=pre_s)
+
+@test_bp.route('/save-record', methods=['POST','GET'])
+def save_record():
+    # check if the post request has the file part
+    if 'file' not in request.files:
+        flash('No file part')
+        return redirect(request.url)
+    file = request.files['file']
+    # if user does not select file, browser also
+    # submit an empty part without filename
+    if file.filename == '':
+        flash('No selected file')
+        return redirect(request.url)
+    file_name = str(uuid.uuid4()) + ".mp3"
+    full_file_name = os.path.join(app.config['UPLOAD_FOLDER'], file_name)
+    file.save(full_file_name)
+    return '<h1>Success</h1>'

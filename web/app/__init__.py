@@ -1,9 +1,14 @@
+import os
+import uuid
 from flask import Flask, redirect, session, url_for
 from flaskext.mysql import MySQL
 import pymysql
 
+UPLOAD_FOLDER = 'files'
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'UGWEGYWEY#(*T@#(*#@Y*(EFHEIGWHG'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
 # MySQL configurations
@@ -13,6 +18,11 @@ app.config['MYSQL_DATABASE_PASSWORD'] = '123456'
 app.config['MYSQL_DATABASE_DB'] = 'project_2'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 db.init_app(app)
+
+
+
+
+
 
 #execute tables
 conn = db.connect()

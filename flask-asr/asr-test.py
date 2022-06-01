@@ -140,9 +140,6 @@ datasets though to have to reduce the number of channels (say from
 stereo to mono) by either taking the mean along the channel dimension,
 or simply keeping only one of the channels. Since SpeechCommands uses a
 single channel for audio, this is not needed here.
-
-
-
 """
 
 new_sample_rate = 8000

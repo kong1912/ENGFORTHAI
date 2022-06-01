@@ -3,27 +3,29 @@
 {% block title %} Pretest {% endblock %}
 
 {% block content %}
-
     <div class="text-center">
         <h1>Post-test</h1>       
         <h2> Speak these words </h2> 
     </div>
-
     <script>
         i = 0;
     </script>
     {% for word in words %}
 
         <div class="text-center" id="words-{{ loop.index }}"> {{word| first}} </div>
-        <form id="answer" name="answer"  method="post" action="{{url_for('test.insert_score')}}" >
+        <form id="answer" name="answer"  method="post" action="{{url_for('test.save_record')}}" >
         <div class="text-center">       
             
             <textarea disabled  style="resize: none;"  id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="25"></textarea><br>
             <textarea disabled  style="resize: none;"  id="score-{{ loop.index }}" name="xxx" rows="1" cols="10"></textarea><br>
             <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" onclick= "disable()" >start</button><br>
+            <p>
+                <button id="startRecording">Start recording</button>
+                <button id="stopRecording" disabled>Stop recording</button>
+            </p>
         </div>
             
-        <script>
+        <!-- <script>
             result = 0; 
             attachEvents();
             function attachEvents() 
@@ -60,7 +62,7 @@
                     scoreTextAreaEl.value = result;
                     
                 }
-            
+             
                 // captures single result each time
                 recognition.continuous = false
 
@@ -143,8 +145,56 @@
               return result;                  
             }
             
+        </script> -->
+        <script>
+            navigator
+                .mediaDevices
+                .getUserMedia({audio: true})
+                .then(stream => { handlerFunction(stream) });
+        
+            function handlerFunction(stream) {
+                rec = new MediaRecorder(stream);
+                rec.ondataavailable = e => {
+                    audioChunks.push(e.data);
+                    if (rec.state == "inactive") {
+                        let blob = new Blob(audioChunks, {type: 'audio/mpeg-3'});
+                        sendData(blob);
+                    }
+                }
+            }
+        
+            function sendData(data) {
+                var form = new FormData();
+                form.append('file', data, 'data.mp3');
+                form.append('title', 'data.mp3');
+                //Chrome inspector shows that the post data includes a file and a title.
+                $.ajax({
+                    type: 'POST',
+                    url: '/save-record',
+                    data: form,
+                    cache: false,
+                    processData: false,
+                    contentType: false
+                }).done(function(data) {
+                    console.log(data);
+                });
+            }
+        
+            startRecording.onclick = e => {
+                console.log('Recording are started..');
+                startRecording.disabled = true;
+                stopRecording.disabled = false;
+                audioChunks = [];
+                rec.start();
+            };
+        
+            stopRecording.onclick = e => {
+                console.log("Recording are stopped.");
+                startRecording.disabled = false;
+                stopRecording.disabled = true;
+                rec.stop();
+            };
         </script>
-       
     {% endfor %}
     
     <input hidden type="text" name="score" id="score">

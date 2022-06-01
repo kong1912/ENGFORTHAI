@@ -29,6 +29,7 @@ import torchaudio
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\\SciUsProject_ENGFORTHAI\\iSAI-NLP-2021")
 ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
 ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"

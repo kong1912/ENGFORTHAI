@@ -126,6 +126,8 @@
 
     <!-- Template Javascript -->
     <script src="{{ url_for('main.static', filename='js/main.js') }}"></script>
+    {% block javascript %}
+    {% endblock %}
 </body>
 
 </html>

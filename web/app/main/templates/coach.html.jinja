@@ -1,18 +1,90 @@
 {% extends "layout.html.jinja" %}
 {% block title %} Coach {% endblock %}
+{% block head %}
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+{% endblock %}
 {% block content %}
-<br>
-   {# <div class="text-center">
-        {% if score['pre_s'] == -1  %}
-        <p class="h1">Please do pretest first</p>
-        </a><br><br>
-        <img src="{{ url_for('main.static', filename='img/14085329833028.jpg') }}" class="img-fluid  border border-5"" width="500" height="500" alt="" >
-        <br><br><a href="{{url_for('test.pretest')}}" class="btn btn-success">Pretest</a><br><br>
-    </div>   
-    {% else %} 
-    {% endif %} #}
-    <div class="text-center">
-        <h1>This is Coach page</h1>
+    <div class="container text-center">
+        <br>
+      <p class="h1">This is your result </p>  
+      <img src="{{ url_for('main.static', filename='img/result.png') }}" alt="" class="img-fluid">
+    
+
+        <p class="h1">We suggest you to learn this course first</p><br>
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="course-item bg-light">
+                                <div class="position-relative overflow-hidden">
+                                    <a href="{{ url_for('lesson.lesson1') }}"><img class="img-fluid" src="{{ url_for('main.static', filename='img/course-1.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="text-center p-4 pb-0">
+                                    <h5 class="mb-4">/ð/ - /θ/ - /tθ/ Pronunciation</h5>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    
+        <br>
+        <p class="h1">and then you can learn these courses</p>
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp"  data-wow-delay="0.3s">
+                        <div class="course-item bg-light">
+                            <div class="position-relative overflow-hidden">
+                            <a href="{{ url_for('lesson.lesson2') }}"><img class="img-fluid" src="{{ url_for('main.static', filename='img/course-2.jpg') }}" alt=""></a> 
+                            </div>
+                            <div class="text-center p-4 pb-0">
+                                
+                                <h5 class="mb-4">/ʒ/ - /ʃ/ Pronunciation</h5>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="course-item bg-light">
+                            <div class="position-relative overflow-hidden">
+                                <a href="{{ url_for('lesson.lesson3') }}"><img class="img-fluid" src="{{ url_for('main.static', filename='img/course-3.jpg') }}" alt=""></a>
+                            </div>
+                            <div class="text-center p-4 pb-0">                            
+                                <h5 class="mb-4">/dʒ/ - /tʃ/ Pronunciation</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="course-item bg-light">
+                            <div class="position-relative overflow-hidden">
+                                <a href="{{ url_for('lesson.lesson4') }}"><img class="img-fluid" src="{{ url_for('main.static', filename='img/course-4.jpg') }}" alt=""></a>                           
+                            </div>
+                            <div class="text-center p-4 pb-0">                   
+                                <h5 class="mb-4">/z/  - /s/ Pronunciation</h5>
+                            </div>                  
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="course-item bg-light">
+                            <div class="position-relative overflow-hidden">
+                                <a href="{{ url_for('lesson.lesson5') }}"><img class="img-fluid" src="{{ url_for('main.static', filename='img/course-5.jpg') }}" alt=""></a>              
+                            </div>
+                            <div class="text-center p-4 pb-0">              
+                                <h5 class="mb-4">/b/ - /p/ Pronunciation</h5>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+{% endblock %}
+
+{% block javascript %}
+
 {% endblock %}
