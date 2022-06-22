@@ -19,7 +19,7 @@ import os
 import pathlib
 
 # import IPython.display as ipd
-
+import matplotlib.pyplot as plt
 import pandas as pd
 import torch
 import torch.nn as nn
@@ -29,9 +29,11 @@ import torchaudio
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\\SciUsProject_ENGFORTHAI\\iSAI-NLP-2021")
-ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
-ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"D:\_tp\iSAI-NLP-2021")
+# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
+# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
+ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb1_train.csv"
+ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb1_test.csv"
 AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"
 
 APP_DIR: pathlib.Path = pathlib.Path.cwd()
@@ -119,7 +121,7 @@ the speaker, the number of the utterance.
 print("Shape of waveform: {}".format(waveform.size()))
 print("Sample rate of waveform: {}".format(sample_rate))
 
-
+plt.plot(waveform.t().numpy())
 """Let’s find the list of labels available in the dataset.
 
 
@@ -140,6 +142,9 @@ datasets though to have to reduce the number of channels (say from
 stereo to mono) by either taking the mean along the channel dimension,
 or simply keeping only one of the channels. Since SpeechCommands uses a
 single channel for audio, this is not needed here.
+
+
+
 """
 
 new_sample_rate = 8000
@@ -166,11 +171,11 @@ def index_to_label(index):
     return labels[index]
 
 
-word_start = "ปิดโปรแกรม"
-index = label_to_index(word_start)
-word_recovered = index_to_label(index)
-
-print(word_start, "-->", index, "-->", word_recovered)
+# word_start = "ปิดโปรแกรม"
+# index = label_to_index(word_start)
+# word_recovered = index_to_label(index)
+#
+# print(word_start, "-->", index, "-->", word_recovered)
 
 
 def pad_sequence(batch):
@@ -271,9 +276,11 @@ def predict(tensor):
 
 
 def load_audio():
+    # TEST_FILE: pathlib.Path = CORPUS_BASE_DIR / "wav/2017/M0000000002_0041.wav"
+    TEST_FILE: pathlib.Path = AUDIO_DIR / "1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Smooth .aac.wav"
+    print(TEST_FILE)
 
-
-    return torchaudio.load("E:\\SciUsProject_ENGFORTHAI\\iSAI-NLP-2021\\wav\\2017\\M0000000002_0041.wav")
+    return torchaudio.load(str(TEST_FILE))
 
 
 # waveform, sample_rate = record()

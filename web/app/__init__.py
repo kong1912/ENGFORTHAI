@@ -19,11 +19,6 @@ app.config['MYSQL_DATABASE_DB'] = 'project_2'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 db.init_app(app)
 
-
-
-
-
-
 #execute tables
 conn = db.connect()
 cursor = conn.cursor() # execute as list

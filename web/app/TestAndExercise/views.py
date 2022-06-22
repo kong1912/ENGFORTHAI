@@ -64,15 +64,15 @@ def postteset():
 
     return render_template('posttest.html.jinja')
 
-# @test_bp.route('/insert_score',methods=['POST'])
-# def insert_score():
-#     if request.method == 'POST':
-#         data = request.get_json()
-#         print(data)
-#         cursor.execute(f"INSERT INTO score (s1_s,s2_s,s3_s,s4_s,s5_s) \
-#                          VALUES ({data[0].score},{data[1].score},{data[2].score},{data[3].score},{data[4].score})")
-#         conn.commit()
-#         return jsonify({})
+@test_bp.route('/insert_score',methods=['POST'])
+def insert_score():
+    if request.method == 'POST':
+        data = request.get_json()
+        print(data)
+        cursor.execute(f"INSERT INTO score (s1_s,s2_s,s3_s,s4_s,s5_s) \
+                         VALUES ({data[0].score},{data[1].score},{data[2].score},{data[3].score},{data[4].score})")
+        conn.commit()
+        return jsonify({})
 
 @test_bp.route('/result')
 def result():

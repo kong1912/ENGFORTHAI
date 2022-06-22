@@ -12,8 +12,6 @@ auth_bp = Blueprint('auth',__name__,
                     static_url_path='/auth/static')
 
 
-
-
 @auth_bp.route('/register', methods=['GET', 'POST'])
 def register():
 
