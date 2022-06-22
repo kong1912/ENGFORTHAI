@@ -28,12 +28,14 @@ import torchaudio
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"D:\_tp\iSAI-NLP-2021")
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021")
 # ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
-ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb1_train.csv"
+ANNOTATIONS_FILE: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021\cb1_train.csv")
 # ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
-ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb1_test.csv"
-AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"
+ANNOTATIONS_FILE_TEST: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021\cb1_train.csv")
+AUDIO_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021\Word level - Copy")
+
 
 APP_DIR: pathlib.Path = pathlib.Path.cwd()
 VAR_DIR: pathlib.Path = APP_DIR / "var"
@@ -50,7 +52,8 @@ CACHE_DIR.mkdir(exist_ok=True)
 
 MODEL_FILE: pathlib.Path = CACHE_DIR / "model.pickle"
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 print(f"{device} mode detected")
 
 """Importing the Dataset

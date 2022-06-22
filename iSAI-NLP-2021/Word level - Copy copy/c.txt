@@ -1,0 +1,937 @@
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Aom(เเนน)/eight.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Aom(เเนน)/hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Aom(เเนน)/Width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Nine (Ben)/eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Nine (Ben)/hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Nine (Ben)/width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Pang (โบว์)/Eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Pang (โบว์)/Hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Pang (โบว์)/Width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Perry(กพ)/eighth.aac.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Perry(กพ)/hundredth.aac.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Perry(กพ)/width.aac.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Ying/eighth.mp3.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Ying/hundredth.mp3.wav
+1) -ð- - -θ- - -tθ-/-tθ-/AJ.Ying/width.mp3.wav
+1) -ð- - -θ- - -tθ-/-tθ-/Daniel (เเนน)/Eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/Daniel (เเนน)/Hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/Daniel (เเนน)/Width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Aung/Eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Aung/Hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Aung/Width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Guy (Ping)/eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Guy (Ping)/Hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Guy (Ping)/Width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Maprang/eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Maprang/hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Maprang/width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Stamp (Ping)/Eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Stamp (Ping)/Hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/N_Stamp (Ping)/Width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2 2.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2 3.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P_meen(สมาย)/Eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P_meen(สมาย)/Hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P_meen(สมาย)/Width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P_Numaun(smile)/eighth.mp3.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P_Numaun(smile)/hundredth.mp3.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P_Numaun(smile)/width.mp3.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P’Manow(Ben)/eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P’Manow(Ben)/hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P’Manow(Ben)/width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P’Pop(เเนน)/Eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P’Pop(เเนน)/Hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/P’Pop(เเนน)/Width.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/ไอริณ (กล้วย)/Eighth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/ไอริณ (กล้วย)/Hundredth.m4a.wav
+1) -ð- - -θ- - -tθ-/-tθ-/ไอริณ (กล้วย)/Width.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Altogether .aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Smooth .aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Though.aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Writhe.aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Nine (Ben)/altogether .m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Nine (Ben)/smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Nine (Ben)/though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Nine (Ben)/writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_altogether.aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_smooth.aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_though.aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_writhe.aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Altogether .aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Smooth .aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Though .aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Writhe.aac.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Ying (Cream)/altogether.mp3.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Ying (Cream)/smooth.mp3.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Ying (Cream)/though.mp3.wav
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Ying (Cream)/writhe .mp3.wav
+1) -ð- - -θ- - -tθ-/-ð-/Daniel (เเนน)/Altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/Daniel (เเนน)/Smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/Daniel (เเนน)/Though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/Daniel (เเนน)/Writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Aung/Altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Aung/Smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Aung/Though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Aung/writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Guy (Ping)/Altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Guy (Ping)/Smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Guy (Ping)/though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Guy (Ping)/Writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Maprang/altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Maprang/smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Maprang/Though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Maprang/writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Stamp (Ping)/Altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Stamp (Ping)/Smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Stamp (Ping)/Though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/N_Stamp (Ping)/Writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/P’ Pop (เเนน)/Altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/P’ Pop (เเนน)/Smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/P’ Pop (เเนน)/Though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/P’ Pop (เเนน)/Writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/P’Manow (Ben)/altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/P’Manow (Ben)/smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/P’Manow (Ben)/though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/P’Manow (Ben)/writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/Altogether 2.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/Smooth 2.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/Though 2.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/writhe 2.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่ซี (กล้วย)/altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่ซี (กล้วย)/smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่ซี (กล้วย)/though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่ซี (กล้วย)/writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่น้ำอุ่น (สมาย)/1.mp3.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่น้ำอุ่น (สมาย)/2.mp3.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่น้ำอุ่น (สมาย)/3.mp3.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่น้ำอุ่น (สมาย)/4.mp3.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่มีนตรา(สมาย)/พี่มีน1.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่มีนตรา(สมาย)/พี่มีน2.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่มีนตรา(สมาย)/พี่มีน3.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/พี่มีนตรา(สมาย)/พี่มีน4.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Altogether 3.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Smooth 3.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Writhe 2.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Smooth(1).m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/ไอริณ (กล้วย)/altogether.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/ไอริณ (กล้วย)/smooth.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/ไอริณ (กล้วย)/though.m4a.wav
+1) -ð- - -θ- - -tθ-/-ð-/ไอริณ (กล้วย)/writhe.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Aom(เเนน)/Athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Aom(เเนน)/Hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Aom(เเนน)/Stealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Aom(เเนน)/theorist.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Nine (Ben)/althete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Nine (Ben)/hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Nine (Ben)/stealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Nine (Ben)/Theorist.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Pang (โบว์)/Athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Pang (โบว์)/Hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Pang (โบว์)/Stealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Pang (โบว์)/Theorist.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Perry(กพ)/athlete.aac.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Perry(กพ)/hypothesis.aac.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Perry(กพ)/purchase.aac.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Perry(กพ)/stealth.aac.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Ying/athlete.mp3.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Ying/hypothesis.mp3.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Ying/stealth.mp3.wav
+1) -ð- - -θ- - -tθ-/-θ-/AJ.Ying/theorist.mp3.wav
+1) -ð- - -θ- - -tθ-/-θ-/Daniel (เเนน)/Athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/Daniel (เเนน)/Hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/Daniel (เเนน)/Stealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/Daniel (เเนน)/Theorist.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Aung/Athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Aung/Hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Aung/Stealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Aung/Theorist.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Guy (Ping)/Athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Guy (Ping)/Hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Guy (Ping)/Stealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Guy (Ping)/theorist.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Maprang/athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Maprang/stealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Maprang/theorist.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Stamp (Ping)/Athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Stamp (Ping)/Hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Stamp (Ping)/Stealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/N_Stamp (Ping)/Theorist.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_C/Khok Pho 3 2 2.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_C/Khok Pho 3 2 3.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_C/Khok Pho 3 2 4.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_C/Khok Pho 3 2.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_meen (สมาย)/Athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_meen (สมาย)/Hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_meen (สมาย)/Starch.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_meen (สมาย)/theorist.mp3.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_Numaun(smile)/athlete.mp3.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_Numaun(smile)/hypothesis.mp3.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_Numaun(smile)/stealth.mp3.wav
+1) -ð- - -θ- - -tθ-/-θ-/P_Numaun(smile)/theorist.mp3.wav
+1) -ð- - -θ- - -tθ-/-θ-/P’Manow (Ben)/athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P’Manow (Ben)/Hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P’Manow (Ben)/stealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P’Manow (Ben)/theorist.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P’Pop (เเนน)/Athlete.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P’Pop (เเนน)/Hypothesis.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P’Pop (เเนน)/sealth.m4a.wav
+1) -ð- - -θ- - -tθ-/-θ-/P’Pop (เเนน)/Theorist.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Aom(เเนน)/Bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Aom(เเนน)/chicamery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Aom(เเนน)/distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Aom(เเนน)/Flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Aom(เเนน)/Ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Aom(เเนน)/Shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Nine (Ben)/bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Nine (Ben)/chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Nine (Ben)/distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Nine (Ben)/flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Nine (Ben)/ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Nine (Ben)/shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Pang (โบว์)/Bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Pang (โบว์)/Chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Pang (โบว์)/Distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Pang (โบว์)/Flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Pang (โบว์)/Shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Perry (kanplu)/bashful.aac.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Perry (kanplu)/chicanery.aac.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Perry (kanplu)/distinguish.aac.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Perry (kanplu)/flush.aac.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Perry (kanplu)/ratio.aac.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Perry (kanplu)/shipment.aac.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Ying/bashful.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Ying/chicanery.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Ying/distinguish.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Ying/flush.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Ying/ratio.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Ying/securely.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/AJ.Ying/shipment.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/Daniel (เเนน)/Bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/Daniel (เเนน)/Chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/Daniel (เเนน)/Distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/Daniel (เเนน)/Flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/Daniel (เเนน)/Ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/Daniel (เเนน)/Shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Aung/Chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Aung/Distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Aung/Flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Aung/Ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Aung/Shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Guy (Ping)/bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Guy (Ping)/Chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Guy (Ping)/Distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Guy (Ping)/Flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Guy (Ping)/ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Guy (Ping)/Shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Maprang/bushful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Maprang/chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Maprang/distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Maprang/flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Maprang/radio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Maprang/shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Stamp (Ping)/Bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Stamp (Ping)/Chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Stamp (Ping)/Distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Stamp (Ping)/Flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Stamp (Ping)/Ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/N_Stamp (Ping)/Shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 2.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 3.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 4.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 5.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 6.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Meen(สมาย)/Bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Meen(สมาย)/Chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Meen(สมาย)/Distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Meen(สมาย)/Flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Meen(สมาย)/Ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Meen(สมาย)/Shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Numaun(smile)/bashful.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Numaun(smile)/chicanery.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Numaun(smile)/distinguish.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Numaun(smile)/flush.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Numaun(smile)/ratio.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/P_Numaun(smile)/shipment.mp3.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Manow (Ben)/bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Manow (Ben)/chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Manow (Ben)/distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Manow (Ben)/flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Manow (Ben)/ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Manow (Ben)/shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Pop(เเนน)/Bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Pop(เเนน)/Chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Pop(เเนน)/Distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Pop(เเนน)/Flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/P’Pop(เเนน)/Ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/ไอริณ (กล้วย)/Bashful.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/ไอริณ (กล้วย)/Chicanery.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/ไอริณ (กล้วย)/Distinguish.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/ไอริณ (กล้วย)/Flush.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/ไอริณ (กล้วย)/Ratio.m4a.wav
+2) -ʒ- - -ʃ-/-ʃ-/ไอริณ (กล้วย)/Shipment.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Aom(เเนน)/Camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Aom(เเนน)/jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Aom(เเนน)/Jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Aom(เเนน)/Luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Aom(เเนน)/Sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Aom(เเนน)/Unusual.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Nine (Ben)/camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Nine (Ben)/jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Nine (Ben)/jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Nine (Ben)/luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Nine (Ben)/sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Nine (Ben)/unusual.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Pang (โบว์)/Camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Pang (โบว์)/Jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Pang (โบว์)/Jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Pang (โบว์)/Luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Pang (โบว์)/Sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Pang (โบว์)/Unusual.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/camouflage.aac.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/Jupe .aac.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/jus.aac.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/luxury.aac.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/sabotage.aac.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/unusual.aac.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/camouflage.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/jupe.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/jus.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/luxury .mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/sabotage.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/unusual.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/Daniel (แนน)/Camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/Daniel (แนน)/Jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/Daniel (แนน)/Jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/Daniel (แนน)/Luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/Daniel (แนน)/Sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/Daniel (แนน)/Unusual.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Aung/Camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Aung/jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Aung/Jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Aung/Luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Aung/Sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Aung/unusual.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Guy (Ping)/Camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Guy (Ping)/Jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Guy (Ping)/Jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Guy (Ping)/Luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Guy (Ping)/Sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Guy (Ping)/Unusual.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Maprang/camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Maprang/jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Maprang/jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Maprang/luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Maprang/sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Maprang/unusual.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Stamp (Ping)/Camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Stamp (Ping)/Jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Stamp (Ping)/Jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Stamp (Ping)/Luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Stamp (Ping)/Sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/N_Stamp (Ping)/Unusual.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 2.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 3.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 4.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 5.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 6.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Meen(สมาย)/Camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Meen(สมาย)/Jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Meen(สมาย)/Jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Meen(สมาย)/Luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Meen(สมาย)/Sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Meen(สมาย)/Unusual.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/camouflage.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/jupe.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/jus.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/luxury(1).mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/luxury.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/sabotage.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/unusual.mp3.wav
+2) -ʒ- - -ʃ-/-ʒ-/P’Manow (Ben)/camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P’Manow (Ben)/jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P’Manow (Ben)/jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P’Manow (Ben)/luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P’Manow (Ben)/sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/P’Manow (Ben)/unusal.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/ไอริณ (กล้วย)/Camouflage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/ไอริณ (กล้วย)/Jupe.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/ไอริณ (กล้วย)/Jus.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/ไอริณ (กล้วย)/Luxury.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/ไอริณ (กล้วย)/Sabotage.m4a.wav
+2) -ʒ- - -ʃ-/-ʒ-/ไอริณ (กล้วย)/Unusual.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Aom(เเนน)/Charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Aom(เเนน)/Fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Aom(เเนน)/indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Aom(เเนน)/jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Aom(เเนน)/Judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Aom(เเนน)/Vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Nine (Ben)/charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Nine (Ben)/fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Nine (Ben)/indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Nine (Ben)/jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Nine (Ben)/judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Nine (Ben)/vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Pang (โบว์)/Charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Pang (โบว์)/Fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Pang (โบว์)/Indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Pang (โบว์)/Jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Pang (โบว์)/Judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Pang (โบว์)/Vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Perry (kanplu)/charge.aac.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Perry (kanplu)/fragile.aac.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Perry (kanplu)/indulge.aac.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Perry (kanplu)/jewelry.aac.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Perry (kanplu)/judge.aac.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Perry (kanplu)/vegetable.aac.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/charge.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/fragile.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/indulge .mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/jewelry.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/judge.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/vegetable.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/Daniel (เเนน)/Charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/Daniel (เเนน)/fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/Daniel (เเนน)/Jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/Daniel (เเนน)/Judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/Daniel (เเนน)/Vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Aung/Charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Aung/Fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Aung/Jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Aung/Vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Guy (Ping)/Charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Guy (Ping)/fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Guy (Ping)/Indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Guy (Ping)/Jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Guy (Ping)/Judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Guy (Ping)/Vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Maprang/fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Maprang/indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Stamp (Ping)/Charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Stamp (Ping)/Fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Stamp (Ping)/Indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Stamp (Ping)/Jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Stamp (Ping)/Judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/N_Stamp (Ping)/Vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 2.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 3.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 4.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 5.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 6.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Meen(สมาย)/Charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Meen(สมาย)/Fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Meen(สมาย)/Indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Meen(สมาย)/Jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Meen(สมาย)/Judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Meen(สมาย)/Vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Numaun(smile)/charge.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Numaun(smile)/fragile.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Numaun(smile)/indulge.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Numaun(smile)/jewelry.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Numaun(smile)/judge.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/P_Numaun(smile)/vegetable.mp3.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Manow (Ben)/charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Manow (Ben)/fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Manow (Ben)/indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Manow (Ben)/jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Manow (Ben)/judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Manow (Ben)/vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Pop(เเนน)/Charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Pop(เเนน)/Fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Pop(เเนน)/Indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Pop(เเนน)/Jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Pop(เเนน)/Judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/P’Pop(เเนน)/Vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/ไอริณ (กล้วย)/Charge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/ไอริณ (กล้วย)/Fragile.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/ไอริณ (กล้วย)/Indulge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/ไอริณ (กล้วย)/Jewelry.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/ไอริณ (กล้วย)/Judge.m4a.wav
+3) -dʒ- - -tʃ-/-dʒ-/ไอริณ (กล้วย)/Vegetable.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Aom(เเนน)/Challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Aom(เเนน)/choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Aom(เเนน)/Etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Aom(เเนน)/Larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Aom(เเนน)/Purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Aom(เเนน)/starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Nine (Ben)/challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Nine (Ben)/choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Nine (Ben)/etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Nine (Ben)/larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Nine (Ben)/purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Nine (Ben)/starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Pang (โบว์)/Challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Pang (โบว์)/Choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Pang (โบว์)/Etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Pang (โบว์)/Larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Pang (โบว์)/Purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Pang (โบว์)/Starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Perry (kanplu)/challenge.aac.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Perry (kanplu)/choke.aac.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Perry (kanplu)/etching.aac.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Perry (kanplu)/larch.aac.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Perry (kanplu)/purchase.aac.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Perry (kanplu)/starch.aac.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Ying/challenge.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Ying/choke.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Ying/etching.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Ying/larch.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Ying/purchase.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/AJ.Ying/starch.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/Daniel (เเนน)/Challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/Daniel (เเนน)/Choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/Daniel (เเนน)/Etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/Daniel (เเนน)/Larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/Daniel (เเนน)/Purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/Daniel (เเนน)/Starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Aung/Challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Aung/Choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Aung/Etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Aung/purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Aung/Starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Guy (Ping)/Challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Guy (Ping)/Choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Guy (Ping)/Etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Guy (Ping)/Larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Guy (Ping)/Purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Guy (Ping)/Starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_MP/challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_MP/choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_MP/etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_MP/larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_MP/purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_MP/starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Stamp (Ping)/Challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Stamp (Ping)/Choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Stamp (Ping)/Etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Stamp (Ping)/Larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Stamp (Ping)/Purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/N_Stamp (Ping)/Starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 2.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 3.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 4.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 5.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 6.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Meen(สมาย)/Challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Meen(สมาย)/Choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Meen(สมาย)/Etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Meen(สมาย)/Larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Meen(สมาย)/Purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Meen(สมาย)/Starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Numaun(smile)/challenge.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Numaun(smile)/choke.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Numaun(smile)/etching.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Numaun(smile)/larch.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Numaun(smile)/purchase.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/P_Numaun(smile)/starch.mp3.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Manow (Ben)/challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Manow (Ben)/choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Manow (Ben)/etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Manow (Ben)/larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Manow (Ben)/purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Manow (Ben)/starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Pop(เเนน)/Challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Pop(เเนน)/Choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Pop(เเนน)/Etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Pop(เเนน)/Larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Pop(เเนน)/Purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/P’Pop(เเนน)/Starch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/ไอริณ (กล้วย)/Challenge.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/ไอริณ (กล้วย)/Choke.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/ไอริณ (กล้วย)/Etching.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/ไอริณ (กล้วย)/Larch.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/ไอริณ (กล้วย)/Purchase.m4a.wav
+3) -dʒ- - -tʃ-/-tʃ-/ไอริณ (กล้วย)/Starch.m4a.wav
+4) -z-  - -s-/-s-/AJ.Aom(เเนน)/Decease.m4a.wav
+4) -z-  - -s-/-s-/AJ.Aom(เเนน)/Overseas.m4a.wav
+4) -z-  - -s-/-s-/AJ.Aom(เเนน)/Practice.m4a.wav
+4) -z-  - -s-/-s-/AJ.Aom(เเนน)/process.m4a.wav
+4) -z-  - -s-/-s-/AJ.Aom(เเนน)/Securely.m4a.wav
+4) -z-  - -s-/-s-/AJ.Aom(เเนน)/successor.m4a.wav
+4) -z-  - -s-/-s-/AJ.Nine(Ben)/decease.m4a.wav
+4) -z-  - -s-/-s-/AJ.Nine(Ben)/overseas.m4a.wav
+4) -z-  - -s-/-s-/AJ.Nine(Ben)/practice.m4a.wav
+4) -z-  - -s-/-s-/AJ.Nine(Ben)/process.m4a.wav
+4) -z-  - -s-/-s-/AJ.Nine(Ben)/securely.m4a.wav
+4) -z-  - -s-/-s-/AJ.Nine(Ben)/successor.m4a.wav
+4) -z-  - -s-/-s-/AJ.Pang (โบว์)/Decease.m4a.wav
+4) -z-  - -s-/-s-/AJ.Pang (โบว์)/Overseas.m4a.wav
+4) -z-  - -s-/-s-/AJ.Pang (โบว์)/Practice.m4a.wav
+4) -z-  - -s-/-s-/AJ.Pang (โบว์)/Process.m4a.wav
+4) -z-  - -s-/-s-/AJ.Pang (โบว์)/Securely.m4a.wav
+4) -z-  - -s-/-s-/AJ.Pang (โบว์)/Successor.m4a.wav
+4) -z-  - -s-/-s-/AJ.Perry (kanplu)/decease.aac.wav
+4) -z-  - -s-/-s-/AJ.Perry (kanplu)/overseas.aac.wav
+4) -z-  - -s-/-s-/AJ.Perry (kanplu)/practice.aac.wav
+4) -z-  - -s-/-s-/AJ.Perry (kanplu)/process.aac.wav
+4) -z-  - -s-/-s-/AJ.Perry (kanplu)/securely.aac.wav
+4) -z-  - -s-/-s-/AJ.Perry (kanplu)/successor.aac.wav
+4) -z-  - -s-/-s-/AJ.Ying/decease.mp3.wav
+4) -z-  - -s-/-s-/AJ.Ying/overseas.mp3.wav
+4) -z-  - -s-/-s-/AJ.Ying/practice.mp3.wav
+4) -z-  - -s-/-s-/AJ.Ying/process.mp3.wav
+4) -z-  - -s-/-s-/AJ.Ying/successor.mp3.wav
+4) -z-  - -s-/-s-/Daniel (เเนน)/Decease.m4a.wav
+4) -z-  - -s-/-s-/Daniel (เเนน)/Overseas.m4a.wav
+4) -z-  - -s-/-s-/Daniel (เเนน)/Practice.m4a.wav
+4) -z-  - -s-/-s-/Daniel (เเนน)/Process.m4a.wav
+4) -z-  - -s-/-s-/Daniel (เเนน)/Securely.m4a.wav
+4) -z-  - -s-/-s-/Daniel (เเนน)/Successor.m4a.wav
+4) -z-  - -s-/-s-/N_Aung/Decease.m4a.wav
+4) -z-  - -s-/-s-/N_Aung/Overseas.m4a.wav
+4) -z-  - -s-/-s-/N_Aung/Practice.m4a.wav
+4) -z-  - -s-/-s-/N_Aung/Process.m4a.wav
+4) -z-  - -s-/-s-/N_Aung/Securely.m4a.wav
+4) -z-  - -s-/-s-/N_Aung/Successor.m4a.wav
+4) -z-  - -s-/-s-/N_Guy (Ping)/Decease.m4a.wav
+4) -z-  - -s-/-s-/N_Guy (Ping)/Overseas.m4a.wav
+4) -z-  - -s-/-s-/N_Guy (Ping)/Practice.m4a.wav
+4) -z-  - -s-/-s-/N_Guy (Ping)/Process.m4a.wav
+4) -z-  - -s-/-s-/N_Guy (Ping)/Securely.m4a.wav
+4) -z-  - -s-/-s-/N_Guy (Ping)/Successors.m4a.wav
+4) -z-  - -s-/-s-/N_Maprang/decrease.m4a.wav
+4) -z-  - -s-/-s-/N_Maprang/overseas.m4a.wav
+4) -z-  - -s-/-s-/N_Maprang/practice.m4a.wav
+4) -z-  - -s-/-s-/N_Maprang/process.m4a.wav
+4) -z-  - -s-/-s-/N_Maprang/securely.m4a.wav
+4) -z-  - -s-/-s-/N_Maprang/successor.m4a.wav
+4) -z-  - -s-/-s-/N_Stamp (Ping)/Decease.m4a.wav
+4) -z-  - -s-/-s-/N_Stamp (Ping)/Overseas.m4a.wav
+4) -z-  - -s-/-s-/N_Stamp (Ping)/Practice.m4a.wav
+4) -z-  - -s-/-s-/N_Stamp (Ping)/Process.m4a.wav
+4) -z-  - -s-/-s-/N_Stamp (Ping)/Securely.m4a.wav
+4) -z-  - -s-/-s-/N_Stamp (Ping)/Successor.m4a.wav
+4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 2.m4a.wav
+4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 3.m4a.wav
+4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 4.m4a.wav
+4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 5.m4a.wav
+4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 6.m4a.wav
+4) -z-  - -s-/-s-/P_C/Khok Pho 10 2.m4a.wav
+4) -z-  - -s-/-s-/P_Meen(สมาย)/Decease.m4a.wav
+4) -z-  - -s-/-s-/P_Meen(สมาย)/Overseas.m4a.wav
+4) -z-  - -s-/-s-/P_Meen(สมาย)/Practice.m4a.wav
+4) -z-  - -s-/-s-/P_Meen(สมาย)/Process.m4a.wav
+4) -z-  - -s-/-s-/P_Meen(สมาย)/Securely.m4a.wav
+4) -z-  - -s-/-s-/P_Meen(สมาย)/Successor.m4a.wav
+4) -z-  - -s-/-s-/P_Numaun(smile)/decease.mp3.wav
+4) -z-  - -s-/-s-/P_Numaun(smile)/overseas.mp3.wav
+4) -z-  - -s-/-s-/P_Numaun(smile)/practice.mp3.wav
+4) -z-  - -s-/-s-/P_Numaun(smile)/process.mp3.wav
+4) -z-  - -s-/-s-/P_Numaun(smile)/securely.mp3.wav
+4) -z-  - -s-/-s-/P_Numaun(smile)/successor.mp3.wav
+4) -z-  - -s-/-s-/P’Manow (Ben)/decease.m4a.wav
+4) -z-  - -s-/-s-/P’Manow (Ben)/overseas.m4a.wav
+4) -z-  - -s-/-s-/P’Manow (Ben)/practice.m4a.wav
+4) -z-  - -s-/-s-/P’Manow (Ben)/process.m4a.wav
+4) -z-  - -s-/-s-/P’Manow (Ben)/securely.m4a.wav
+4) -z-  - -s-/-s-/P’Manow (Ben)/successor.m4a.wav
+4) -z-  - -s-/-s-/P’Pop(เเนน)/Decease.m4a.wav
+4) -z-  - -s-/-s-/P’Pop(เเนน)/Overseas.m4a.wav
+4) -z-  - -s-/-s-/P’Pop(เเนน)/Practice.m4a.wav
+4) -z-  - -s-/-s-/P’Pop(เเนน)/Process.m4a.wav
+4) -z-  - -s-/-s-/P’Pop(เเนน)/Securely.m4a.wav
+4) -z-  - -s-/-s-/P’Pop(เเนน)/Successor.m4a.wav
+4) -z-  - -s-/-s-/ไอริณ (กล้วย)/Decease.m4a.wav
+4) -z-  - -s-/-s-/ไอริณ (กล้วย)/Overseas.m4a.wav
+4) -z-  - -s-/-s-/ไอริณ (กล้วย)/Practice.m4a.wav
+4) -z-  - -s-/-s-/ไอริณ (กล้วย)/Process.m4a.wav
+4) -z-  - -s-/-s-/ไอริณ (กล้วย)/Securely.m4a.wav
+4) -z-  - -s-/-s-/ไอริณ (กล้วย)/Successor.m4a.wav
+4) -z-  - -s-/-z-/AJ,Ying/criticize (1).mp3.wav
+4) -z-  - -s-/-z-/AJ,Ying/emphasize (1).mp3.wav
+4) -z-  - -s-/-z-/AJ,Ying/enzyme.mp3.wav
+4) -z-  - -s-/-z-/AJ,Ying/equalizer.mp3.wav
+4) -z-  - -s-/-z-/AJ,Ying/zealous.mp3.wav
+4) -z-  - -s-/-z-/AJ,Ying/zipper.mp3.wav
+4) -z-  - -s-/-z-/AJ.Aom(เเนน)/Criticize.m4a.wav
+4) -z-  - -s-/-z-/AJ.Aom(เเนน)/emphasize.m4a.wav
+4) -z-  - -s-/-z-/AJ.Aom(เเนน)/Enzyme.m4a.wav
+4) -z-  - -s-/-z-/AJ.Aom(เเนน)/Equalizer.m4a.wav
+4) -z-  - -s-/-z-/AJ.Aom(เเนน)/Zealous.m4a.wav
+4) -z-  - -s-/-z-/AJ.Aom(เเนน)/zipper.m4a.wav
+4) -z-  - -s-/-z-/AJ.Nine (Ben)/criticize.m4a.wav
+4) -z-  - -s-/-z-/AJ.Nine (Ben)/emphasize.m4a.wav
+4) -z-  - -s-/-z-/AJ.Nine (Ben)/enzyme.m4a.wav
+4) -z-  - -s-/-z-/AJ.Nine (Ben)/equalizer.m4a.wav
+4) -z-  - -s-/-z-/AJ.Nine (Ben)/zealous.m4a.wav
+4) -z-  - -s-/-z-/AJ.Nine (Ben)/zipper.m4a.wav
+4) -z-  - -s-/-z-/AJ.Pang (โบว์)/Criticize.m4a.wav
+4) -z-  - -s-/-z-/AJ.Pang (โบว์)/Emphasize.m4a.wav
+4) -z-  - -s-/-z-/AJ.Pang (โบว์)/Enzyme.m4a.wav
+4) -z-  - -s-/-z-/AJ.Pang (โบว์)/Equalizer.m4a.wav
+4) -z-  - -s-/-z-/AJ.Pang (โบว์)/Zeolous.m4a.wav
+4) -z-  - -s-/-z-/AJ.Pang (โบว์)/Zipper.m4a.wav
+4) -z-  - -s-/-z-/AJ.Perry (kanplu)/criticize.aac.wav
+4) -z-  - -s-/-z-/AJ.Perry (kanplu)/emphasize.aac.wav
+4) -z-  - -s-/-z-/AJ.Perry (kanplu)/enzyme.aac.wav
+4) -z-  - -s-/-z-/AJ.Perry (kanplu)/equalizer.aac.wav
+4) -z-  - -s-/-z-/AJ.Perry (kanplu)/zealous.aac.wav
+4) -z-  - -s-/-z-/AJ.Perry (kanplu)/zipper.aac.wav
+4) -z-  - -s-/-z-/Daniel (เเนน)/Criticize.m4a.wav
+4) -z-  - -s-/-z-/Daniel (เเนน)/Emphasize.m4a.wav
+4) -z-  - -s-/-z-/Daniel (เเนน)/Enzyme.m4a.wav
+4) -z-  - -s-/-z-/Daniel (เเนน)/Equalizer.m4a.wav
+4) -z-  - -s-/-z-/Daniel (เเนน)/Zealous.m4a.wav
+4) -z-  - -s-/-z-/Daniel (เเนน)/Zipper.m4a.wav
+4) -z-  - -s-/-z-/N_Aung/Criticize.m4a.wav
+4) -z-  - -s-/-z-/N_Aung/Emphasize.m4a.wav
+4) -z-  - -s-/-z-/N_Aung/Enzyme.m4a.wav
+4) -z-  - -s-/-z-/N_Aung/Equalizer.m4a.wav
+4) -z-  - -s-/-z-/N_Aung/Zipper.m4a.wav
+4) -z-  - -s-/-z-/N_Guy (Ping)/Criticize.m4a.wav
+4) -z-  - -s-/-z-/N_Guy (Ping)/Emphasize.m4a.wav
+4) -z-  - -s-/-z-/N_Guy (Ping)/Enzyme.m4a.wav
+4) -z-  - -s-/-z-/N_Guy (Ping)/Equalizer.m4a.wav
+4) -z-  - -s-/-z-/N_Guy (Ping)/Zealous.m4a.wav
+4) -z-  - -s-/-z-/N_Guy (Ping)/Zipper.m4a.wav
+4) -z-  - -s-/-z-/N_Maprang/criticize.m4a.wav
+4) -z-  - -s-/-z-/N_Maprang/emphasize.m4a.wav
+4) -z-  - -s-/-z-/N_Maprang/enzyme.m4a.wav
+4) -z-  - -s-/-z-/N_Maprang/equalizer.m4a.wav
+4) -z-  - -s-/-z-/N_Maprang/zealous.m4a.wav
+4) -z-  - -s-/-z-/N_Maprang/zipper.m4a.wav
+4) -z-  - -s-/-z-/N_Stamp (Ping)/Criticize.m4a.wav
+4) -z-  - -s-/-z-/N_Stamp (Ping)/Emphasize.m4a.wav
+4) -z-  - -s-/-z-/N_Stamp (Ping)/Enzyme.m4a.wav
+4) -z-  - -s-/-z-/N_Stamp (Ping)/Equalizer.m4a.wav
+4) -z-  - -s-/-z-/N_Stamp (Ping)/Zealous.m4a.wav
+4) -z-  - -s-/-z-/N_Stamp (Ping)/Zipper.m4a.wav
+4) -z-  - -s-/-z-/P_C/Khok Pho 9 2.m4a.wav
+4) -z-  - -s-/-z-/P_C/Khok Pho 9 3.m4a.wav
+4) -z-  - -s-/-z-/P_C/Khok Pho 9 4.m4a.wav
+4) -z-  - -s-/-z-/P_C/Khok Pho 9 5.m4a.wav
+4) -z-  - -s-/-z-/P_C/Khok Pho 9 6.m4a.wav
+4) -z-  - -s-/-z-/P_C/Khok Pho 9.m4a.wav
+4) -z-  - -s-/-z-/P_Meen(สมาย)/Criticize.m4a.wav
+4) -z-  - -s-/-z-/P_Meen(สมาย)/Emphasize.m4a.wav
+4) -z-  - -s-/-z-/P_Meen(สมาย)/Enzyme.m4a.wav
+4) -z-  - -s-/-z-/P_Meen(สมาย)/Equalizer.m4a.wav
+4) -z-  - -s-/-z-/P_Meen(สมาย)/Zealous.m4a.wav
+4) -z-  - -s-/-z-/P_Meen(สมาย)/Zipper.m4a.wav
+4) -z-  - -s-/-z-/P_Numaun(smile)/criticize.mp3.wav
+4) -z-  - -s-/-z-/P_Numaun(smile)/emphasize.mp3.wav
+4) -z-  - -s-/-z-/P_Numaun(smile)/enzyme.mp3.wav
+4) -z-  - -s-/-z-/P_Numaun(smile)/equalizer.mp3.wav
+4) -z-  - -s-/-z-/P_Numaun(smile)/zealous.mp3.wav
+4) -z-  - -s-/-z-/P_Numaun(smile)/zipper.mp3.wav
+4) -z-  - -s-/-z-/P’Manow (Ben)/criticize.m4a.wav
+4) -z-  - -s-/-z-/P’Manow (Ben)/emphasize.m4a.wav
+4) -z-  - -s-/-z-/P’Manow (Ben)/enzyme.m4a.wav
+4) -z-  - -s-/-z-/P’Manow (Ben)/equalizer.m4a.wav
+4) -z-  - -s-/-z-/P’Manow (Ben)/zealous.m4a.wav
+4) -z-  - -s-/-z-/P’Manow (Ben)/zipper.m4a.wav
+4) -z-  - -s-/-z-/P’Pop(เเนน)/Criticize.m4a.wav
+4) -z-  - -s-/-z-/P’Pop(เเนน)/Emphasize.m4a.wav
+4) -z-  - -s-/-z-/P’Pop(เเนน)/Enzyme.m4a.wav
+4) -z-  - -s-/-z-/P’Pop(เเนน)/Equalizer.m4a.wav
+4) -z-  - -s-/-z-/P’Pop(เเนน)/Zealous.m4a.wav
+4) -z-  - -s-/-z-/P’Pop(เเนน)/Zipper.m4a.wav
+4) -z-  - -s-/-z-/ไอริณ (กล้วย)/Criticize.m4a.wav
+4) -z-  - -s-/-z-/ไอริณ (กล้วย)/Emphasize.m4a.wav
+4) -z-  - -s-/-z-/ไอริณ (กล้วย)/Enzyme.m4a.wav
+4) -z-  - -s-/-z-/ไอริณ (กล้วย)/Equalizer.m4a.wav
+4) -z-  - -s-/-z-/ไอริณ (กล้วย)/Zealous.m4a.wav
+4) -z-  - -s-/-z-/ไอริณ (กล้วย)/Zipper.m4a.wav
+5) -b- - -p-/-b-/AJ.Aom(เเนน)/belonging.m4a.wav
+5) -b- - -p-/-b-/AJ.Aom(เเนน)/Bilingual.m4a.wav
+5) -b- - -p-/-b-/AJ.Aom(เเนน)/Dabble.m4a.wav
+5) -b- - -p-/-b-/AJ.Aom(เเนน)/Orbit.m4a.wav
+5) -b- - -p-/-b-/AJ.Aom(เเนน)/Reverb.m4a.wav
+5) -b- - -p-/-b-/AJ.Aom(เเนน)/Robe.m4a.wav
+5) -b- - -p-/-b-/AJ.Nine(Ben)/belonging.m4a.wav
+5) -b- - -p-/-b-/AJ.Nine(Ben)/bilingual.m4a.wav
+5) -b- - -p-/-b-/AJ.Nine(Ben)/dabble.m4a.wav
+5) -b- - -p-/-b-/AJ.Nine(Ben)/orbit.m4a.wav
+5) -b- - -p-/-b-/AJ.Nine(Ben)/reverb.m4a.wav
+5) -b- - -p-/-b-/AJ.Nine(Ben)/robe.m4a.wav
+5) -b- - -p-/-b-/AJ.Pang (โบว์)/Belonging.m4a.wav
+5) -b- - -p-/-b-/AJ.Pang (โบว์)/Bilingual.m4a.wav
+5) -b- - -p-/-b-/AJ.Pang (โบว์)/Dabble.m4a.wav
+5) -b- - -p-/-b-/AJ.Pang (โบว์)/Orbit.m4a.wav
+5) -b- - -p-/-b-/AJ.Pang (โบว์)/Reverb.m4a.wav
+5) -b- - -p-/-b-/AJ.Pang (โบว์)/Robe.m4a.wav
+5) -b- - -p-/-b-/AJ.Perry (kanplu)/belonging.aac.wav
+5) -b- - -p-/-b-/AJ.Perry (kanplu)/bilingual.aac.wav
+5) -b- - -p-/-b-/AJ.Perry (kanplu)/dabble.aac.wav
+5) -b- - -p-/-b-/AJ.Perry (kanplu)/orbit.aac.wav
+5) -b- - -p-/-b-/AJ.Perry (kanplu)/reverb.aac.wav
+5) -b- - -p-/-b-/AJ.Perry (kanplu)/robe.aac.wav
+5) -b- - -p-/-b-/AJ.Ying/belonging.mp3.wav
+5) -b- - -p-/-b-/AJ.Ying/bilingual .mp3.wav
+5) -b- - -p-/-b-/AJ.Ying/dabble.mp3.wav
+5) -b- - -p-/-b-/AJ.Ying/orbit.mp3.wav
+5) -b- - -p-/-b-/AJ.Ying/reverb.mp3.wav
+5) -b- - -p-/-b-/AJ.Ying/robe.mp3.wav
+5) -b- - -p-/-b-/belonging.aac.wav
+5) -b- - -p-/-b-/Daniel (เเนน)/Belonging.m4a.wav
+5) -b- - -p-/-b-/Daniel (เเนน)/Bilingual.m4a.wav
+5) -b- - -p-/-b-/Daniel (เเนน)/Dabble.m4a.wav
+5) -b- - -p-/-b-/Daniel (เเนน)/Orbit.m4a.wav
+5) -b- - -p-/-b-/Daniel (เเนน)/Reverb.m4a.wav
+5) -b- - -p-/-b-/Daniel (เเนน)/Robe.m4a.wav
+5) -b- - -p-/-b-/N_Aung/Belonging.m4a.wav
+5) -b- - -p-/-b-/N_Aung/billingual.m4a.wav
+5) -b- - -p-/-b-/N_Aung/Dabble.m4a.wav
+5) -b- - -p-/-b-/N_Aung/Orbit.m4a.wav
+5) -b- - -p-/-b-/N_Aung/reverb.m4a.wav
+5) -b- - -p-/-b-/N_Aung/Robe.m4a.wav
+5) -b- - -p-/-b-/N_Guy (Ping)/Belonging.m4a.wav
+5) -b- - -p-/-b-/N_Guy (Ping)/Bilingual.m4a.wav
+5) -b- - -p-/-b-/N_Guy (Ping)/Dabble.m4a.wav
+5) -b- - -p-/-b-/N_Guy (Ping)/Orbit.m4a.wav
+5) -b- - -p-/-b-/N_Guy (Ping)/Reverb.m4a.wav
+5) -b- - -p-/-b-/N_Guy (Ping)/Robe.m4a.wav
+5) -b- - -p-/-b-/N_Maprang/belonging.m4a.wav
+5) -b- - -p-/-b-/N_Maprang/bilingual.m4a.wav
+5) -b- - -p-/-b-/N_Maprang/dabble.m4a.wav
+5) -b- - -p-/-b-/N_Maprang/orbit.m4a.wav
+5) -b- - -p-/-b-/N_Maprang/reverb.m4a.wav
+5) -b- - -p-/-b-/N_Maprang/robe.m4a.wav
+5) -b- - -p-/-b-/N_Stamp (Ping)/Belonging.m4a.wav
+5) -b- - -p-/-b-/N_Stamp (Ping)/Bilingual.m4a.wav
+5) -b- - -p-/-b-/N_Stamp (Ping)/Dabble.m4a.wav
+5) -b- - -p-/-b-/N_Stamp (Ping)/Orbit.m4a.wav
+5) -b- - -p-/-b-/N_Stamp (Ping)/Reverb.m4a.wav
+5) -b- - -p-/-b-/N_Stamp (Ping)/Robe.m4a.wav
+5) -b- - -p-/-b-/P_C/Khok Pho 11 2.m4a.wav
+5) -b- - -p-/-b-/P_C/Khok Pho 11 3.m4a.wav
+5) -b- - -p-/-b-/P_C/Khok Pho 11 4.m4a.wav
+5) -b- - -p-/-b-/P_C/Khok Pho 11 5.m4a.wav
+5) -b- - -p-/-b-/P_C/Khok Pho 11 6.m4a.wav
+5) -b- - -p-/-b-/P_C/Khok Pho 11.m4a.wav
+5) -b- - -p-/-b-/P_Meen(สมาย)/Belonging.m4a.wav
+5) -b- - -p-/-b-/P_Meen(สมาย)/Bilingual.m4a.wav
+5) -b- - -p-/-b-/P_Meen(สมาย)/Dabble.m4a.wav
+5) -b- - -p-/-b-/P_Meen(สมาย)/Orbit.m4a.wav
+5) -b- - -p-/-b-/P_Meen(สมาย)/Reverb.m4a.wav
+5) -b- - -p-/-b-/P_Meen(สมาย)/Robe.m4a.wav
+5) -b- - -p-/-b-/P_Numaun(smile)/belonging.mp3.wav
+5) -b- - -p-/-b-/P_Numaun(smile)/bilingual.mp3.wav
+5) -b- - -p-/-b-/P_Numaun(smile)/dabble.mp3.wav
+5) -b- - -p-/-b-/P_Numaun(smile)/orbit.mp3.wav
+5) -b- - -p-/-b-/P_Numaun(smile)/reverb.mp3.wav
+5) -b- - -p-/-b-/P_Numaun(smile)/robe.mp3.wav
+5) -b- - -p-/-b-/P’Manow (Ben)/belonging.m4a.wav
+5) -b- - -p-/-b-/P’Manow (Ben)/bilingual.m4a.wav
+5) -b- - -p-/-b-/P’Manow (Ben)/dabble.m4a.wav
+5) -b- - -p-/-b-/P’Manow (Ben)/orbit.m4a.wav
+5) -b- - -p-/-b-/P’Manow (Ben)/reverb.m4a.wav
+5) -b- - -p-/-b-/P’Manow (Ben)/robe.m4a.wav
+5) -b- - -p-/-b-/P’Pop(เเนน)/Belonging.m4a.wav
+5) -b- - -p-/-b-/P’Pop(เเนน)/Bilingual.m4a.wav
+5) -b- - -p-/-b-/P’Pop(เเนน)/Dabble.m4a.wav
+5) -b- - -p-/-b-/P’Pop(เเนน)/Orbits.m4a.wav
+5) -b- - -p-/-b-/P’Pop(เเนน)/Reverb.m4a.wav
+5) -b- - -p-/-b-/P’Pop(เเนน)/Robe.m4a.wav
+5) -b- - -p-/-b-/ไอริณ (กล้วย)/Belonging.m4a.wav
+5) -b- - -p-/-b-/ไอริณ (กล้วย)/Bilingual.m4a.wav
+5) -b- - -p-/-b-/ไอริณ (กล้วย)/Dabble.m4a.wav
+5) -b- - -p-/-b-/ไอริณ (กล้วย)/Orbit.m4a.wav
+5) -b- - -p-/-b-/ไอริณ (กล้วย)/Reverb.m4a.wav
+5) -b- - -p-/-b-/ไอริณ (กล้วย)/Robe.m4a.wav
+5) -b- - -p-/-p-/AJ.Aom(เเนน)/Appellate.m4a.wav
+5) -b- - -p-/-p-/AJ.Aom(เเนน)/Correspondence.m4a.wav
+5) -b- - -p-/-p-/AJ.Aom(เเนน)/landscape.m4a.wav
+5) -b- - -p-/-p-/AJ.Aom(เเนน)/Pathogens.m4a.wav
+5) -b- - -p-/-p-/AJ.Aom(เเนน)/proposal.m4a.wav
+5) -b- - -p-/-p-/AJ.Aom(เเนน)/Rope.m4a.wav
+5) -b- - -p-/-p-/AJ.Nine (Ben)/appellate.m4a.wav
+5) -b- - -p-/-p-/AJ.Nine (Ben)/correspondence.m4a.wav
+5) -b- - -p-/-p-/AJ.Nine (Ben)/landscape.m4a.wav
+5) -b- - -p-/-p-/AJ.Nine (Ben)/pathogens.m4a.wav
+5) -b- - -p-/-p-/AJ.Nine (Ben)/proposal.m4a.wav
+5) -b- - -p-/-p-/AJ.Nine (Ben)/robe.m4a.wav
+5) -b- - -p-/-p-/AJ.Pang (โบว์)/Appellate.m4a.wav
+5) -b- - -p-/-p-/AJ.Pang (โบว์)/Correspondence.m4a.wav
+5) -b- - -p-/-p-/AJ.Pang (โบว์)/Landscape.m4a.wav
+5) -b- - -p-/-p-/AJ.Pang (โบว์)/Pathogens.m4a.wav
+5) -b- - -p-/-p-/AJ.Pang (โบว์)/Proposal.m4a.wav
+5) -b- - -p-/-p-/AJ.Pang (โบว์)/Rope.m4a.wav
+5) -b- - -p-/-p-/AJ.Perry (kanplu)/appellate.aac.wav
+5) -b- - -p-/-p-/AJ.Perry (kanplu)/correspondence.aac.wav
+5) -b- - -p-/-p-/AJ.Perry (kanplu)/landscape.aac.wav
+5) -b- - -p-/-p-/AJ.Perry (kanplu)/pathogens.aac.wav
+5) -b- - -p-/-p-/AJ.Perry (kanplu)/proposal.aac.wav
+5) -b- - -p-/-p-/AJ.Perry (kanplu)/rope.aac.wav
+5) -b- - -p-/-p-/AJ.Ying/appellate.mp3.wav
+5) -b- - -p-/-p-/AJ.Ying/correspondence.mp3.wav
+5) -b- - -p-/-p-/AJ.Ying/landscape.mp3.wav
+5) -b- - -p-/-p-/AJ.Ying/pathogens.mp3.wav
+5) -b- - -p-/-p-/AJ.Ying/proposal.mp3.wav
+5) -b- - -p-/-p-/AJ.Ying/rope.mp3.wav
+5) -b- - -p-/-p-/Daniel (เเนน)/Appellate.m4a.wav
+5) -b- - -p-/-p-/Daniel (เเนน)/Corespondent.m4a.wav
+5) -b- - -p-/-p-/Daniel (เเนน)/Landscape.m4a.wav
+5) -b- - -p-/-p-/Daniel (เเนน)/Pathogens.m4a.wav
+5) -b- - -p-/-p-/Daniel (เเนน)/Proposal.m4a.wav
+5) -b- - -p-/-p-/Daniel (เเนน)/Rope.m4a.wav
+5) -b- - -p-/-p-/N_Aung/Appellate.m4a.wav
+5) -b- - -p-/-p-/N_Aung/Correspondence.m4a.wav
+5) -b- - -p-/-p-/N_Aung/Landscape.m4a.wav
+5) -b- - -p-/-p-/N_Aung/Pathogens.m4a.wav
+5) -b- - -p-/-p-/N_Aung/proposal.m4a.wav
+5) -b- - -p-/-p-/N_Aung/Rope.m4a.wav
+5) -b- - -p-/-p-/N_Guy (Ping)/Appellate.m4a.wav
+5) -b- - -p-/-p-/N_Guy (Ping)/Correspondence.m4a.wav
+5) -b- - -p-/-p-/N_Guy (Ping)/Landscape.m4a.wav
+5) -b- - -p-/-p-/N_Guy (Ping)/Pathogens.m4a.wav
+5) -b- - -p-/-p-/N_Guy (Ping)/Proposal.m4a.wav
+5) -b- - -p-/-p-/N_Guy (Ping)/Rope.m4a.wav
+5) -b- - -p-/-p-/N_Maprang/appellate.m4a.wav
+5) -b- - -p-/-p-/N_Maprang/correspondence.m4a.wav
+5) -b- - -p-/-p-/N_Maprang/landscape.m4a.wav
+5) -b- - -p-/-p-/N_Maprang/pathogens.m4a.wav
+5) -b- - -p-/-p-/N_Maprang/proposal.m4a.wav
+5) -b- - -p-/-p-/N_Maprang/rope.m4a.wav
+5) -b- - -p-/-p-/N_Stamp (Ping)/Appellate.m4a.wav
+5) -b- - -p-/-p-/N_Stamp (Ping)/Correspondence.m4a.wav
+5) -b- - -p-/-p-/N_Stamp (Ping)/Landscape.m4a.wav
+5) -b- - -p-/-p-/N_Stamp (Ping)/Pathogens.m4a.wav
+5) -b- - -p-/-p-/N_Stamp (Ping)/Proposal.m4a.wav
+5) -b- - -p-/-p-/N_Stamp (Ping)/Rope.m4a.wav
+5) -b- - -p-/-p-/P_C/Khok Pho 12 2 2.m4a.wav
+5) -b- - -p-/-p-/P_C/Khok Pho 12 2 3.m4a.wav
+5) -b- - -p-/-p-/P_C/Khok Pho 12 2 4.m4a.wav
+5) -b- - -p-/-p-/P_C/Khok Pho 12 2 5.m4a.wav
+5) -b- - -p-/-p-/P_C/Khok Pho 12 2 6.m4a.wav
+5) -b- - -p-/-p-/P_C/Khok Pho 12 2.m4a.wav
+5) -b- - -p-/-p-/P_Meen(สมาย)/Appellate.m4a.wav
+5) -b- - -p-/-p-/P_Meen(สมาย)/Correspondance.m4a.wav
+5) -b- - -p-/-p-/P_Meen(สมาย)/Landscape.m4a.wav
+5) -b- - -p-/-p-/P_Meen(สมาย)/Pathogen.m4a.wav
+5) -b- - -p-/-p-/P_Meen(สมาย)/Proposal.m4a.wav
+5) -b- - -p-/-p-/P_Meen(สมาย)/Rope.m4a.wav
+5) -b- - -p-/-p-/P_Numaun(smile)/appellate.mp3.wav
+5) -b- - -p-/-p-/P_Numaun(smile)/correspondence.mp3.wav
+5) -b- - -p-/-p-/P_Numaun(smile)/landscape.mp3.wav
+5) -b- - -p-/-p-/P_Numaun(smile)/pathogens.mp3.wav
+5) -b- - -p-/-p-/P_Numaun(smile)/proposal.mp3.wav
+5) -b- - -p-/-p-/P_Numaun(smile)/rope.mp3.wav
+5) -b- - -p-/-p-/P’Manow (Ben)/appellate.m4a.wav
+5) -b- - -p-/-p-/P’Manow (Ben)/correspondence.m4a.wav
+5) -b- - -p-/-p-/P’Manow (Ben)/landscape.m4a.wav
+5) -b- - -p-/-p-/P’Manow (Ben)/pathogens.m4a.wav
+5) -b- - -p-/-p-/P’Manow (Ben)/proposal.m4a.wav
+5) -b- - -p-/-p-/P’Manow (Ben)/rope.m4a.wav
+5) -b- - -p-/-p-/P’Pop(เเนน)/Appellate.m4a.wav
+5) -b- - -p-/-p-/P’Pop(เเนน)/Correspondence.m4a.wav
+5) -b- - -p-/-p-/P’Pop(เเนน)/Landscape.m4a.wav
+5) -b- - -p-/-p-/P’Pop(เเนน)/Pathogens.m4a.wav
+5) -b- - -p-/-p-/P’Pop(เเนน)/Proposal.m4a.wav
+5) -b- - -p-/-p-/P’Pop(เเนน)/Rope.m4a.wav
+5) -b- - -p-/-p-/ไอริณ (กล้วย)/Appellate.m4a.wav
+5) -b- - -p-/-p-/ไอริณ (กล้วย)/Correspondence.m4a.wav
+5) -b- - -p-/-p-/ไอริณ (กล้วย)/Landscape.m4a.wav
+5) -b- - -p-/-p-/ไอริณ (กล้วย)/Pathogens.m4a.wav
+5) -b- - -p-/-p-/ไอริณ (กล้วย)/Propsal.m4a.wav
+5) -b- - -p-/-p-/ไอริณ (กล้วย)/Rope.m4a.wav

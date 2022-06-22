@@ -14,10 +14,14 @@ from flask import render_template
 from torch import nn
 from torch.utils.data import Dataset
 
+# CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021")
+# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb1_train.csv"
+# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb1_test.csv"
+# AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"
 CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021")
-ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
-ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
-AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"
+ANNOTATIONS_FILE: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021\cb1_train.csv")
+ANNOTATIONS_FILE_TEST: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021\cb1_train.csv")
+AUDIO_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021\Word level - Copy")
 
 APP_DIR: pathlib.Path = pathlib.Path.cwd()
 VAR_DIR: pathlib.Path = APP_DIR / "var"
@@ -215,7 +219,7 @@ def asr():
             "-y",
             "-i", f'`wslpath -a "{full_file_name}"`',
             "-vn",
-            "-ac", "2",
+            # "-ac", "2",
             f'`wslpath -a "{full_file_name_wav}"`',
         ]
     else:
