@@ -1,10 +1,11 @@
 import os
 import uuid
+import pathlib
 from flask import Flask, redirect, session, url_for
 from flaskext.mysql import MySQL
 import pymysql
 
-UPLOAD_FOLDER = 'files'
+UPLOAD_FOLDER = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\web\app\var\upload")
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'UGWEGYWEY#(*T@#(*#@Y*(EFHEIGWHG'

@@ -25,7 +25,7 @@ def register():
         conn.commit()
         user = User(form.username.data, form.password.data)
         user.login_user()
-        return redirect(url_for('main.home'))
+        return redirect(url_for('main.home')) 
 
     
     return render_template('register.html.jinja', form=form)
