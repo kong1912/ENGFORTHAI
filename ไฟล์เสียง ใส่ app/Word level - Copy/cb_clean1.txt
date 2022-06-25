@@ -28,9 +28,6 @@
 1) -ð- - -θ- - -tθ-/-tθ-/N_Stamp (Ping)/Eighth.m4a.wav,eighth
 1) -ð- - -θ- - -tθ-/-tθ-/N_Stamp (Ping)/Hundredth.m4a.wav,hundredth
 1) -ð- - -θ- - -tθ-/-tθ-/N_Stamp (Ping)/Width.m4a.wav,width
-1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2 2.m4a.wav,khok pho 4 2 2  ***
-1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2 3.m4a.wav,khok pho 4 2 3  ***
-1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2.m4a.wav,khok pho 4 2      ***
 1) -ð- - -θ- - -tθ-/-tθ-/P_meen(สมาย)/Eighth.m4a.wav,eighth
 1) -ð- - -θ- - -tθ-/-tθ-/P_meen(สมาย)/Hundredth.m4a.wav,hundredth
 1) -ð- - -θ- - -tθ-/-tθ-/P_meen(สมาย)/Width.m4a.wav,width
@@ -46,26 +43,26 @@
 1) -ð- - -θ- - -tθ-/-tθ-/ไอริณ (กล้วย)/Eighth.m4a.wav,eighth
 1) -ð- - -θ- - -tθ-/-tθ-/ไอริณ (กล้วย)/Hundredth.m4a.wav,hundredth
 1) -ð- - -θ- - -tθ-/-tθ-/ไอริณ (กล้วย)/Width.m4a.wav,width
-1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Altogether .aac.wav,altogether 
-1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Smooth .aac.wav,smooth 
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Altogether .aac.wav,altogether
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Smooth .aac.wav,smooth
 1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Though.aac.wav,though
 1) -ð- - -θ- - -tθ-/-ð-/AJ.Aom(เเนน)/Writhe.aac.wav,writhe
-1) -ð- - -θ- - -tθ-/-ð-/AJ.Nine (Ben)/altogether .m4a.wav,altogether 
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Nine (Ben)/altogether .m4a.wav,altogether
 1) -ð- - -θ- - -tθ-/-ð-/AJ.Nine (Ben)/smooth.m4a.wav,smooth
 1) -ð- - -θ- - -tθ-/-ð-/AJ.Nine (Ben)/though.m4a.wav,though
 1) -ð- - -θ- - -tθ-/-ð-/AJ.Nine (Ben)/writhe.m4a.wav,writhe
-1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_altogether.aac.wav,voice_altogether
-1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_smooth.aac.wav,voice_smooth
-1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_though.aac.wav,voice_though
-1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_writhe.aac.wav,voice_writhe
-1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Altogether .aac.wav,altogether 
-1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Smooth .aac.wav,smooth 
-1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Though .aac.wav,though 
+1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_altogether.aac.wav,altogether
+1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_smooth.aac.wav,smooth
+1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_though.aac.wav,though
+1) -ð- - -θ- - -tθ-/-ð-/AJ.pang (Bow)/voice_writhe.aac.wav,writhe
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Altogether .aac.wav,altogether
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Smooth .aac.wav,smooth
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Though .aac.wav,though
 1) -ð- - -θ- - -tθ-/-ð-/AJ.Perry (kanplu)/Writhe.aac.wav,writhe
 1) -ð- - -θ- - -tθ-/-ð-/AJ.Ying (Cream)/altogether.mp3.wav,altogether
 1) -ð- - -θ- - -tθ-/-ð-/AJ.Ying (Cream)/smooth.mp3.wav,smooth
 1) -ð- - -θ- - -tθ-/-ð-/AJ.Ying (Cream)/though.mp3.wav,though
-1) -ð- - -θ- - -tθ-/-ð-/AJ.Ying (Cream)/writhe .mp3.wav,writhe 
+1) -ð- - -θ- - -tθ-/-ð-/AJ.Ying (Cream)/writhe .mp3.wav,writhe
 1) -ð- - -θ- - -tθ-/-ð-/Daniel (เเนน)/Altogether.m4a.wav,altogether
 1) -ð- - -θ- - -tθ-/-ð-/Daniel (เเนน)/Smooth.m4a.wav,smooth
 1) -ð- - -θ- - -tθ-/-ð-/Daniel (เเนน)/Though.m4a.wav,though
@@ -94,28 +91,20 @@
 1) -ð- - -θ- - -tθ-/-ð-/P’Manow (Ben)/smooth.m4a.wav,smooth
 1) -ð- - -θ- - -tθ-/-ð-/P’Manow (Ben)/though.m4a.wav,though
 1) -ð- - -θ- - -tθ-/-ð-/P’Manow (Ben)/writhe.m4a.wav,writhe
-1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/Altogether 2.m4a.wav,altogether 2
-1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/Smooth 2.m4a.wav,smooth 2
-1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/Though 2.m4a.wav,though 2
-1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/writhe 2.m4a.wav,writhe 2
+1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/Altogether 2.m4a.wav,altogether
+1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/Smooth 2.m4a.wav,smooth
+1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/Though 2.m4a.wav,though
+1) -ð- - -θ- - -tθ-/-ð-/ชาย ป.ตรี เอกอื่น (กล้วย)/writhe 2.m4a.wav,writhe
 1) -ð- - -θ- - -tθ-/-ð-/พี่ซี (กล้วย)/altogether.m4a.wav,altogether
 1) -ð- - -θ- - -tθ-/-ð-/พี่ซี (กล้วย)/smooth.m4a.wav,smooth
 1) -ð- - -θ- - -tθ-/-ð-/พี่ซี (กล้วย)/though.m4a.wav,though
 1) -ð- - -θ- - -tθ-/-ð-/พี่ซี (กล้วย)/writhe.m4a.wav,writhe
-1) -ð- - -θ- - -tθ-/-ð-/พี่น้ำอุ่น (สมาย)/1.mp3.wav,1
-1) -ð- - -θ- - -tθ-/-ð-/พี่น้ำอุ่น (สมาย)/2.mp3.wav,2
-1) -ð- - -θ- - -tθ-/-ð-/พี่น้ำอุ่น (สมาย)/3.mp3.wav,3
-1) -ð- - -θ- - -tθ-/-ð-/พี่น้ำอุ่น (สมาย)/4.mp3.wav,4
-1) -ð- - -θ- - -tθ-/-ð-/พี่มีนตรา(สมาย)/พี่มีน1.m4a.wav,พี่มีน1
-1) -ð- - -θ- - -tθ-/-ð-/พี่มีนตรา(สมาย)/พี่มีน2.m4a.wav,พี่มีน2
-1) -ð- - -θ- - -tθ-/-ð-/พี่มีนตรา(สมาย)/พี่มีน3.m4a.wav,พี่มีน3
-1) -ð- - -θ- - -tθ-/-ð-/พี่มีนตรา(สมาย)/พี่มีน4.m4a.wav,พี่มีน4
-1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Altogether 3.m4a.wav,altogether 3
-1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Smooth 3.m4a.wav,smooth 3
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Altogether 3.m4a.wav,altogether
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Smooth 3.m4a.wav,smooth
 1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Though.m4a.wav,though
-1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Writhe 2.m4a.wav,writhe 2
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ป.ตรี เอกอื่น2 (กล้วย)/Writhe 2.m4a.wav,writhe
 1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Altogether.m4a.wav,altogether
-1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Smooth(1).m4a.wav,smooth(1)
+1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Smooth(1).m4a.wav,smooth
 1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Smooth.m4a.wav,smooth
 1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Though.m4a.wav,though
 1) -ð- - -θ- - -tθ-/-ð-/หญิง ไม่จบเอกอิ้ง ปสก.0-3ปี (กล้วย)/Writhe.m4a.wav,writhe
@@ -163,10 +152,6 @@
 1) -ð- - -θ- - -tθ-/-θ-/N_Stamp (Ping)/Hypothesis.m4a.wav,hypothesis
 1) -ð- - -θ- - -tθ-/-θ-/N_Stamp (Ping)/Stealth.m4a.wav,stealth
 1) -ð- - -θ- - -tθ-/-θ-/N_Stamp (Ping)/Theorist.m4a.wav,theorist
-1) -ð- - -θ- - -tθ-/-θ-/P_C/Khok Pho 3 2 2.m4a.wav,khok pho 3 2 2
-1) -ð- - -θ- - -tθ-/-θ-/P_C/Khok Pho 3 2 3.m4a.wav,khok pho 3 2 3
-1) -ð- - -θ- - -tθ-/-θ-/P_C/Khok Pho 3 2 4.m4a.wav,khok pho 3 2 4
-1) -ð- - -θ- - -tθ-/-θ-/P_C/Khok Pho 3 2.m4a.wav,khok pho 3 2
 1) -ð- - -θ- - -tθ-/-θ-/P_meen (สมาย)/Athlete.m4a.wav,athlete
 1) -ð- - -θ- - -tθ-/-θ-/P_meen (สมาย)/Hypothesis.m4a.wav,hypothesis
 1) -ð- - -θ- - -tθ-/-θ-/P_meen (สมาย)/Starch.m4a.wav,starch
@@ -242,12 +227,6 @@
 2) -ʒ- - -ʃ-/-ʃ-/N_Stamp (Ping)/Flush.m4a.wav,flush
 2) -ʒ- - -ʃ-/-ʃ-/N_Stamp (Ping)/Ratio.m4a.wav,ratio
 2) -ʒ- - -ʃ-/-ʃ-/N_Stamp (Ping)/Shipment.m4a.wav,shipment
-2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 2.m4a.wav,khok pho 6 2
-2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 3.m4a.wav,khok pho 6 3
-2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 4.m4a.wav,khok pho 6 4
-2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 5.m4a.wav,khok pho 6 5
-2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6 6.m4a.wav,khok pho 6 6
-2) -ʒ- - -ʃ-/-ʃ-/P_C/Khok Pho 6.m4a.wav,khok pho 6
 2) -ʒ- - -ʃ-/-ʃ-/P_Meen(สมาย)/Bashful.m4a.wav,bashful
 2) -ʒ- - -ʃ-/-ʃ-/P_Meen(สมาย)/Chicanery.m4a.wav,chicanery
 2) -ʒ- - -ʃ-/-ʃ-/P_Meen(สมาย)/Distinguish.m4a.wav,distinguish
@@ -296,7 +275,7 @@
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Pang (โบว์)/Sabotage.m4a.wav,sabotage
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Pang (โบว์)/Unusual.m4a.wav,unusual
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/camouflage.aac.wav,camouflage
-2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/Jupe .aac.wav,jupe 
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/Jupe .aac.wav,jupe
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/jus.aac.wav,jus
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/luxury.aac.wav,luxury
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Perry (kanplu)/sabotage.aac.wav,sabotage
@@ -304,7 +283,7 @@
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/camouflage.mp3.wav,camouflage
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/jupe.mp3.wav,jupe
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/jus.mp3.wav,jus
-2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/luxury .mp3.wav,luxury 
+2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/luxury .mp3.wav,luxury
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/sabotage.mp3.wav,sabotage
 2) -ʒ- - -ʃ-/-ʒ-/AJ.Ying/unusual.mp3.wav,unusual
 2) -ʒ- - -ʃ-/-ʒ-/Daniel (แนน)/Camouflage.m4a.wav,camouflage
@@ -337,12 +316,6 @@
 2) -ʒ- - -ʃ-/-ʒ-/N_Stamp (Ping)/Luxury.m4a.wav,luxury
 2) -ʒ- - -ʃ-/-ʒ-/N_Stamp (Ping)/Sabotage.m4a.wav,sabotage
 2) -ʒ- - -ʃ-/-ʒ-/N_Stamp (Ping)/Unusual.m4a.wav,unusual
-2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 2.m4a.wav,khok pho 5 2 2
-2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 3.m4a.wav,khok pho 5 2 3
-2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 4.m4a.wav,khok pho 5 2 4
-2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 5.m4a.wav,khok pho 5 2 5
-2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2 6.m4a.wav,khok pho 5 2 6
-2) -ʒ- - -ʃ-/-ʒ-/P_C/Khok Pho 5 2.m4a.wav,khok pho 5 2
 2) -ʒ- - -ʃ-/-ʒ-/P_Meen(สมาย)/Camouflage.m4a.wav,camouflage
 2) -ʒ- - -ʃ-/-ʒ-/P_Meen(สมาย)/Jupe.m4a.wav,jupe
 2) -ʒ- - -ʃ-/-ʒ-/P_Meen(สมาย)/Jus.m4a.wav,jus
@@ -352,7 +325,7 @@
 2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/camouflage.mp3.wav,camouflage
 2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/jupe.mp3.wav,jupe
 2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/jus.mp3.wav,jus
-2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/luxury(1).mp3.wav,luxury(1)
+2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/luxury(1).mp3.wav,luxury
 2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/luxury.mp3.wav,luxury
 2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/sabotage.mp3.wav,sabotage
 2) -ʒ- - -ʃ-/-ʒ-/P_Numaun(smile)/unusual.mp3.wav,unusual
@@ -394,7 +367,7 @@
 3) -dʒ- - -tʃ-/-dʒ-/AJ.Perry (kanplu)/vegetable.aac.wav,vegetable
 3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/charge.mp3.wav,charge
 3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/fragile.mp3.wav,fragile
-3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/indulge .mp3.wav,indulge 
+3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/indulge .mp3.wav,indulge
 3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/jewelry.mp3.wav,jewelry
 3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/judge.mp3.wav,judge
 3) -dʒ- - -tʃ-/-dʒ-/AJ.Ying/vegetable.mp3.wav,vegetable
@@ -421,12 +394,6 @@
 3) -dʒ- - -tʃ-/-dʒ-/N_Stamp (Ping)/Jewelry.m4a.wav,jewelry
 3) -dʒ- - -tʃ-/-dʒ-/N_Stamp (Ping)/Judge.m4a.wav,judge
 3) -dʒ- - -tʃ-/-dʒ-/N_Stamp (Ping)/Vegetable.m4a.wav,vegetable
-3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 2.m4a.wav,khok pho 7 2
-3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 3.m4a.wav,khok pho 7 3
-3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 4.m4a.wav,khok pho 7 4
-3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 5.m4a.wav,khok pho 7 5
-3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7 6.m4a.wav,khok pho 7 6
-3) -dʒ- - -tʃ-/-dʒ-/P_C/Khok Pho 7.m4a.wav,khok pho 7
 3) -dʒ- - -tʃ-/-dʒ-/P_Meen(สมาย)/Charge.m4a.wav,charge
 3) -dʒ- - -tʃ-/-dʒ-/P_Meen(สมาย)/Fragile.m4a.wav,fragile
 3) -dʒ- - -tʃ-/-dʒ-/P_Meen(สมาย)/Indulge.m4a.wav,indulge
@@ -516,12 +483,6 @@
 3) -dʒ- - -tʃ-/-tʃ-/N_Stamp (Ping)/Larch.m4a.wav,larch
 3) -dʒ- - -tʃ-/-tʃ-/N_Stamp (Ping)/Purchase.m4a.wav,purchase
 3) -dʒ- - -tʃ-/-tʃ-/N_Stamp (Ping)/Starch.m4a.wav,starch
-3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 2.m4a.wav,khok pho 8 2
-3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 3.m4a.wav,khok pho 8 3
-3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 4.m4a.wav,khok pho 8 4
-3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 5.m4a.wav,khok pho 8 5
-3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8 6.m4a.wav,khok pho 8 6
-3) -dʒ- - -tʃ-/-tʃ-/P_C/Khok Pho 8.m4a.wav,khok pho 8
 3) -dʒ- - -tʃ-/-tʃ-/P_Meen(สมาย)/Challenge.m4a.wav,challenge
 3) -dʒ- - -tʃ-/-tʃ-/P_Meen(สมาย)/Choke.m4a.wav,choke
 3) -dʒ- - -tʃ-/-tʃ-/P_Meen(สมาย)/Etching.m4a.wav,etching
@@ -611,12 +572,6 @@
 4) -z-  - -s-/-s-/N_Stamp (Ping)/Process.m4a.wav,process
 4) -z-  - -s-/-s-/N_Stamp (Ping)/Securely.m4a.wav,securely
 4) -z-  - -s-/-s-/N_Stamp (Ping)/Successor.m4a.wav,successor
-4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 2.m4a.wav,khok pho 10 2 2
-4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 3.m4a.wav,khok pho 10 2 3
-4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 4.m4a.wav,khok pho 10 2 4
-4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 5.m4a.wav,khok pho 10 2 5
-4) -z-  - -s-/-s-/P_C/Khok Pho 10 2 6.m4a.wav,khok pho 10 2 6
-4) -z-  - -s-/-s-/P_C/Khok Pho 10 2.m4a.wav,khok pho 10 2
 4) -z-  - -s-/-s-/P_Meen(สมาย)/Decease.m4a.wav,decease
 4) -z-  - -s-/-s-/P_Meen(สมาย)/Overseas.m4a.wav,overseas
 4) -z-  - -s-/-s-/P_Meen(สมาย)/Practice.m4a.wav,practice
@@ -647,8 +602,8 @@
 4) -z-  - -s-/-s-/ไอริณ (กล้วย)/Process.m4a.wav,process
 4) -z-  - -s-/-s-/ไอริณ (กล้วย)/Securely.m4a.wav,securely
 4) -z-  - -s-/-s-/ไอริณ (กล้วย)/Successor.m4a.wav,successor
-4) -z-  - -s-/-z-/AJ,Ying/criticize (1).mp3.wav,criticize (1)
-4) -z-  - -s-/-z-/AJ,Ying/emphasize (1).mp3.wav,emphasize (1)
+4) -z-  - -s-/-z-/AJ,Ying/criticize (1).mp3.wav,criticize
+4) -z-  - -s-/-z-/AJ,Ying/emphasize (1).mp3.wav,emphasize
 4) -z-  - -s-/-z-/AJ,Ying/enzyme.mp3.wav,enzyme
 4) -z-  - -s-/-z-/AJ,Ying/equalizer.mp3.wav,equalizer
 4) -z-  - -s-/-z-/AJ,Ying/zealous.mp3.wav,zealous
@@ -706,12 +661,6 @@
 4) -z-  - -s-/-z-/N_Stamp (Ping)/Equalizer.m4a.wav,equalizer
 4) -z-  - -s-/-z-/N_Stamp (Ping)/Zealous.m4a.wav,zealous
 4) -z-  - -s-/-z-/N_Stamp (Ping)/Zipper.m4a.wav,zipper
-4) -z-  - -s-/-z-/P_C/Khok Pho 9 2.m4a.wav,khok pho 9 2
-4) -z-  - -s-/-z-/P_C/Khok Pho 9 3.m4a.wav,khok pho 9 3
-4) -z-  - -s-/-z-/P_C/Khok Pho 9 4.m4a.wav,khok pho 9 4
-4) -z-  - -s-/-z-/P_C/Khok Pho 9 5.m4a.wav,khok pho 9 5
-4) -z-  - -s-/-z-/P_C/Khok Pho 9 6.m4a.wav,khok pho 9 6
-4) -z-  - -s-/-z-/P_C/Khok Pho 9.m4a.wav,khok pho 9
 4) -z-  - -s-/-z-/P_Meen(สมาย)/Criticize.m4a.wav,criticize
 4) -z-  - -s-/-z-/P_Meen(สมาย)/Emphasize.m4a.wav,emphasize
 4) -z-  - -s-/-z-/P_Meen(สมาย)/Enzyme.m4a.wav,enzyme
@@ -767,7 +716,7 @@
 5) -b- - -p-/-b-/AJ.Perry (kanplu)/reverb.aac.wav,reverb
 5) -b- - -p-/-b-/AJ.Perry (kanplu)/robe.aac.wav,robe
 5) -b- - -p-/-b-/AJ.Ying/belonging.mp3.wav,belonging
-5) -b- - -p-/-b-/AJ.Ying/bilingual .mp3.wav,bilingual 
+5) -b- - -p-/-b-/AJ.Ying/bilingual .mp3.wav,bilingual
 5) -b- - -p-/-b-/AJ.Ying/dabble.mp3.wav,dabble
 5) -b- - -p-/-b-/AJ.Ying/orbit.mp3.wav,orbit
 5) -b- - -p-/-b-/AJ.Ying/reverb.mp3.wav,reverb
@@ -803,12 +752,6 @@
 5) -b- - -p-/-b-/N_Stamp (Ping)/Orbit.m4a.wav,orbit
 5) -b- - -p-/-b-/N_Stamp (Ping)/Reverb.m4a.wav,reverb
 5) -b- - -p-/-b-/N_Stamp (Ping)/Robe.m4a.wav,robe
-5) -b- - -p-/-b-/P_C/Khok Pho 11 2.m4a.wav,khok pho 11 2
-5) -b- - -p-/-b-/P_C/Khok Pho 11 3.m4a.wav,khok pho 11 3
-5) -b- - -p-/-b-/P_C/Khok Pho 11 4.m4a.wav,khok pho 11 4
-5) -b- - -p-/-b-/P_C/Khok Pho 11 5.m4a.wav,khok pho 11 5
-5) -b- - -p-/-b-/P_C/Khok Pho 11 6.m4a.wav,khok pho 11 6
-5) -b- - -p-/-b-/P_C/Khok Pho 11.m4a.wav,khok pho 11
 5) -b- - -p-/-b-/P_Meen(สมาย)/Belonging.m4a.wav,belonging
 5) -b- - -p-/-b-/P_Meen(สมาย)/Bilingual.m4a.wav,bilingual
 5) -b- - -p-/-b-/P_Meen(สมาย)/Dabble.m4a.wav,dabble
@@ -899,12 +842,6 @@
 5) -b- - -p-/-p-/N_Stamp (Ping)/Pathogens.m4a.wav,pathogens
 5) -b- - -p-/-p-/N_Stamp (Ping)/Proposal.m4a.wav,proposal
 5) -b- - -p-/-p-/N_Stamp (Ping)/Rope.m4a.wav,rope
-5) -b- - -p-/-p-/P_C/Khok Pho 12 2 2.m4a.wav,khok pho 12 2 2
-5) -b- - -p-/-p-/P_C/Khok Pho 12 2 3.m4a.wav,khok pho 12 2 3
-5) -b- - -p-/-p-/P_C/Khok Pho 12 2 4.m4a.wav,khok pho 12 2 4
-5) -b- - -p-/-p-/P_C/Khok Pho 12 2 5.m4a.wav,khok pho 12 2 5
-5) -b- - -p-/-p-/P_C/Khok Pho 12 2 6.m4a.wav,khok pho 12 2 6
-5) -b- - -p-/-p-/P_C/Khok Pho 12 2.m4a.wav,khok pho 12 2
 5) -b- - -p-/-p-/P_Meen(สมาย)/Appellate.m4a.wav,appellate
 5) -b- - -p-/-p-/P_Meen(สมาย)/Correspondance.m4a.wav,correspondance
 5) -b- - -p-/-p-/P_Meen(สมาย)/Landscape.m4a.wav,landscape

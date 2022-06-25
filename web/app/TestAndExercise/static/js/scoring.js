@@ -1,40 +1,52 @@
+navigator
+        .mediaDevices
+        .getUserMedia({audio: true})
+        .then(stream => {
+            handlerFunction(stream)
+        });
 
+    function handlerFunction(stream) {
+        rec = new MediaRecorder(stream);
+        rec.ondataavailable = e => {
+            audioChunks.push(e.data);
+            if (rec.state == "inactive") {
+                // let blob = new Blob(audioChunks, {type: 'audio/wav'});
+                let blob = new Blob(audioChunks, {type: 'audio/webm'});
+                sendData(blob);
+            }
+        }
+    }
 
-let s1_s =  parseInt(document.getElementById("score-1").value) +
-            parseInt(document.getElementById("score-2").value) +
-            parseInt(document.getElementById("score-3").value);
+    function sendData(data) {
+        var form = new FormData();
+        form.append('file', data, 'data.mp3');
+        form.append('title', 'data.mp3');
+        //Chrome inspector shows that the post data includes a file and a title.
+        $.ajax({
+            type: 'POST',
+            // url: '/save-record',
+            url: '/asr',
+            data: form,
+            cache: false,
+            processData: false,
+            contentType: false
+        }).done(function (data) {
+            console.log(data);
+            alert(JSON.stringify(data))
+        });
+    }
 
-let s2_s = parseInt(document.getElementById("score-4").value) +
-           parseInt(document.getElementById("score-5").value) +   
-           parseInt(document.getElementById("score-6").value);
+    startRecording.onclick = e => {
+        console.log('Recording are started..');
+        startRecording.disabled = true;
+        stopRecording.disabled = false;
+        audioChunks = [];
+        rec.start();
+    };
 
-let s3_s = Number(document.getElementById("score-7").value) +
-           Number(document.getElementById("score-8").value) +
-           Number(document.getElementById("score-9").value);
-
-let s4_s = Number(document.getElementById("score-10").value) +
-           Number(document.getElementById("score-11").value) +
-           Number(document.getElementById("score-12").value);
-
-let s5_s  = Number(document.getElementById("score-13").value) +
-            Number(document.getElementById("score-14").value) +
-            Number(document.getElementById("score-15").value);
-
-let total = s1_s + s2_s + s3_s + s4_s + s5_s;
-let result = {"s1": s1_s, 
-              "s2": s2_s,
-              "s3": s3_s, 
-              "s4": s4_s, 
-              "s5": s5_s, 
-              "total": total};
-// let xhr = new XMLHttpRequest();
-// xhr.open("POST", "/insert_score");
-// xhr.setRequestHeader("Content-Type", "application/json");
-// xhr.send(JSON.stringify(result));
-fetch('/test')
-      .then(function (response) {
-          return response.json();
-      }).then(function (text) {
-          console.log('GET response:');
-          console.log(text.greeting); 
-      });
+    stopRecording.onclick = e => {
+        console.log("Recording are stopped.");
+        startRecording.disabled = false;
+        stopRecording.disabled = true;
+        rec.stop();
+    };
