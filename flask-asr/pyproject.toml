@@ -7,8 +7,7 @@ authors = ["Your Name <you@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 Flask = "^2.1.1"
-pandas = "^1.4.2"
-matplotlib = "^3.5.1"
+pandas = "^1.4.3"
 torchaudio = "^0.11.0"
 tqdm = "^4.64.0"
 SoundFile = "^0.10.3"
@@ -17,7 +16,7 @@ sox = "^1.4.1"
 Jinja2 = "^3.1.2"
 
 [tool.poetry.dev-dependencies]
-pytest = "^7.1.1"
+pytest = "^7.1.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

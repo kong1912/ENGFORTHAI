@@ -1,20 +1,29 @@
-from app import app,VAR_DIR, LOG_DIR, CACHE_DIR, \
-UPLOAD_DIR, ANNOTATIONS_FILE, AUDIO_DIR,MODEL_FILE,ANNOTATIONS_FILE_TEST
 import math
 import os
 import pathlib
 import subprocess
 import sys
 import uuid
+import logging
+
 import pandas as pd
 import torch
 import torch.nn.functional as F
 import torchaudio
-from flask import Flask, request, flash, redirect
+from flask import Flask, request, flash, redirect, jsonify
 from flask import render_template
 from torch import nn
 from torch.utils.data import Dataset
+from app import app
+from asr.e2e_asr import *
 
+APP_DIR: pathlib.Path = pathlib.Path.cwd()
+VAR_DIR: pathlib.Path = APP_DIR / "var"
+LOG_DIR: pathlib.Path = VAR_DIR / "log"
+UPLOAD_DIR: pathlib.Path = VAR_DIR / "upload"
+CACHE_DIR: pathlib.Path = VAR_DIR / "cache"
+
+LOG_FILE: pathlib.Path = LOG_DIR / "flask_asr.log"
 
 
 def ensure_folder(path: pathlib.Path, path_name: str = "") -> None:
@@ -35,91 +44,48 @@ def ensure_folders() -> None:
 
 ensure_folders()
 
+# E2E_ASR
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\kongpop-asr-data")
 
-class GowajeeDataset(Dataset):
+END_TO_END_SETTINGS: (EndToEndSetting) = (
+    EndToEndSetting(
+        annotations_file_train=CORPUS_BASE_DIR / "cb1_clean1_train.csv",
+        annotations_file_test=CORPUS_BASE_DIR / "cb1_clean1_test.csv",
+        model_file=CACHE_DIR / "cb1_clean1_model.pickle",
+        audio_dir=CORPUS_BASE_DIR / "wav",
+    ),
+    EndToEndSetting(
+        annotations_file_train=CORPUS_BASE_DIR / "cb2_clean1_train.csv",
+        annotations_file_test=CORPUS_BASE_DIR / "cb2_clean1_test.csv",
+        model_file=CACHE_DIR / "cb2_clean1_model.pickle",
+        audio_dir=CORPUS_BASE_DIR / "wav",
+    ),
+    EndToEndSetting(
+        annotations_file_train=CORPUS_BASE_DIR / "cb3_clean1_train.csv",
+        annotations_file_test=CORPUS_BASE_DIR / "cb3_clean1_test.csv",
+        model_file=CACHE_DIR / "cb3_clean1_model.pickle",
+        audio_dir=CORPUS_BASE_DIR / "wav",
+    ),
+    EndToEndSetting(
+        annotations_file_train=CORPUS_BASE_DIR / "cb4_clean1_train.csv",
+        annotations_file_test=CORPUS_BASE_DIR / "cb4_clean1_test.csv",
+        model_file=CACHE_DIR / "cb4_clean1_model.pickle",
+        audio_dir=CORPUS_BASE_DIR / "wav",
+    ),
+    EndToEndSetting(
+        annotations_file_train=CORPUS_BASE_DIR / "cb5_clean1_train.csv",
+        annotations_file_test=CORPUS_BASE_DIR / "cb5_clean1_test.csv",
+        model_file=CACHE_DIR / "cb5_clean1_model.pickle",
+        audio_dir=CORPUS_BASE_DIR / "wav",
+    ),
+)
 
-    def __init__(self, annotations_file, audio_dir):
-        self.annotations = pd.read_csv(annotations_file)
-        self.audio_dir = audio_dir
-
-    def __len__(self):
-        return len(self.annotations)
-
-    def __getitem__(self, index):
-        audio_sample_path = self._get_audio_sample_path(index)
-        label = self._get_audio_sample_label(index)
-        waveform, sr = torchaudio.load(audio_sample_path)
-        return waveform, sr, label
-
-    def _get_audio_sample_path(self, index):
-        path = os.path.join(self.audio_dir, self.annotations.iloc[
-            index, 0])
-        return path
-
-    def _get_audio_sample_label(self, index):
-        return self.annotations.iloc[index, 1]
-
-
-gwj = GowajeeDataset(ANNOTATIONS_FILE, AUDIO_DIR)
-gwj_test = GowajeeDataset(ANNOTATIONS_FILE_TEST, AUDIO_DIR)
-print(f"There are {len(gwj)} samples in the dataset.")
-waveform, sample_rate, label = gwj[0]
-
-
-class M5(nn.Module):
-    def __init__(self, n_input=1, n_output=24, stride=16, n_channel=32):
-        super().__init__()
-        self.conv1 = nn.Conv1d(n_input, n_channel, kernel_size=80, stride=stride)
-        self.bn1 = nn.BatchNorm1d(n_channel)
-        self.pool1 = nn.MaxPool1d(4)
-        self.conv2 = nn.Conv1d(n_channel, n_channel, kernel_size=3)
-        self.bn2 = nn.BatchNorm1d(n_channel)
-        self.pool2 = nn.MaxPool1d(4)
-        self.conv3 = nn.Conv1d(n_channel, 2 * n_channel, kernel_size=3)
-        self.bn3 = nn.BatchNorm1d(2 * n_channel)
-        self.pool3 = nn.MaxPool1d(4)
-        self.conv4 = nn.Conv1d(2 * n_channel, 2 * n_channel, kernel_size=3)
-        self.bn4 = nn.BatchNorm1d(2 * n_channel)
-        self.pool4 = nn.MaxPool1d(4)
-        self.fc1 = nn.Linear(2 * n_channel, n_output)
-
-    def forward(self, x):
-        x = self.conv1(x)
-        x = F.relu(self.bn1(x))
-        x = self.pool1(x)
-        x = self.conv2(x)
-        x = F.relu(self.bn2(x))
-        x = self.pool2(x)
-        x = self.conv3(x)
-        x = F.relu(self.bn3(x))
-        x = self.pool3(x)
-        x = self.conv4(x)
-        x = F.relu(self.bn4(x))
-        x = self.pool4(x)
-        x = F.avg_pool1d(x, x.shape[-1])
-        x = x.permute(0, 2, 1)
-        x = self.fc1(x)
-        return F.log_softmax(x, dim=2)
-
-
-model = torch.load(MODEL_FILE)
-labels = sorted(list(set(datapoint[2] for datapoint in gwj)))
-
-
-def get_likely_index(tensor):
-    # find most likely label index for each element in the batch
-    return tensor.argmax(dim=-1)
-
-
-def label_to_index(word):
-    # Return the position of the word in labels
-    return torch.tensor(labels.index(word))
-
-
-def index_to_label(index):
-    # Return the word corresponding to the index in labels
-    # This is the inverse of label_to_index
-    return labels[index]
+# Tuple from generator
+# END_TO_END_ASRS: [EndToEndASR] = [EndToEndASR(e) for e in END_TO_END_SETTINGS]
+END_TO_END_ASRS: [EndToEndASR] = []
+for s in END_TO_END_SETTINGS:
+    asr = EndToEndASR(s)
+    END_TO_END_ASRS.append(asr)
 
 @app.route('/save-record', methods=['POST'])
 def save_record():
@@ -170,6 +136,7 @@ def asr():
     if 'file' not in request.files:
         flash('No file part')
         return redirect(request.url)
+
     file = request.files['file']
     # if user does not select file, browser also
     # submit an empty part without filename
@@ -191,7 +158,7 @@ def asr():
             "-y",
             "-i", f'`wslpath -a "{full_file_name}"`',
             "-vn",
-            # "-ac", "2",
+            "-ac", "2",
             f'`wslpath -a "{full_file_name_wav}"`',
         ]
     else:
@@ -212,23 +179,27 @@ def asr():
         print("ffmpeg execution failed: ", e)
 
     waveform, sample_rate = torchaudio.load(full_file_name_wav)
-    tensor, predict_score = predict(waveform)
 
-    # return '<h1>Success</h1>'
-    # return f"<div>Predicted: {predict(waveform)}</div>"
-    return {
-        "text": tensor,
-        "score": predict_score,
-    }
+    asr_results: list = []
+    #google asr
+    for asr in END_TO_END_ASRS:
+        tensor, predict_score = asr.predict(waveform)
+        asr_results.append({
+            "text": tensor,
+            "score": predict_score,
+        })
+        #  asr_results.append({
+        #     "text": tensor,
+        #     "score": 0,
+        # })
+
+
+    return jsonify(asr_results)
 
 
 def test1():
-    full_file_name = r"D:\lst-dlt\flask-asr\files\f2e5cc25-941a-42c2-9f1d-b3619d69f3e4.webm"
-    # full_file_name = r"D:\lst-dlt\flask-asr\files\output.wav"
-    # full_file_name = r"D:\lst-dlt\flask-asr\files\recording.wav"
-    # full_file_name = r"D:\lst-dlt\flask-asr\files\eighth.aac.wav"
-    full_file_name_wav = full_file_name + ".wav"
-    # subprocess.run(["ping", "-c", "3", host], shell=False)
+    full_file_name = str(UPLOAD_DIR / "95d7f1f6-2bde-40e8-805c-b6d68e41190c.webm")
+    full_file_name_wav = str(full_file_name) + ".wav"
 
     if sys.platform.startswith('win32'):
         ffmpeg_cmd = [
@@ -257,8 +228,56 @@ def test1():
     except subprocess.CalledProcessError as e:
         print("ffmpeg execution failed: ", e)
 
+    asr: EndToEndASR = EndToEndASR(EndToEndSetting(
+        audio_dir=APP_DIR,
+        model_file=CACHE_DIR / "model.pickle",
+        annotations_file_train=CORPUS_BASE_DIR / "cb1_train.csv",
+        annotations_file_test=CORPUS_BASE_DIR / "cb1_test.csv",
+    ))
+
     waveform, sample_rate = torchaudio.load(full_file_name_wav)
-    tensor, predict_score = predict(waveform)
+    tensor, predict_score = asr.predict(waveform)
+    return {
+        "text": tensor,
+        "score": predict_score,
+    }
+
+
+def test2():
+    full_file_name = str(UPLOAD_DIR / "95d7f1f6-2bde-40e8-805c-b6d68e41190c.webm")
+    full_file_name_wav = str(full_file_name) + ".wav"
+
+    if sys.platform.startswith('win32'):
+        ffmpeg_cmd = [
+            "wsl",
+            "ffmpeg",
+            "-y",
+            "-i", f'`wslpath -a "{full_file_name}"`',
+            "-vn",
+            "-ac", "2",
+            f'`wslpath -a "{full_file_name_wav}"`',
+        ]
+    else:
+        ffmpeg_cmd = [
+            "ffmpeg",
+            "-y",
+            "-i", full_file_name,
+            "-vn",
+            "-ac", "2",
+            full_file_name_wav,
+        ]
+
+    print(ffmpeg_cmd)
+    try:
+        # pass
+        subprocess.run(ffmpeg_cmd, check=True)
+    except subprocess.CalledProcessError as e:
+        print("ffmpeg execution failed: ", e)
+
+    asr: EndToEndASR = END_TO_END_ASRS[0]
+
+    waveform, sample_rate = torchaudio.load(full_file_name_wav)
+    tensor, predict_score = asr.predict(waveform)
     return {
         "text": tensor,
         "score": predict_score,

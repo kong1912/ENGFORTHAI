@@ -17,8 +17,6 @@ Thai Speech Command Recognition with torchaudio
 import os
 import pathlib
 
-# import IPython.display as ipd
-import matplotlib.pyplot as plt
 import pandas as pd
 import torch
 import torch.nn as nn
@@ -28,32 +26,65 @@ import torchaudio
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021")
-# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
-ANNOTATIONS_FILE: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021\cb1_train.csv")
-# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
-ANNOTATIONS_FILE_TEST: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021\cb1_train.csv")
-AUDIO_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\iSAI-NLP-2021\Word level - Copy")
-
-
+# var
 APP_DIR: pathlib.Path = pathlib.Path.cwd()
 VAR_DIR: pathlib.Path = APP_DIR / "var"
+LOG_DIR: pathlib.Path = VAR_DIR / "log"
+UPLOAD_DIR: pathlib.Path = VAR_DIR / "upload"
 CACHE_DIR: pathlib.Path = VAR_DIR / "cache"
-print(f"APP_DIR = {APP_DIR}")
-print(f"VAR_DIR = {VAR_DIR}")
-print(f"CACHE_DIR = {CACHE_DIR}")
 
-print(f"ensuring VAR_DIR")
-VAR_DIR.mkdir(exist_ok=True)
+LOG_FILE: pathlib.Path = LOG_DIR / f"{__name__}.log"
 
-print(f"ensuring CACHE_DIR")
-CACHE_DIR.mkdir(exist_ok=True)
 
-MODEL_FILE: pathlib.Path = CACHE_DIR / "model.pickle"
+def ensure_folder(path: pathlib.Path, path_name: str = "") -> None:
+    try:
+        path.mkdir(parents=True, exist_ok=False)
+    except FileExistsError:
+        print(f"{path_name}folder is already there: {path}")
+    else:
+        print(f"{path_name}folder was created: {path}")
 
-# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-device = torch.device("cpu")
+
+def ensure_folders() -> None:
+    ensure_folder(VAR_DIR, "Generated files (cache, logs, etc.) ")
+    ensure_folder(LOG_DIR, "Logging ")
+    ensure_folder(CACHE_DIR, "Cache ")
+    ensure_folder(UPLOAD_DIR, "Upload ")
+
+
+ensure_folders()
+
+# E2E_ASR
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\kongpop-asr-data")
+# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
+# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
+AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"
+
+# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb1_train.csv"
+# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb1_test.csv"
+# MODEL_FILE: pathlib.Path = CACHE_DIR / "model.pickle"
+
+# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb1_clean1_train.csv"
+# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb1_clean1_test.csv"
+# MODEL_FILE: pathlib.Path = CACHE_DIR / "cb1_clean1_model.pickle"
+
+# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb2_clean1_train.csv"
+# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb2_clean1_test.csv"
+# MODEL_FILE: pathlib.Path = CACHE_DIR / "cb2_clean1_model.pickle"
+
+# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb3_clean1_train.csv"
+# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb3_clean1_test.csv"
+# MODEL_FILE: pathlib.Path = CACHE_DIR / "cb3_clean1_model.pickle"
+
+# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb4_clean1_train.csv"
+# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb4_clean1_test.csv"
+# MODEL_FILE: pathlib.Path = CACHE_DIR / "cb4_clean1_model.pickle"
+
+ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb5_clean1_train.csv"
+ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb5_clean1_test.csv"
+MODEL_FILE: pathlib.Path = CACHE_DIR / "cb5_clean1_model.pickle"
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"{device} mode detected")
 
 """Importing the Dataset
@@ -109,7 +140,7 @@ the speaker, the number of the utterance.
 print("Shape of waveform: {}".format(waveform.size()))
 print("Sample rate of waveform: {}".format(sample_rate))
 
-plt.plot(waveform.t().numpy())
+# plt.plot(waveform.t().numpy())
 """Let’s find the list of labels available in the dataset.
 
 
@@ -409,7 +440,7 @@ varies during the training.
 """
 
 log_interval = 20
-n_epoch = 50
+n_epoch = 150
 
 pbar_update = 1 / (len(train_loader) + len(test_loader))
 losses = []

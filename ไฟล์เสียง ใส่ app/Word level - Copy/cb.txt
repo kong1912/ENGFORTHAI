@@ -28,9 +28,9 @@
 1) -ð- - -θ- - -tθ-/-tθ-/N_Stamp (Ping)/Eighth.m4a.wav,eighth
 1) -ð- - -θ- - -tθ-/-tθ-/N_Stamp (Ping)/Hundredth.m4a.wav,hundredth
 1) -ð- - -θ- - -tθ-/-tθ-/N_Stamp (Ping)/Width.m4a.wav,width
-1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2 2.m4a.wav,khok pho 4 2 2  ***
-1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2 3.m4a.wav,khok pho 4 2 3  ***
-1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2.m4a.wav,khok pho 4 2      ***
+1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2 2.m4a.wav,khok pho 4 2 2  
+1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2 3.m4a.wav,khok pho 4 2 3  
+1) -ð- - -θ- - -tθ-/-tθ-/P_C/Khok Pho 4 2.m4a.wav,khok pho 4 2 
 1) -ð- - -θ- - -tθ-/-tθ-/P_meen(สมาย)/Eighth.m4a.wav,eighth
 1) -ð- - -θ- - -tθ-/-tθ-/P_meen(สมาย)/Hundredth.m4a.wav,hundredth
 1) -ð- - -θ- - -tθ-/-tθ-/P_meen(สมาย)/Width.m4a.wav,width

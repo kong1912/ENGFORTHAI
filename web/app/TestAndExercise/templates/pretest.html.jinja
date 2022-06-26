@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="text-center">
-        <h1>Post-test</h1>       
+        <h1>Pre-test</h1>       
         <h2> Speak these words </h2> 
     </div>
     {% for word in words %}
@@ -12,70 +12,94 @@
         <div class="text-center" id="words-{{ loop.index }}"> {{word| first}} </div>
         <div class="text-center">       
             
-            <textarea disabled  style="resize: none;"  id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="25"></textarea><br>
-            <textarea disabled  style="resize: none;"  id="score-{{ loop.index }}" name="xxx" rows="1" cols="10"></textarea><br>
-            <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" onclick= "disable()" >start</button><br>
-            <p>
-                <button id="startRecording">Start recording</button>
-                <button id="stopRecording" disabled>Stop recording</button>
-            </p>
+           {# <textarea disabled  style="resize: none;"  id="output-textarea-{{ loop.index }}" rows="1" cols="25"></textarea><br>
+            <textarea disabled  style="resize: none;"  id="score-{{ loop.index }}"  rows="1" cols="10"></textarea><br>#}
+            <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" >start</button>
+            <button class="btn btn-success" id="stop-btn-{{ loop.index }}" type="button" name="stop-btn-{{ loop.index }}" >stop</button>
         </div>
 
         <script>
             navigator
-        .mediaDevices
-        .getUserMedia({audio: true})
-        .then(stream => {
-            handlerFunction(stream)
-        });
-
-    function handlerFunction(stream) {
-        rec = new MediaRecorder(stream);
-        rec.ondataavailable = e => {
-            audioChunks.push(e.data);
-            if (rec.state == "inactive") {
-                // let blob = new Blob(audioChunks, {type: 'audio/wav'});
-                let blob = new Blob(audioChunks, {type: 'audio/webm'});
-                sendData(blob);
+            .mediaDevices
+            .getUserMedia({audio: true})
+            .then(stream => {
+                handlerFunction(stream)
+            });
+    
+        function handlerFunction(stream) {
+            rec = new MediaRecorder(stream);
+            rec.ondataavailable = e => {
+                audioChunks.push(e.data);
+                if (rec.state == "inactive") {
+                    // let blob = new Blob(audioChunks, {type: 'audio/wav'});
+                    let blob = new Blob(audioChunks, {type: 'audio/webm'});
+                    sendData(blob);
+                }
             }
         }
-    }
+    
+        function sendData(data) {
+            var form = new FormData();
+            form.append('file', data, 'data.mp3');
+            form.append('title', 'data.mp3');
+            //Chrome inspector shows that the post data includes a file and a title.
+            $.ajax({
+                type: 'POST',
+                url: '/asr',
+                data: form,
+                cache: false,
+                processData: false,
+                contentType: false
+            }).done(function (data) {
+                console.log(data);
+                alert(JSON.stringify(data));
+            });
+        }
 
-    function sendData(data) {
-        var form = new FormData();
-        form.append('file', data, 'data.mp3');
-        form.append('title', 'data.mp3');
-        //Chrome inspector shows that the post data includes a file and a title.
-        $.ajax({
-            type: 'POST',
-            // url: '/save-record',
-            url: '/asr',
-            data: form,
-            cache: false,
-            processData: false,
-            contentType: false
-        }).done(function (data) {
-            console.log(data);
-            alert(JSON.stringify(data))
-        });
-    }
+    attachEvents();
+            function attachEvents() 
+            {
+                let workingEls = getWorkingEls();
+                workingEls.forEach(attachEvent);
+            }
 
-    startRecording.onclick = e => {
-        console.log('Recording are started..');
-        startRecording.disabled = true;
-        stopRecording.disabled = false;
-        audioChunks = [];
-        rec.start();
-    };
+            function getWorkingEls() 
+            {
+                return [
+                    {
+                        id_start_btn: "#start-btn-{{ loop.index }}",
+                        id_stop_btn: "#stop-btn-{{ loop.index }}",
+                        // id_output_txta: "#output-textarea-{{ loop.index }}",
+                        // id_score: "#score-{{ loop.index }}",
+                    }
+                ]
+            }
 
-    stopRecording.onclick = e => {
-        console.log("Recording are stopped.");
-        startRecording.disabled = false;
-        stopRecording.disabled = true;
-        rec.stop();
-    };
+            function attachEvent(element, index, array) 
+            {
+                let startRecording = document.querySelector(element.id_start_btn);
+                let outputTextArea = document.querySelector(element.id_output_txta);
+                let stopRecording = document.querySelector(element.id_stop_btn);
+                //let scoreTextArea = document.querySelector(element.id_score);
+
+                stopRecording.disabled = true;
+
+                startRecording.onclick = e => {
+                    console.log('Recording are started..');
+                    startRecording.disabled = true;
+                    stopRecording.disabled = false;
+                    audioChunks = [];
+                    rec.start();
+                };
+
+                stopRecording.onclick = e => {
+                    console.log('Recording are stopped..');       
+                    startRecording.disabled = false;
+                    stopRecording.disabled = true;
+                    rec.stop();
+                };
+            } 
         </script>
-        
     {% endfor %}
     
     <input hidden type="text" name="score" id="score">
@@ -83,7 +107,7 @@
     <div class="text-center">
         <button class="btn btn-primary" type="submit" id="submit"  form="answer" name="score">Submit </button>
     </div>    
-    {#<script type="text" src="{url_for('test.static', filename='js/scoring.js')}}"></script>#}
+    {#<script type="text" src="{url_for('test.static', filename='js/audio.js')}}"></script>#}
 
 {% endblock %}
 

@@ -1,19 +1,5 @@
-import json
-import os
-import math
-import pathlib
-import subprocess
-import sys
-import uuid
-import pandas as pd
-import torch
-import torch.nn.functional as F
-import torchaudio
-from torch import nn
-from torch.utils.data import Dataset
 from flask import Blueprint, redirect, url_for, render_template, jsonify, request, session, flash
-from app import conn, cursor, cursor_dict, app, VAR_DIR, LOG_DIR, CACHE_DIR, \
-UPLOAD_DIR, ANNOTATIONS_FILE, AUDIO_DIR,MODEL_FILE,ANNOTATIONS_FILE_TEST 
+from app import conn, cursor, cursor_dict
 from ..user import login_required
 
 
@@ -60,16 +46,48 @@ def exercise_lesson4():
 @test_bp.route('/exercise_lesson5')
 @login_required
 def exercise_lesson5():
-    cursor.execute("SELECT word FROM word_list WHERE lesson = 5")
+    cursor.execute("SELECT word FROM word_list WHERE lesson = 5 ")
     words = cursor.fetchall()
 
     return render_template('exercise_lesson5.html.jinja',words=words)
      
 @test_bp.route('/pre-test')
 def pretest():
-    cursor.execute("SELECT word FROM word_list WHERE lesson = 1")
-    words = cursor.fetchall()
-
+    # cursor.execute(""" 
+    #                 SELECT word FROM word_list WHERE lesson = 1 AND stress = 1_1 LIMIT 3 
+    #                 UNION SELECT word FROM word_list WHERE lesson = 1 AND stress = 1_2 LIMIT 3
+    #                 UNION SELECT word FROM word_list WHERE lesson = 2 AND stress = 2_1 LIMIT 3
+    #                 UNION SELECT word FROM word_list WHERE lesson = 2 AND stress = 2_2 LIMIT 3
+    #                 UNION SELECT word FROM word_list WHERE lesson = 3 AND stress = 3_1 LIMIT 3
+    #                 UNION SELECT word FROM word_list WHERE lesson = 3 AND stress = 3_2 LIMIT 3
+    #                 UNION SELECT word FROM word_list WHERE lesson = 4 AND stress = 4_1 LIMIT 3
+    #                 UNION SELECT word FROM word_list WHERE lesson = 4 AND stress = 4_2 LIMIT 3
+    #                 UNION SELECT word FROM word_list WHERE lesson = 5 AND stress = 5_1 LIMIT 3
+    #                 UNION SELECT word FROM word_list WHERE lesson = 5 AND stress = 5_2 LIMIT 3
+    #                 """)
+    # words = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '1_1' LIMIT 3")
+    w1 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '1_2' LIMIT 3")
+    w2 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '2_1' LIMIT 3")
+    w3 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '2_2' LIMIT 3")
+    w4 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '3_1' LIMIT 3")
+    w5 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '3_2' LIMIT 3")
+    w6 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '4_1' LIMIT 3")
+    w7 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '4_2' LIMIT 3")
+    w8 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '5_1' LIMIT 3")
+    w9 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '5_2' LIMIT 3")
+    w10 = cursor.fetchall()
+    words = w1 + w2 + w3 + w4 + w5 + w6 + w7 + w8 + w9 + w10
+    print(words)
     return render_template('pretest.html.jinja',words=words)
 
 @test_bp.route('/post-test')
