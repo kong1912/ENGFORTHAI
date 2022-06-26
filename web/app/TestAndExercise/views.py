@@ -53,19 +53,6 @@ def exercise_lesson5():
      
 @test_bp.route('/pre-test')
 def pretest():
-    # cursor.execute(""" 
-    #                 SELECT word FROM word_list WHERE lesson = 1 AND stress = 1_1 LIMIT 3 
-    #                 UNION SELECT word FROM word_list WHERE lesson = 1 AND stress = 1_2 LIMIT 3
-    #                 UNION SELECT word FROM word_list WHERE lesson = 2 AND stress = 2_1 LIMIT 3
-    #                 UNION SELECT word FROM word_list WHERE lesson = 2 AND stress = 2_2 LIMIT 3
-    #                 UNION SELECT word FROM word_list WHERE lesson = 3 AND stress = 3_1 LIMIT 3
-    #                 UNION SELECT word FROM word_list WHERE lesson = 3 AND stress = 3_2 LIMIT 3
-    #                 UNION SELECT word FROM word_list WHERE lesson = 4 AND stress = 4_1 LIMIT 3
-    #                 UNION SELECT word FROM word_list WHERE lesson = 4 AND stress = 4_2 LIMIT 3
-    #                 UNION SELECT word FROM word_list WHERE lesson = 5 AND stress = 5_1 LIMIT 3
-    #                 UNION SELECT word FROM word_list WHERE lesson = 5 AND stress = 5_2 LIMIT 3
-    #                 """)
-    # words = cursor.fetchall()
     cursor.execute("SELECT word FROM word_list WHERE stress = '1_1' LIMIT 3")
     w1 = cursor.fetchall()
     cursor.execute("SELECT word FROM word_list WHERE stress = '1_2' LIMIT 3")
