@@ -140,12 +140,15 @@ def asr():
         return redirect(request.url)
 
     file = request.files['file']
+    xxx = request.form['text']
+    print(f"#{xxx}#")
+
     # if user does not select file, browser also
     # submit an empty part without filename
     if file.filename == '':
         flash('No selected file')
         return redirect(request.url)
-
+    # file.text
     # webm/opus
     file_name = str(uuid.uuid4()) + ".webm"
     full_file_name = os.path.join(app.config['UPLOAD_FOLDER'], file_name)
@@ -198,6 +201,11 @@ def asr():
     print(text)
     # google asr end
     
+    """
+    if text = word:
+        return jsonify({"text" : text,
+                        "score" : 1})
+    """
     asr_results: list = []
     for asr in END_TO_END_ASRS:
         tensor, predict_score = asr.predict(waveform)

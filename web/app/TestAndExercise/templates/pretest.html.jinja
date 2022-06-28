@@ -16,32 +16,37 @@
             <textarea disabled  style="resize: none;"  id="score-{{ loop.index }}"  rows="1" cols="10"></textarea><br>#}
             <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" >start</button>
             <button class="btn btn-success" id="stop-btn-{{ loop.index }}" type="button" name="stop-btn-{{ loop.index }}" >stop</button>
+            <input type="hidden" id="text-{{ loop.index }}" name="text-{{ loop.index }}" value="{{word| first}}" >
         </div>
-
         <script>
+            
             navigator
             .mediaDevices
             .getUserMedia({audio: true})
             .then(stream => {
-                handlerFunction(stream)
-            });
+                handlerFunction(stream, "{{ word| first }}")
+            }); 
+            
     
-        function handlerFunction(stream) {
+        function handlerFunction(stream, word) {
             rec = new MediaRecorder(stream);
             rec.ondataavailable = e => {
                 audioChunks.push(e.data);
                 if (rec.state == "inactive") {
                     // let blob = new Blob(audioChunks, {type: 'audio/wav'});
                     let blob = new Blob(audioChunks, {type: 'audio/webm'});
-                    sendData(blob);
+                    sendData(blob, word);
                 }
             }
         }
     
-        function sendData(data) {
+        function sendData(data, word) {
             var form = new FormData();
             form.append('file', data, 'data.mp3');
             form.append('title', 'data.mp3');
+            form.append('text', word);
+            // form.append('text', "{{ word| first }}");
+            //document.getElementById("xyz").innerHTML
             //Chrome inspector shows that the post data includes a file and a title.
             $.ajax({
                 type: 'POST',
@@ -69,6 +74,7 @@
                     {
                         id_start_btn: "#start-btn-{{ loop.index }}",
                         id_stop_btn: "#stop-btn-{{ loop.index }}",
+                        text : "text-{{ loop.index }}"
                         // id_output_txta: "#output-textarea-{{ loop.index }}",
                         // id_score: "#score-{{ loop.index }}",
                     }
@@ -80,11 +86,13 @@
                 let startRecording = document.querySelector(element.id_start_btn);
                 let outputTextArea = document.querySelector(element.id_output_txta);
                 let stopRecording = document.querySelector(element.id_stop_btn);
+                let textRecording = document.querySelector(element.text); 
                 //let scoreTextArea = document.querySelector(element.id_score);
-
+                
                 stopRecording.disabled = true;
 
                 startRecording.onclick = e => {
+                    
                     console.log('Recording are started..');
                     startRecording.disabled = true;
                     stopRecording.disabled = false;
@@ -93,7 +101,7 @@
                 };
 
                 stopRecording.onclick = e => {
-                    console.log('Recording are stopped..');       
+                    console.log('Recording are stopped..');      
                     startRecording.disabled = false;
                     stopRecording.disabled = true;
                     rec.stop();
@@ -101,6 +109,9 @@
             } 
         </script>
     {% endfor %}
+    <script>
+        
+    </script>
     
     <input hidden type="text" name="score" id="score">
     <hr>

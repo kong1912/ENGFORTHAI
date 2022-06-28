@@ -74,7 +74,7 @@ def pretest():
     cursor.execute("SELECT word FROM word_list WHERE stress = '5_2' LIMIT 3")
     w10 = cursor.fetchall()
     words = w1 + w2 + w3 + w4 + w5 + w6 + w7 + w8 + w9 + w10
-    print(words)
+    # print(words)
     return render_template('pretest.html.jinja',words=words)
 
 @test_bp.route('/post-test')
