@@ -1,3 +1,4 @@
+from cgitb import text
 import math
 import os
 import pathlib
@@ -16,6 +17,7 @@ from torch import nn
 from torch.utils.data import Dataset
 from app import app
 from asr.e2e_asr import *
+import speech_recognition as sr
 
 APP_DIR: pathlib.Path = pathlib.Path.cwd()
 VAR_DIR: pathlib.Path = APP_DIR / "var"
@@ -45,7 +47,7 @@ def ensure_folders() -> None:
 ensure_folders()
 
 # E2E_ASR
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\kongpop-asr-data")
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\asr-data")
 
 END_TO_END_SETTINGS: (EndToEndSetting) = (
     EndToEndSetting(
@@ -179,19 +181,31 @@ def asr():
         print("ffmpeg execution failed: ", e)
 
     waveform, sample_rate = torchaudio.load(full_file_name_wav)
-
-    asr_results: list = []
+    
     #google asr
+    # Create an instance of the Recognizer class
+    recognizer = sr.Recognizer()
+    # Set the energy threshold
+    recognizer.energy_threshold = 300
+    # Convert audio to AudioFile
+    clean_support_call = sr.AudioFile(f"{full_file_name_wav}")
+    # Convert AudioFile to AudioData
+    with clean_support_call as source:
+        clean_support_call_audio = recognizer.record(source)
+    # Transcribe AudioData to text
+    text = recognizer.recognize_google(clean_support_call_audio,
+                                   language="en-US")
+    print(text)
+    # google asr end
+    
+    asr_results: list = []
     for asr in END_TO_END_ASRS:
         tensor, predict_score = asr.predict(waveform)
         asr_results.append({
             "text": tensor,
             "score": predict_score,
         })
-        #  asr_results.append({
-        #     "text": tensor,
-        #     "score": 0,
-        # })
+    asr_results.append({"text" : text})
 
 
     return jsonify(asr_results)
