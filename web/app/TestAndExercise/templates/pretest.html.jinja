@@ -9,111 +9,129 @@
     </div>
     {% for word in words %}
 
-        <div class="text-center" id="words-{{ loop.index }}"> {{word| first}} </div>
+        <div class="text-center" id="wordData-{{ loop.index }}"> {{word| first}} </div>
         <div class="text-center">       
             
            {# <textarea disabled  style="resize: none;"  id="output-textarea-{{ loop.index }}" rows="1" cols="25"></textarea><br>
             <textarea disabled  style="resize: none;"  id="score-{{ loop.index }}"  rows="1" cols="10"></textarea><br>#}
-            <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" >start</button>
-            <button class="btn btn-success" id="stop-btn-{{ loop.index }}" type="button" name="stop-btn-{{ loop.index }}" >stop</button>
+            <button class="btn btn-success" id="startRecording-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" >start</button>
+            <button class="btn btn-success" id="stopRecording-{{ loop.index }}" type="button" name="stop-btn-{{ loop.index }}" >stop</button>
             <input type="hidden" id="text-{{ loop.index }}" name="text-{{ loop.index }}" value="{{word| first}}" >
         </div>
-        <script>
+    {% endfor %}    
+     <script>
             
-            navigator
-            .mediaDevices
-            .getUserMedia({audio: true})
-            .then(stream => {
-                handlerFunction(stream, "{{ word| first }}")
-            }); 
-            
-    
-        function handlerFunction(stream, word) {
-            rec = new MediaRecorder(stream);
-            rec.ondataavailable = e => {
-                audioChunks.push(e.data);
-                if (rec.state == "inactive") {
-                    // let blob = new Blob(audioChunks, {type: 'audio/wav'});
-                    let blob = new Blob(audioChunks, {type: 'audio/webm'});
-                    sendData(blob, word);
-                }
+            {#navigator#}
+    {#    .mediaDevices#}
+    {#    .getUserMedia({audio: true})#}
+    {#    .then(stream => {#}
+    {#        handlerFunction(stream)#}
+    {#    });#} 
+
+    function handlerFunction(stream, word) {
+        rec = new MediaRecorder(stream);
+        rec.ondataavailable = e => {
+            audioChunks.push(e.data);
+            if (rec.state == "inactive") {
+                {#let blob = new Blob(audioChunks, {type: 'audio/wav'});#}
+                let blob = new Blob(audioChunks, {type: 'audio/webm'});
+                sendData(blob);
             }
         }
-    
-        function sendData(data, word) {
-            var form = new FormData();
-            form.append('file', data, 'data.mp3');
-            form.append('title', 'data.mp3');
-            form.append('text', word);
-            // form.append('text', "{{ word| first }}");
-            //document.getElementById("xyz").innerHTML
-            //Chrome inspector shows that the post data includes a file and a title.
-            $.ajax({
-                type: 'POST',
-                url: '/asr',
-                data: form,
-                cache: false,
-                processData: false,
-                contentType: false
-            }).done(function (data) {
-                console.log(data);
-                alert(JSON.stringify(data));
-            });
-        }
+    }
+
+    function sendData(data, word) {
+        var form = new FormData();
+        form.append('file', data, 'data.webm');
+        form.append('title', 'data.webm');
+        form.append('word', word);
+        //Chrome inspector shows that the post data includes a file and a title.
+        $.ajax({
+            type: 'POST',
+            url: '/asr',
+            data: form,
+            cache: false,
+            processData: false,
+            contentType: false
+        }).done(function (data) {
+            console.log(data);
+            alert(JSON.stringify(data))
+        });
+    }
+
 
     attachEvents();
-            function attachEvents() 
-            {
-                let workingEls = getWorkingEls();
-                workingEls.forEach(attachEvent);
-            }
 
-            function getWorkingEls() 
-            {
-                return [
-                    {
-                        id_start_btn: "#start-btn-{{ loop.index }}",
-                        id_stop_btn: "#stop-btn-{{ loop.index }}",
-                        text : "text-{{ loop.index }}"
-                        // id_output_txta: "#output-textarea-{{ loop.index }}",
-                        // id_score: "#score-{{ loop.index }}",
+    function attachEvents() {
+        {% for word in words %}
+            attachEvent({{ loop.index }});
+        {% endfor %}
+    }
+
+    function attachEvent(i) {
+        const wordData = document.getElementById(`wordData-${i}`);
+        const startRecording = document.getElementById(`startRecording-${i}`);
+        const stopRecording = document.getElementById(`stopRecording-${i}`);
+
+        let word = wordData.innerText
+
+        if (navigator.mediaDevices) {
+            console.log('getUserMedia supported.');
+
+            const constraints = {audio: true};
+            let chunks = [];
+
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then(function (stream) {
+
+                    const mediaRecorder = new MediaRecorder(stream);
+
+                    startRecording.onclick = function () {
+                        mediaRecorder.start();
+                        console.log(mediaRecorder.state);
+                        console.log(`recorder started - ${word}`);
+                        startRecording.style.background = "red";
+                        startRecording.style.color = "black";
+
+                        startRecording.disabled = true;
+                        stopRecording.disabled = false;
                     }
-                ]
-            }
 
-            function attachEvent(element, index, array) 
-            {
-                let startRecording = document.querySelector(element.id_start_btn);
-                let outputTextArea = document.querySelector(element.id_output_txta);
-                let stopRecording = document.querySelector(element.id_stop_btn);
-                let textRecording = document.querySelector(element.text); 
-                //let scoreTextArea = document.querySelector(element.id_score);
-                
-                stopRecording.disabled = true;
+                    stopRecording.onclick = function () {
+                        mediaRecorder.stop();
+                        console.log(mediaRecorder.state);
+                        console.log(`recorder stopped A - ${word}`);
+                        startRecording.style.background = "";
+                        startRecording.style.color = "";
 
-                startRecording.onclick = e => {
-                    
-                    console.log('Recording are started..');
-                    startRecording.disabled = true;
-                    stopRecording.disabled = false;
-                    audioChunks = [];
-                    rec.start();
-                };
+                        startRecording.disabled = false;
+                        stopRecording.disabled = true;
+                    }
 
-                stopRecording.onclick = e => {
-                    console.log('Recording are stopped..');      
-                    startRecording.disabled = false;
-                    stopRecording.disabled = true;
-                    rec.stop();
-                };
-            } 
-        </script>
-    {% endfor %}
-    <script>
-        
+                    mediaRecorder.onstop = function (e) {
+                        console.log("data available after MediaRecorder.stop() called.");
+
+                        const blob = new Blob(chunks, {'type': 'audio/webm; codecs=opus'});
+                        // const blob = new Blob(chunks, {'type': 'audio/ogg; codecs=opus'});
+                        // const blob = new Blob(chunks, {'type': 'audio/webm'});
+                        chunks = [];
+                        sendData(blob, word);
+                        console.log(`recorder stopped B - ${word}`);
+                    }
+
+                    mediaRecorder.ondataavailable = function (e) {
+                        chunks.push(e.data);
+                    }
+                })
+                .catch(function (err) {
+                    console.log('The following error occurred: ' + err);
+                })
+        }
+
+    }
     </script>
     
-    <input hidden type="text" name="score" id="score">
+
     <hr>
     <div class="text-center">
         <button class="btn btn-primary" type="submit" id="submit"  form="answer" name="score">Submit </button>

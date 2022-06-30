@@ -55,7 +55,7 @@ def ensure_folders() -> None:
 ensure_folders()
 
 # E2E_ASR
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"D:\_tp\iSAI-NLP-2021")
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\kongpop-asr-data")
 # ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
 # ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
 AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"

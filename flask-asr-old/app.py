@@ -46,9 +46,9 @@ def ensure_folders() -> None:
 ensure_folders()
 
 # E2E_ASR
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\asr-data")
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"D:\_tp\iSAI-NLP-2021")
 
-END_TO_END_SETTINGS: (EndToEndSetting) = (
+END_TO_END_SETTINGS: (EndToEndSetting,) = (
     EndToEndSetting(
         annotations_file_train=CORPUS_BASE_DIR / "cb1_clean1_train.csv",
         annotations_file_test=CORPUS_BASE_DIR / "cb1_clean1_test.csv",
@@ -97,7 +97,6 @@ app.config['UPLOAD_FOLDER'] = str(UPLOAD_DIR)
 def root_index():  # put application's code here
     return render_template(
         'index.html.jinja2',
-        words=["aaa", "bbb", ],
     )
 
 
@@ -107,9 +106,6 @@ def asr():
     if 'file' not in request.files:
         flash('No file part')
         return redirect(request.url)
-
-    word = request.form['word']
-    print(f"word={word}")
 
     file = request.files['file']
     # if user does not select file, browser also
@@ -132,7 +128,6 @@ def asr():
             "-y",
             "-i", f'`wslpath -a "{full_file_name}"`',
             "-vn",
-            "-ar", "8000",
             "-ac", "2",
             f'`wslpath -a "{full_file_name_wav}"`',
         ]
@@ -142,7 +137,6 @@ def asr():
             "-y",
             "-i", full_file_name,
             "-vn",
-            "-ar", "8000",
             "-ac", "2",
             full_file_name_wav,
         ]
@@ -164,15 +158,11 @@ def asr():
             "score": predict_score,
         })
 
-    # clean audio tempfiles
-    pathlib.Path(full_file_name_wav).unlink()
-    pathlib.Path(full_file_name).unlink()
-
     return jsonify(asr_results)
 
 
 def test1():
-    full_file_name = str(UPLOAD_DIR / "test.webm")
+    full_file_name = str(UPLOAD_DIR / "95d7f1f6-2bde-40e8-805c-b6d68e41190c.webm")
     full_file_name_wav = str(full_file_name) + ".wav"
 
     if sys.platform.startswith('win32'):
@@ -182,7 +172,6 @@ def test1():
             "-y",
             "-i", f'`wslpath -a "{full_file_name}"`',
             "-vn",
-            "-ar", "8000",
             "-ac", "2",
             f'`wslpath -a "{full_file_name_wav}"`',
         ]
@@ -192,7 +181,6 @@ def test1():
             "-y",
             "-i", full_file_name,
             "-vn",
-            "-ar", "8000",
             "-ac", "2",
             full_file_name_wav,
         ]
@@ -220,7 +208,7 @@ def test1():
 
 
 def test2():
-    full_file_name = str(UPLOAD_DIR / "test.webm")
+    full_file_name = str(UPLOAD_DIR / "95d7f1f6-2bde-40e8-805c-b6d68e41190c.webm")
     full_file_name_wav = str(full_file_name) + ".wav"
 
     if sys.platform.startswith('win32'):
@@ -230,7 +218,6 @@ def test2():
             "-y",
             "-i", f'`wslpath -a "{full_file_name}"`',
             "-vn",
-            "-ar", "8000",
             "-ac", "2",
             f'`wslpath -a "{full_file_name_wav}"`',
         ]
@@ -240,7 +227,6 @@ def test2():
             "-y",
             "-i", full_file_name,
             "-vn",
-            "-ar", "8000",
             "-ac", "2",
             full_file_name_wav,
         ]

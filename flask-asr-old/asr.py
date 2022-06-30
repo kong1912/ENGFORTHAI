@@ -17,6 +17,8 @@ Thai Speech Command Recognition with torchaudio
 import os
 import pathlib
 
+# import IPython.display as ipd
+import matplotlib.pyplot as plt
 import pandas as pd
 import torch
 import torch.nn as nn
@@ -26,66 +28,37 @@ import torchaudio
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-# var
-APP_DIR: pathlib.Path = pathlib.Path.cwd()
-VAR_DIR: pathlib.Path = APP_DIR / "var"
-LOG_DIR: pathlib.Path = VAR_DIR / "log"
-UPLOAD_DIR: pathlib.Path = VAR_DIR / "upload"
-CACHE_DIR: pathlib.Path = VAR_DIR / "cache"
-
-LOG_FILE: pathlib.Path = LOG_DIR / f"{__name__}.log"
-
-
-def ensure_folder(path: pathlib.Path, path_name: str = "") -> None:
-    try:
-        path.mkdir(parents=True, exist_ok=False)
-    except FileExistsError:
-        print(f"{path_name}folder is already there: {path}")
-    else:
-        print(f"{path_name}folder was created: {path}")
-
-
-def ensure_folders() -> None:
-    ensure_folder(VAR_DIR, "Generated files (cache, logs, etc.) ")
-    ensure_folder(LOG_DIR, "Logging ")
-    ensure_folder(CACHE_DIR, "Cache ")
-    ensure_folder(UPLOAD_DIR, "Upload ")
-
-
-ensure_folders()
-
-# E2E_ASR
-CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"D:\_tp\iSAI-NLP-2021")
-# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
-# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
+CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"C:\_temp\iSAI-NLP-2021")
+ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
+ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
 AUDIO_DIR: pathlib.Path = CORPUS_BASE_DIR / "wav"
 
-# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb1_train.csv"
-# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb1_test.csv"
-# MODEL_FILE: pathlib.Path = CACHE_DIR / "model.pickle"
+APP_DIR: pathlib.Path = pathlib.Path.cwd()
+VAR_DIR: pathlib.Path = APP_DIR / "var"
+CACHE_DIR: pathlib.Path = VAR_DIR / "cache"
+print(f"APP_DIR = {APP_DIR}")
+print(f"VAR_DIR = {VAR_DIR}")
+print(f"CACHE_DIR = {CACHE_DIR}")
 
-# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb1_clean1_train.csv"
-# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb1_clean1_test.csv"
-# MODEL_FILE: pathlib.Path = CACHE_DIR / "cb1_clean1_model.pickle"
+print(f"ensuring VAR_DIR")
+VAR_DIR.mkdir(exist_ok=True)
 
-# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb2_clean1_train.csv"
-# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb2_clean1_test.csv"
-# MODEL_FILE: pathlib.Path = CACHE_DIR / "cb2_clean1_model.pickle"
+print(f"ensuring CACHE_DIR")
+CACHE_DIR.mkdir(exist_ok=True)
 
-# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb3_clean1_train.csv"
-# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb3_clean1_test.csv"
-# MODEL_FILE: pathlib.Path = CACHE_DIR / "cb3_clean1_model.pickle"
+MODEL_FILE: pathlib.Path = CACHE_DIR / "model.pickle"
+# exit()
 
-# ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb4_clean1_train.csv"
-# ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb4_clean1_test.csv"
-# MODEL_FILE: pathlib.Path = CACHE_DIR / "cb4_clean1_model.pickle"
 
-ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "cb5_clean1_train.csv"
-ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "cb5_clean1_test.csv"
-MODEL_FILE: pathlib.Path = CACHE_DIR / "cb5_clean1_model.pickle"
+"""Let’s check if a CUDA GPU is available and select our device. Running
+the network on a GPU will greatly decrease the training/testing runtime.
+
+
+
+"""
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"{device} mode detected")
+print(device)
 
 """Importing the Dataset
 ---------------------
@@ -124,6 +97,9 @@ class GowajeeDataset(Dataset):
         return self.annotations.iloc[index, 1]
 
 
+# ANNOTATIONS_FILE = "/content/drive/MyDrive/iSAI-NLP/gwjcommand_train.csv"
+# ANNOTATIONS_FILE_TEST  = "/content/drive/MyDrive/iSAI-NLP/gwjcommand_test.csv"
+# AUDIO_DIR = "/content/drive/MyDrive/iSAI-NLP/wav"
 gwj = GowajeeDataset(ANNOTATIONS_FILE, AUDIO_DIR)
 gwj_test = GowajeeDataset(ANNOTATIONS_FILE_TEST, AUDIO_DIR)
 print(f"There are {len(gwj)} samples in the dataset.")
@@ -140,7 +116,7 @@ the speaker, the number of the utterance.
 print("Shape of waveform: {}".format(waveform.size()))
 print("Sample rate of waveform: {}".format(sample_rate))
 
-# plt.plot(waveform.t().numpy())
+plt.plot(waveform.t().numpy())
 """Let’s find the list of labels available in the dataset.
 
 
@@ -190,10 +166,11 @@ def index_to_label(index):
     return labels[index]
 
 
-# word_start = "ปิดโปรแกรม"
-# index = label_to_index(word_start)
-# word_recovered = index_to_label(index)
-# print(word_start, "-->", index, "-->", word_recovered)
+word_start = "ปิดโปรแกรม"
+index = label_to_index(word_start)
+word_recovered = index_to_label(index)
+
+print(word_start, "-->", index, "-->", word_recovered)
 
 """To turn a list of data point made of audio recordings and utterances
 into two batched tensors for the model, we implement a collate function
@@ -252,7 +229,6 @@ train_loader = torch.utils.data.DataLoader(
     num_workers=num_workers,
     pin_memory=pin_memory,
 )
-
 test_loader = torch.utils.data.DataLoader(
     gwj_test,
     batch_size=batch_size,
@@ -366,7 +342,7 @@ def train(model, epoch, log_interval):
         target = target.to(device)
 
         # apply transform and model on whole batch directly on device
-        # data = transform(data)
+        data = transform(data)
         output = model(data)
 
         # negative log-likelihood for a tensor of size (batch x 1 x n_output)
@@ -417,7 +393,7 @@ def test(model, epoch):
         target = target.to(device)
 
         # apply transform and model on whole batch directly on device
-        # data = transform(data)
+        data = transform(data)
         output = model(data)
 
         pred = get_likely_index(output)
@@ -440,7 +416,7 @@ varies during the training.
 """
 
 log_interval = 20
-n_epoch = 150
+n_epoch = 50
 
 pbar_update = 1 / (len(train_loader) + len(test_loader))
 losses = []
@@ -454,3 +430,123 @@ with tqdm(total=n_epoch) as pbar:
         scheduler.step()
 
 torch.save(model, MODEL_FILE)
+
+# with MODEL_FILE.open(mode="wb") as f:
+# my_pickled_object = pickle.dumps(model, f)  # Pickling the object
+# print(f"This is my pickled object:\n{my_pickled_object}\n")
+# pickle.dumps(model, f)  # Pickling the object
+
+exit()
+
+# Let's plot the training loss versus the number of iteration.
+plt.plot(losses)
+plt.title("training loss")
+
+"""The network should be more than 65% accurate on the test set after 2
+epochs, and 85% after 21 epochs. Let’s look at the last words in the
+train set, and see how the model did on it.
+
+
+
+"""
+
+
+def predict(tensor):
+    # Use the model to predict the label of the waveform
+    tensor = tensor.to(device)
+    tensor = transform(tensor)
+    tensor = model(tensor.unsqueeze(0))
+    tensor = get_likely_index(tensor)
+    tensor = index_to_label(tensor.squeeze())
+    return tensor
+
+
+waveform, sample_rate, utterance, *_ = gwj_test[34]
+ipd.Audio(waveform.numpy(), rate=sample_rate)
+
+print(f"Expected: {utterance}. Predicted: {predict(waveform)}.")
+
+"""Let’s find an example that isn’t classified correctly, if there is one.
+
+
+
+"""
+
+for i, (waveform, sample_rate, utterance, *_) in enumerate(gwj_test):
+    output = predict(waveform)
+    if output != utterance:
+        ipd.Audio(waveform.numpy(), rate=sample_rate)
+        print(f"Data point #{i}. Expected: {utterance}. Predicted: {output}.")
+        break
+    else:
+        print("All examples in this dataset were correctly classified!")
+        print("In this case, let's just look at the last data point")
+        ipd.Audio(waveform.numpy(), rate=sample_rate)
+        print(f"Data point #{i}. Expected: {utterance}. Predicted: {output}.")
+
+"""Feel free to try with one of your own recordings of one of the labels!
+For example, using Colab, say “Go” while executing the cell below. This
+will record one second of audio and try to classify it.
+
+
+
+"""
+
+from base64 import b64decode
+from io import BytesIO
+from pydub import AudioSegment
+
+RECORD = """
+const sleep  = time => new Promise(resolve => setTimeout(resolve, time))
+const b2text = blob => new Promise(resolve => {
+  const reader = new FileReader()
+  reader.onloadend = e => resolve(e.srcElement.result)
+  reader.readAsDataURL(blob)
+})
+var record = time => new Promise(async resolve => {
+  stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+  recorder = new MediaRecorder(stream)
+  chunks = []
+  recorder.ondataavailable = e => chunks.push(e.data)
+  recorder.start()
+  await sleep(time)
+  recorder.onstop = async ()=>{
+    blob = new Blob(chunks)
+    text = await b2text(blob)
+    resolve(text)
+  }
+  recorder.stop()
+})
+"""
+
+
+def record(seconds=1):
+    display(ipd.Javascript(RECORD))
+    print(f"Recording started for {seconds} seconds.")
+    s = colab_output.eval_js("record(%d)" % (seconds * 1000))
+    print("Recording ended.")
+    b = b64decode(s.split(",")[1])
+
+    fileformat = "wav"
+    filename = f"_audio.{fileformat}"
+    AudioSegment.from_file(BytesIO(b)).export(filename, format=fileformat)
+    return torchaudio.load(filename)
+
+
+waveform, sample_rate = record()
+print(f"Predicted: {predict(waveform)}.")
+ipd.Audio(waveform.numpy(), rate=sample_rate)
+
+"""Conclusion
+----------
+
+In this tutorial, we used torchaudio to load a dataset and resample the
+signal. We have then defined a neural network that we trained to
+recognize a given command. There are also other data preprocessing
+methods, such as finding the mel frequency cepstral coefficients (MFCC),
+that can reduce the size of the dataset. This transform is also
+available in torchaudio as ``torchaudio.transforms.MFCC``.
+
+
+
+"""

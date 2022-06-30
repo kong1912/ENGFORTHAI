@@ -89,22 +89,6 @@ for s in END_TO_END_SETTINGS:
     asr = EndToEndASR(s)
     END_TO_END_ASRS.append(asr)
 
-@app.route('/save-record', methods=['POST'])
-def save_record():
-    # check if the post request has the file part
-    if 'file' not in request.files:
-        flash('No file part')
-        return redirect(request.url)
-    file = request.files['file']
-    # if user does not select file, browser also
-    # submit an empty part without filename
-    if file.filename == '':
-        flash('No selected file')
-        return redirect(request.url)
-    file_name = str(uuid.uuid4()) + ".wav"
-    full_file_name = os.path.join(app.config['UPLOAD_FOLDER'], file_name)
-    file.save(full_file_name)
-    return '<h1>Success</h1>'
 
 
 def predict(tensor):
@@ -139,10 +123,11 @@ def asr():
         flash('No file part')
         return redirect(request.url)
 
+    
+    word = request.form['word']
+    print(f"word={word}")
+    
     file = request.files['file']
-    xxx = request.form['text']
-    print(f"#{xxx}#")
-
     # if user does not select file, browser also
     # submit an empty part without filename
     if file.filename == '':
