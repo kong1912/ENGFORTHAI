@@ -8,7 +8,8 @@
         </div>
     {% else %}
         <div class="container-fluid p-0 mb-5">
-            <div class="position-relative">
+            <div class="owl-carousel header-carousel position-relative">
+                <div class="owl-carousel-item position-relative">
                     <img class="img-fluid" src="{{ url_for('main.static', filename='img/messageImage_1616184825417.jpg') }}" alt="">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                         <div class="container">
@@ -21,13 +22,15 @@
                             </div>
                         </div>
                     </div>
+                </div>    
             </div>
         </div>
     {% endif %}
     
 {% else %}
     <div class="container-fluid p-0 mb-5">
-        <div class="position-relative">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="{{ url_for('main.static', filename='img/messageImage_1616184825417.jpg') }}" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
@@ -42,6 +45,7 @@
                         </div>
                     </div>
                 </div>
+                 
         </div>
     </div>
 
@@ -139,7 +143,7 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
-                        <div class="overflow-hidden">
+                        <div class="">
                             <img  src="{{ url_for('main.static', filename='img/kong.jpg') }}" height="300px" width="100%">
                         </div>
 
@@ -153,7 +157,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
-                        <div class="overflow-hidden">
+                        <div class="">
                             <img  src="{{ url_for('main.static', filename='img/tai.jpg') }}" height="300px" width="100%">
                         </div>
                         <div class="text-center p-4">
@@ -166,7 +170,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light">
-                        <div class="overflow-hidden">
+                        <div class="">
                             <img  src="{{ url_for('main.static', filename='img/ammie.png') }}" height="300px" width="100%">
                         </div>
                         <div class="text-center p-4">
@@ -179,7 +183,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item bg-light">
-                        <div class="overflow-hidden">
+                        <div class="">
                             <img  src="{{ url_for('main.static', filename='img/saww.png') }}" height="300px" width="100%">
                         </div>
                         <div class="text-center p-4">
