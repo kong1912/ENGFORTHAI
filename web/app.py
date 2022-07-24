@@ -6,16 +6,17 @@ import subprocess
 import sys
 import uuid
 import logging
+from colorama import Cursor
 
 import pandas as pd
 import torch
 import torch.nn.functional as F
 import torchaudio
-from flask import Flask, request, flash, redirect, jsonify
+from flask import Flask, request, flash, redirect, jsonify, session
 from flask import render_template
 from torch import nn
 from torch.utils.data import Dataset
-from app import app
+from app import app, cursor, cursor_dict, conn
 from asr.e2e_asr import *
 import speech_recognition as sr
 
@@ -184,24 +185,49 @@ def asr():
     text = recognizer.recognize_google(clean_support_call_audio,
                                    language="en-US")
     print(text)
+    if text == word:
+        pass
+        
     # google asr end
-    
-    """
-    if text = word:
-        return jsonify({"text" : text,
-                        "score" : 1})
-    """
+
     asr_results: list = []
+    cursor.execute(f"SELECT lesson FROM word_list WHERE word = '{word}' ")
+    level = cursor.fetchone()
+    level = int(level[0])
+    print(f"level={level}")
     for asr in END_TO_END_ASRS:
         tensor, predict_score = asr.predict(waveform)
         asr_results.append({
             "text": tensor,
-            "score": predict_score,
+            "score": round(predict_score, 2),
         })
-    asr_results.append({"text" : text})
+    asr_results.append({"google_text" : text})
+    print(f"asr_results={asr_results}")\
 
+    # update score
+    if level == 1:
+        score = asr_results[0]['score']
+        cursor.execute(f"UPDATE score SET s1_s = {score} WHERE u_id = {session['u_id']} ")
+        conn.commit()
+    elif level == 2:
+        score = asr_results[1]['score']
+        cursor.execute(f"UPDATE score SET s2_s = {score} WHERE u_id = {session['u_id']} ")
+        conn.commit()
+    elif level == 3:
+        score = asr_results[2]['score']
+        cursor.execute(f"UPDATE score SET s3_s = {score} WHERE u_id = {session['u_id']} ")
+        conn.commit()
+    elif level == 4:
+        score = asr_results[3]['score']
+        cursor.execute(f"UPDATE score SET s4_s = {score} WHERE u_id = {session['u_id']} ")
+        conn.commit()
+    elif level == 5:
+        score = asr_results[4]['score']
+        cursor.execute(f"UPDATE score SET s5_s = {score} WHERE u_id = {session['u_id']} ")
+        conn.commit()
+    print(f"score={score}")
 
-    return jsonify(asr_results)
+    return jsonify(asr_results[level-1])
 
 
 def test1():

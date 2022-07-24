@@ -27,8 +27,10 @@ def profile():
 @main_bp.route('/course')
 @login_required
 def course():
+    cursor.execute(f"SELECT pre_s FROM score WHERE u_id = {session['u_id']} ")
+    pre_s = cursor.fetchone()
 
-    return render_template('course.html.jinja')
+    return render_template('course.html.jinja',pre_s=pre_s)
 
 @main_bp.route('/about')
 def about():

@@ -7,24 +7,13 @@
         <div class="container-fluid">
         </div>
     {% else %}
-        <div class="container-fluid p-0 mb-5">
-            <div class="owl-carousel header-carousel position-relative">
-                <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="{{ url_for('main.static', filename='img/messageImage_1616184825417.jpg') }}" alt="">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
-                        <div class="container">
-                            <div class="row justify-content-start">
-                                <div class="col-sm-10 col-lg-8">
-                                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown"></h5>
-                                    <h1 class="display-3 text-white animated slideInDown">Let's do Pre-test to test your skills!</h1>
-                                    <a href="{{ url_for('test.pretest') }}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Pre-test</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-            </div>
-        </div>
+
+        <div class="justify-content-start text-center">
+                <h5 class="text-primary text-uppercase mb-3 animated slideInDown"></h5>                    
+                <h1 class="display-3 animated slideInDown">Let's do Pre-test to test your skills!</h1>
+                <br><br><br><br><br><br><br><br><br>
+                <a href="{{ url_for('test.pretest') }}" class="btn btn-primary py-md-3 px-md-5 me-3">Pre-test</a>
+        </div>                                   
     {% endif %}
     
 {% else %}
