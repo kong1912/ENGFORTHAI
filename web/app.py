@@ -184,9 +184,8 @@ def asr():
     # Transcribe AudioData to text
     text = recognizer.recognize_google(clean_support_call_audio,
                                    language="en-US")
-    print(text)
-    if text == word:
-        pass
+    print(f"google text = {text}")
+
         
     # google asr end
 
@@ -199,35 +198,88 @@ def asr():
         tensor, predict_score = asr.predict(waveform)
         asr_results.append({
             "text": tensor,
-            "score": round(predict_score, 2),
+            "score": round(predict_score, 2) * 10,
         })
     asr_results.append({"google_text" : text})
-    print(f"asr_results={asr_results}")\
+    print(f"asr_results={asr_results}")
+    if text == word:
+        if level == 1:
+            cursor.execute(f"SELECT s1_s from score WHERE u_id = {session['u_id']} ")
+            old_s = cursor.fetchone()
+            old_s = old_s[0]
+            new_s = 1 + old_s
+            cursor.execute(f"UPDATE score SET s1_s = {new_s}  WHERE u_id = {session['u_id']}")
+            conn.commit()
+        elif level == 2:
+            cursor.execute(f"SELECT s2_s from score WHERE u_id = {session['u_id']} ")
+            old_s = cursor.fetchone()
+            old_s = old_s[0]
+            new_s = 1 + old_s
+            cursor.execute(f"UPDATE score SET s2_s = {new_s}  WHERE u_id = {session['u_id']} ")
+            conn.commit()
+        elif level == 3:
+            cursor.execute(f"SELECT s3_s from score WHERE u_id = {session['u_id']} ")
+            old_s = cursor.fetchone()
+            old_s = old_s[0]
+            new_s = 1 + old_s
+            cursor.execute(f"UPDATE score SET s3_s = {new_s}  WHERE u_id = {session['u_id']} ")
+            conn.commit()
+        elif level == 4:
+            cursor.execute(f"SELECT s4_s from score WHERE u_id = {session['u_id']} ")
+            old_s = cursor.fetchone()
+            old_s = old_s[0]
+            new_s = 1 + old_s
+            cursor.execute(f"UPDATE score SET s4_s = {new_s}  WHERE u_id = {session['u_id']} ")
+            conn.commit()
+        elif level == 5:
+            cursor.execute(f"SELECT s5_s from score WHERE u_id = {session['u_id']} ")
+            old_s = cursor.fetchone()
+            old_s = old_s[0]
+            new_s = 1 + old_s
+            cursor.execute(f"UPDATE score SET s5_s = {new_s}  WHERE u_id = {session['u_id']} ")
+            conn.commit()
 
+        return jsonify(asr_results[level-1])
     # update score
+
     if level == 1:
         score = asr_results[0]['score']
-        cursor.execute(f"UPDATE score SET s1_s = {score} WHERE u_id = {session['u_id']} ")
+        cursor.execute(f"SELECT s1_s from score WHERE u_id = {session['u_id']} ")
+        old_s = cursor.fetchone()
+        old_s = old_s[0]
+        new_s = score + old_s
+        cursor.execute(f"UPDATE score SET s1_s = {new_s}  WHERE u_id = {session['u_id']}")
         conn.commit()
     elif level == 2:
         score = asr_results[1]['score']
-        cursor.execute(f"UPDATE score SET s2_s = {score} WHERE u_id = {session['u_id']} ")
+        cursor.execute(f"SELECT s2_s from score WHERE u_id = {session['u_id']} ")
+        old_s = cursor.fetchone()
+        old_s = old_s[0]
+        cursor.execute(f"UPDATE score SET s2_s = {new_s}  WHERE u_id = {session['u_id']} ")
         conn.commit()
     elif level == 3:
         score = asr_results[2]['score']
-        cursor.execute(f"UPDATE score SET s3_s = {score} WHERE u_id = {session['u_id']} ")
+        cursor.execute(f"SELECT s3_s from score WHERE u_id = {session['u_id']} ")
+        old_s = cursor.fetchone()
+        old_s = old_s[0]
+        cursor.execute(f"UPDATE score SET s3_s = {new_s}  WHERE u_id = {session['u_id']} ")
         conn.commit()
     elif level == 4:
         score = asr_results[3]['score']
-        cursor.execute(f"UPDATE score SET s4_s = {score} WHERE u_id = {session['u_id']} ")
+        cursor.execute(f"SELECT s4_s from score WHERE u_id = {session['u_id']} ")
+        old_s = cursor.fetchone()
+        old_s = old_s[0]
+        cursor.execute(f"UPDATE score SET s4_s = {new_s}  WHERE u_id = {session['u_id']} ")
         conn.commit()
     elif level == 5:
         score = asr_results[4]['score']
-        cursor.execute(f"UPDATE score SET s5_s = {score} WHERE u_id = {session['u_id']} ")
+        cursor.execute(f"SELECT s5_s from score WHERE u_id = {session['u_id']} ")
+        old_s = cursor.fetchone()
+        old_s = old_s[0]
+        cursor.execute(f"UPDATE score SET s5_s = {new_s}  WHERE u_id = {session['u_id']} ")
         conn.commit()
-    print(f"score={score}")
 
-    return jsonify(asr_results[level-1])
+    return jsonify(asr_results)
 
 
 def test1():

@@ -5,13 +5,13 @@
 {% block content %}
     <div class="justify container text-center">
         <p class="h1">Profile</p>
-        <p class="h2">ชื่อ : {{ user.firstname + " " +  user.lastname }} </p>
-        <p class="h2"> คะแนน pretest : {{ score.pre_s }} </p>
-        <p class="h2"> คะแนน posttest : {{ score.post_s }} </p>
-        <p class="h2"> คะแนนการออกเสียง /ð/ - /θ/ - /tθ/  : {{ score.s1_s }} </p>
-        <p class="h2"> คะแนนการออกเสียง /ʒ/ - /ʃ/  : {{ score.s2_s }} </p>
-        <p class="h2"> คะแนนการออกเสียง /dʒ/ - /tʃ/ : {{ score.s3_s }} </p>
-        <p class="h2"> คะแนนการออกเสียง /z/  - /s/  : {{ score.s4_s }} </p>
-        <p class="h2"> คะแนนการออกเสียง /b/ - /p/  : {{ score.s5_s }} </p>
+        <p class="h2">Name : {{ user.firstname + " " +  user.lastname }} </p>
+        <p class="h2"> Pretest score : {{ score.pre_s }} </p>
+        <p class="h2"> Post score  : {{ score.post_s }} </p>
+        <p class="h2">  /ð/ - /θ/ - /tθ/ pronunciation score : {{ score.s1_s }} </p>
+        <p class="h2"> /ʒ/ - /ʃ/ pronunciation score : {{ score.s2_s }} </p>
+        <p class="h2"> /dʒ/ - /tʃ/ pronunciation score : {{ score.s3_s }} </p>
+        <p class="h2"> /z/  - /s/ pronunciation score : {{ score.s4_s }} </p>
+        <p class="h2"> /b/ - /p/ pronunciation score : {{ score.s5_s }} </p>
     </div>
 {% endblock %}

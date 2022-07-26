@@ -3,9 +3,8 @@
 {% block content %}
 
 {% if session['loggedin'] %}
-    {% if score['pre_s'] != -1 %}
-        <div class="container-fluid">
-        </div>
+    {% if score['isPre'] != 0 %}
+
     {% else %}
 
         <div class="justify-content-start text-center">
