@@ -255,6 +255,7 @@ def asr():
         cursor.execute(f"SELECT s2_s from score WHERE u_id = {session['u_id']} ")
         old_s = cursor.fetchone()
         old_s = old_s[0]
+        new_s = score + old_s
         cursor.execute(f"UPDATE score SET s2_s = {new_s}  WHERE u_id = {session['u_id']} ")
         conn.commit()
     elif level == 3:
@@ -262,6 +263,7 @@ def asr():
         cursor.execute(f"SELECT s3_s from score WHERE u_id = {session['u_id']} ")
         old_s = cursor.fetchone()
         old_s = old_s[0]
+        new_s = score + old_s
         cursor.execute(f"UPDATE score SET s3_s = {new_s}  WHERE u_id = {session['u_id']} ")
         conn.commit()
     elif level == 4:
@@ -269,6 +271,7 @@ def asr():
         cursor.execute(f"SELECT s4_s from score WHERE u_id = {session['u_id']} ")
         old_s = cursor.fetchone()
         old_s = old_s[0]
+        new_s = score + old_s
         cursor.execute(f"UPDATE score SET s4_s = {new_s}  WHERE u_id = {session['u_id']} ")
         conn.commit()
     elif level == 5:
@@ -276,6 +279,7 @@ def asr():
         cursor.execute(f"SELECT s5_s from score WHERE u_id = {session['u_id']} ")
         old_s = cursor.fetchone()
         old_s = old_s[0]
+        new_s = score + old_s
         cursor.execute(f"UPDATE score SET s5_s = {new_s}  WHERE u_id = {session['u_id']} ")
         conn.commit()
 
