@@ -54,7 +54,7 @@
                 contentType: false
             }).done(function (data) {
                 console.log(data);
-                // alert(JSON.stringify(data[]));
+                alert(JSON.stringify(data));
             });
         }
 
@@ -131,8 +131,11 @@
     </script>
     
     <hr>
+    
     <div class="text-center">
-        <button class="btn btn-primary" type="submit" id="submit"  form="answer" name="score">Submit </button>
+
+        <a href="{{ url_for('main.profile') }}"> {{ form.submit(class='btn btn-primary') }} </a>
+
     </div>    
 
 {% endblock %}

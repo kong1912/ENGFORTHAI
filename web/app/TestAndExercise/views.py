@@ -1,6 +1,7 @@
 from flask import Blueprint, redirect, url_for, render_template, jsonify, request, session, flash
 from app import conn, cursor, cursor_dict
 from ..user import login_required
+from ..auth.forms import submitForm
 
 
 
@@ -51,8 +52,18 @@ def exercise_lesson5():
 
     return render_template('exercise_lesson5.html.jinja',words=words)
      
-@test_bp.route('/pre-test')
+@test_bp.route('/pre-test',methods=['GET','POST'])
 def pretest():
+    form = submitForm()
+    if request.method == 'POST':
+        cursor.execute(f"SELECT pre_s FROM score WHERE u_id = {session['u_id']}" )
+        pre_s = cursor.fetchone()
+        cursor.execute(f"UPDATE score SET isPre = 1 WHERE u_id = {session['u_id']}" )
+        # if pre_s['pre_s'] == 0:
+        #     return redirect(url_for('test.pretest'))
+        # else:
+        #     cursor.execute(f"UPDATE score SET isPre = 1 WHERE u_id = {session['u_id']}" )
+        return redirect(url_for('main.profile'))
     cursor.execute("SELECT word FROM word_list WHERE stress = '1_1' LIMIT 3")
     w1 = cursor.fetchall()
     cursor.execute("SELECT word FROM word_list WHERE stress = '1_2' LIMIT 3")
@@ -75,7 +86,7 @@ def pretest():
     w10 = cursor.fetchall()
     words = w1 + w2 + w3 + w4 + w5 + w6 + w7 + w8 + w9 + w10
     # print(words)
-    return render_template('pretest.html.jinja',words=words)
+    return render_template('pretest.html.jinja',words=words,form=form)
 
 @test_bp.route('/post-test')
 def postteset():

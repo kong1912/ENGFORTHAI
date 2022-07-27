@@ -13,8 +13,8 @@ main_bp = Blueprint('main',__name__,
 @main_bp.route('/')
 def home():
     if user_is_authenticated():
-        score = get_score()
-        return render_template('home.html.jinja',score=score)
+        user = get_user()
+        return render_template('home.html.jinja',user=user)
     return render_template('home.html.jinja')
     
 @main_bp.route('/profile')

@@ -11,8 +11,6 @@ class RegisterForm(FlaskForm):
                                                 Length(min=2, max=45, message="Firstname must be between 2 and 45 characters long")])
     lastname = StringField('lastname', validators=[DataRequired(message="Please enter your lastname"),
                                                 Length(min=2, max=45, message="Lastname must be between 2 and 45 characters long")] )
-    email = StringField('E-mail', validators=[DataRequired(message="Please enter your email"),
-                                             Email(message="Invalid email form")])
     username = StringField('username', validators=[DataRequired(message="Please enter your username"),
                                                 Length(min=6, max=20, message="Username must be between 6 and 20 characters long")])
     password = PasswordField('password', validators=[DataRequired(message="Please enter your password"),
@@ -31,11 +29,6 @@ class RegisterForm(FlaskForm):
         data = cursor.fetchone()
         if data:
             raise ValidationError(f'There is a username "{data[0]}" in the system.')
-    def validate_email(self,email):
-        cursor.execute(f"SELECT email FROM user WHERE email = %s",(email.data))
-        data = cursor.fetchone()
-        if data:
-            raise ValidationError(f'There is a email "{data[0]}" in the system.')
 
 class LoginForm(FlaskForm):
 
@@ -54,4 +47,7 @@ class LoginForm(FlaskForm):
         data = cursor.fetchone()
         if not data:
             raise ValidationError('รหัสผ่านไม่ถูกต้อง')
+
+class submitForm(FlaskForm):
+    submit = SubmitField('Submit')
         
