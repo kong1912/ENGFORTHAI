@@ -9,108 +9,144 @@
   
     <div class="text-center">
         <h1>Exercise1</h1>       
-        <h2> จงพูดคำต่อไปนี้ </h2> 
+        <h2> Speak these words </h2> 
     </div>
 
-    <script>
-        i = 0;
-   </script>
-   {% for word in words %}
-   
-   <div class="text-center" id="words-{{ loop.index }}"> {{word| first}} </div>
-   <form id="answer" name="answer"  method="post" >
-       <div class="text-center">       
-           
-           <textarea disabled   id="output-textarea-{{ loop.index }}" name="xxx" rows="1" cols="50"></textarea><br>
-    
-           <button class="btn btn-success" id="start-btn-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" onclick= "disable()" >start</button><br>
-       </div>
-           
-   
-   
-    <script>
-        
-       
-       attachEvents();
-   
-   function attachEvents() {
-       let workingEls = getWorkingEls();
-       workingEls.forEach(attachEvent);
-   }
-   
-   function getWorkingEls() {
-       return [
-           {
-               id_start_btn: "#start-btn-{{ loop.index }}",
-               id_output_txta: "#output-textarea-{{ loop.index }}",
-           }
-           
-       ]
-   }
-   
-   function attachEvent(element, index, array) {
-       let cnt = 0;
-       let startBtnEl = document.querySelector(element.id_start_btn);
-       let outputTextAreaEl = document.querySelector(element.id_output_txta);
-       // new speech recognition object
-       let speechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
-       let recognition = new speechRecognition();
-       if (cnt == 4) {
-           startBtnEl.disabled = true;
-       }
-   
-       // captures single result each time
-       recognition.continuous = false
+    {% for word in words %}
 
-       
-       startBtnEl.onclick = function () {
-           ++cnt;
-           console.log(cnt);
-           outputTextAreaEl.value = "";
-           recognition.start();
-           if (cnt == 4) {
-            startBtnEl.disabled = true;
+        <div class="text-center" id="wordData-{{ loop.index }}"> {{word| first}} </div>
+        <div class="text-center">       
+           {# <textarea disabled  style="resize: none;"  id="output-textarea-{{ loop.index }}" rows="1" cols="25"></textarea><br>
+            <textarea disabled  style="resize: none;"  id="score-{{ loop.index }}"  rows="1" cols="10"></textarea><br>#}
+            <button class="btn btn-success" id="startRecording-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" >start</button>
+            <button class="btn btn-success" id="stopRecording-{{ loop.index }}" type="button" name="stop-btn-{{ loop.index }}" >stop</button>
+            <input type="hidden" id="text-{{ loop.index }}" name="text-{{ loop.index }}" value="{{word| first}}" >
+        </div>
+    {% endfor %}    
+    <script>
+            
+            {#navigator#}
+        {#    .mediaDevices#}
+        {#    .getUserMedia({audio: true})#}
+        {#    .then(stream => {#}
+        {#        handlerFunction(stream)#}
+        {#    });#} 
+
+        function handlerFunction(stream, word) {
+            rec = new MediaRecorder(stream);
+            rec.ondataavailable = e => {
+                audioChunks.push(e.data);
+                if (rec.state == "inactive") {
+                    {#let blob = new Blob(audioChunks, {type: 'audio/wav'});#}
+                    let blob = new Blob(audioChunks, {type: 'audio/webm'});
+                    sendData(blob);
+                }
+            }
         }
-       };
-   
-     /*  recognition.onend = function() {
-           startBtnEl.disabled = false;
-       } */
-   
-       recognition.onresult = function (event) {
-        if (cnt == 4) {
-            startBtnEl.disabled = true;
+
+        function sendData(data, word) {
+            var form = new FormData();
+            form.append('file', data, 'data.webm');
+            form.append('title', 'data.webm');
+            form.append('word', word);
+            //Chrome inspector shows that the post data includes a file and a title.
+            $.ajax({
+                type: 'POST',
+                url: '/asr',
+                data: form,
+                cache: false,
+                processData: false,
+                contentType: false
+            }).done(function (data) {
+                console.log(data);
+                alert(JSON.stringify(data));
+            });
         }
-           let current = event.resultIndex;
-           outputTextAreaEl.value = `${event.results[current][0].transcript}`;
-           let prob = document.querySelector("#words-{{ loop.index }}").innerHTML;
-           let resultText = document.querySelector("#output-textarea-{{ loop.index }}").value;
-           let result1 = prob.trim();
-           let result2 = resultText.trim();
-           let rLower = result1.toLowerCase();
-           let pLower = result2.toLowerCase();
-           let score = document.querySelector("#score"); 
-           if ( rLower === pLower){
-               i += 1;
-               score.value = i;
-               }
-          }
-   }    
-   
-   
+
+
+        attachEvents();
+
+        function attachEvents() {
+            {% for word in words %}
+                attachEvent({{ loop.index }});
+            {% endfor %}
+        }
+
+        function attachEvent(i) {
+            const wordData = document.getElementById(`wordData-${i}`);
+            const startRecording = document.getElementById(`startRecording-${i}`);
+            const stopRecording = document.getElementById(`stopRecording-${i}`);
+
+            let word = wordData.innerText
+
+            if (navigator.mediaDevices) {
+                console.log('getUserMedia supported.');
+
+                const constraints = {audio: true};
+                let chunks = [];
+
+                navigator.mediaDevices.getUserMedia(constraints)
+                    .then(function (stream) {
+
+                        const mediaRecorder = new MediaRecorder(stream);
+
+                        startRecording.onclick = function () {
+                            mediaRecorder.start();
+                            console.log(mediaRecorder.state);
+                            console.log(`recorder started - ${word}`);
+                            startRecording.style.background = "red";
+                            startRecording.style.color = "black";
+
+                            startRecording.disabled = true;
+                            stopRecording.disabled = false;
+                        }
+
+                        stopRecording.onclick = function () {
+                            mediaRecorder.stop();
+                            console.log(mediaRecorder.state);
+                            console.log(`recorder stopped A - ${word}`);
+                            startRecording.style.background = "";
+                            startRecording.style.color = "";
+
+                            startRecording.disabled = false;
+                            stopRecording.disabled = true;
+                        }
+
+                        mediaRecorder.onstop = function (e) {
+                            console.log("data available after MediaRecorder.stop() called.");
+
+                            const blob = new Blob(chunks, {'type': 'audio/webm; codecs=opus'});
+                            // const blob = new Blob(chunks, {'type': 'audio/ogg; codecs=opus'});
+                            // const blob = new Blob(chunks, {'type': 'audio/webm'});
+                            chunks = [];
+                            sendData(blob, word);
+                            console.log(`recorder stopped B - ${word}`);
+                        }
+
+                        mediaRecorder.ondataavailable = function (e) {
+                            chunks.push(e.data);
+                        }
+                    })
+                    .catch(function (err) {
+                        console.log('The following error occurred: ' + err);
+                    })
+            }
+
+        }
     </script>
-   
-    {% endfor %}
     
-   <input hidden type="text" name="score" id="score">
     <hr>
-       <div class="text-center">
-           <button class="btn btn-primary" type="submit" id="submit"  form="answer" name="score">Submit </button>
-       </div>    
-   </form>
-   
-   
+    
+    <div class="text-center">
+
+        <a href="{{ url_for('main.profile') }}"> {{ form.submit(class='btn btn-primary') }} </a>
+
+    </div>    
+
 {% endblock %}
+   
+   
+
 
 
 

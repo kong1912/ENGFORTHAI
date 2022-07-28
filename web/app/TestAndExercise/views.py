@@ -14,9 +14,10 @@ test_bp = Blueprint('test', __name__,
 @test_bp.route('/exercise_lesson1',methods=['GET', 'POST'])
 @login_required
 def exercise_lesson1():
+    form = submitForm()
     cursor.execute("SELECT word FROM word_list WHERE lesson = 1")
     words = cursor.fetchall()
-    return render_template('exercise_lesson1.html.jinja', words=words)
+    return render_template('exercise_lesson1.html.jinja', words=words, form=form)
     
 @test_bp.route('/exercise_lesson2')
 @login_required
@@ -90,8 +91,29 @@ def pretest():
 
 @test_bp.route('/post-test')
 def postteset():
-
-    return render_template('posttest.html.jinja')
+    cursor.execute("SELECT word FROM word_list WHERE stress = '1_1' ORDER BY RAND() LIMIT 3")
+    w1 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '1_2' ORDER BY RAND() LIMIT 3")
+    w2 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '2_1' ORDER BY RAND() LIMIT 3")
+    w3 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '2_2' ORDER BY RAND() LIMIT 3")
+    w4 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '3_1' ORDER BY RAND() LIMIT 3")
+    w5 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '3_2' ORDER BY RAND() LIMIT 3")
+    w6 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '4_1' ORDER BY RAND() LIMIT 3")
+    w7 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '4_2' ORDER BY RAND() LIMIT 3")
+    w8 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '5_1' ORDER BY RAND() LIMIT 3")
+    w9 = cursor.fetchall()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '5_2' ORDER BY RAND() LIMIT 3")
+    w10 = cursor.fetchall()
+    words = w1 + w2 + w3 + w4 + w5 + w6 + w7 + w8 + w9 + w10
+    form = submitForm()
+    return render_template('posttest.html.jinja',words=words,form=form)
 
 @test_bp.route('/insert_score',methods=['POST'])
 def insert_score():
