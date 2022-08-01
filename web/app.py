@@ -20,13 +20,13 @@ from app import app, cursor, cursor_dict, conn
 from asr.e2e_asr import *
 import speech_recognition as sr
 
-APP_DIR: pathlib.Path = pathlib.Path.cwd()
-VAR_DIR: pathlib.Path = APP_DIR / "var"
+
+VAR_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\web\var")
 LOG_DIR: pathlib.Path = VAR_DIR / "log"
 UPLOAD_DIR: pathlib.Path = VAR_DIR / "upload"
 CACHE_DIR: pathlib.Path = VAR_DIR / "cache"
 
-LOG_FILE: pathlib.Path = LOG_DIR / "flask_asr.log"
+# LOG_FILE: pathlib.Path = LOG_DIR / "flask_asr.log"
 
 
 def ensure_folder(path: pathlib.Path, path_name: str = "") -> None:
@@ -57,7 +57,7 @@ END_TO_END_SETTINGS: (EndToEndSetting) = (
         model_file=CACHE_DIR / "cb1_clean1_model.pickle",
         audio_dir=CORPUS_BASE_DIR / "wav",
     ),
-    EndToEndSetting(
+    EndToEndSetting( 
         annotations_file_train=CORPUS_BASE_DIR / "cb2_clean1_train.csv",
         annotations_file_test=CORPUS_BASE_DIR / "cb2_clean1_test.csv",
         model_file=CACHE_DIR / "cb2_clean1_model.pickle",
@@ -115,8 +115,7 @@ def predict(tensor):
     tensor = index_to_label(predict_index)
     # tensor = index_to_label(tensor.squeeze())
     return (tensor, predict_score)
-
-
+    
 @app.route('/asr', methods=['POST'])
 def asr():
     # check if the post request has the file part
