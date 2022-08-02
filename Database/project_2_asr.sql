@@ -16,27 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `lesson1`
+-- Table structure for table `asr`
 --
 
-DROP TABLE IF EXISTS `lesson1`;
+DROP TABLE IF EXISTS `asr`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `lesson1` (
-  `id` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `asr` (
+  `order` int NOT NULL AUTO_INCREMENT,
+  `u_id` int NOT NULL,
   `word` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `score` float NOT NULL,
+  `predict_word` varchar(45) NOT NULL,
+  PRIMARY KEY (`order`),
+  KEY `u_id_idx` (`u_id`),
+  CONSTRAINT `user_id` FOREIGN KEY (`u_id`) REFERENCES `user` (`u_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `lesson1`
+-- Dumping data for table `asr`
 --
 
-LOCK TABLES `lesson1` WRITE;
-/*!40000 ALTER TABLE `lesson1` DISABLE KEYS */;
-INSERT INTO `lesson1` VALUES (1,'athlete'),(2,'health'),(3,'depth'),(4,'thatch'),(5,'atheist'),(6,'oath '),(7,'path'),(8,'though '),(9,'leather'),(10,'writhe'),(11,'theorist'),(12,'father');
-/*!40000 ALTER TABLE `lesson1` ENABLE KEYS */;
+LOCK TABLES `asr` WRITE;
+/*!40000 ALTER TABLE `asr` DISABLE KEYS */;
+INSERT INTO `asr` VALUES (1,13,'eight',0.366094,'writhe'),(2,16,'altogether',0.518298,'smooth'),(3,16,'smooth',0.346131,'smooth'),(4,16,'eight',0.179599,'smooth'),(5,16,'smooth',0.153776,'smooth'),(6,16,'smooth',0.15916,'width'),(7,16,'smooth',0.26221,'smooth');
+/*!40000 ALTER TABLE `asr` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-07 15:55:57
+-- Dump completed on 2022-08-02 20:57:47

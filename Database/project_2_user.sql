@@ -24,13 +24,14 @@ DROP TABLE IF EXISTS `user`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
   `u_id` int NOT NULL AUTO_INCREMENT,
-  `email` varchar(100) NOT NULL,
   `firstname` varchar(100) NOT NULL,
   `lastname` varchar(100) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(16) NOT NULL,
+  `isPre` tinyint DEFAULT '0',
+  `isPost` tinyint DEFAULT '0',
   PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +40,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (2,'kongpopboonma1912@gmail.com','Kongpop','Boonma','kong1912','12345678'),(3,'test@gmail.com','John','Cena','test123','12345678'),(4,'randy@gmail.com','Randy','Orton','test321','123456'),(5,'test3333@gmail.com','vachi','ralong','test333','12345678'),(7,'kongpopboonma1912@gmail.com','Kongpop','Boonma','kong1912','123456'),(8,'test32122@gmail.com','Hello','Goodbye','test543','123456');
+INSERT INTO `user` VALUES (13,'ก้องภพ ','บุญมา','kong1912','123kong',0,0),(14,'ก้องภา','บุญบพ','test123','123456',1,0),(15,'ณรบดี','พวงมณี','test11','1234567890',0,0),(16,'กนกวรรณ','แซ่โซว','testuser1','1234',0,0),(17,'ปฐมาวดี','สมหวัง','testuser2','1234',0,0),(18,'เบญวรรณ','สมใจ','testuser3','1234',0,0),(19,'กวิสรา','สุวรรณรัตน์','testuser4','1234',0,0),(20,'ภูมิไท','สุวรรณเนาว์','testuser5','1234',0,0),(21,'พิทยาภรณ์','แสงขาว','newtest1','1234',0,0),(22,'สัณหฤทัย','บุญช่วย','newtest2','1234',0,0),(23,'รวิสรา','คงพรหม','newtest3','1234',0,0),(24,'พงศธร','ฮู้สกุลวัฒนา','newtest4','1234',0,0),(25,'นพรุต','รัตนวงค์','newtest5','1234',0,0);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-25 11:26:40
+-- Dump completed on 2022-08-02 20:57:48
