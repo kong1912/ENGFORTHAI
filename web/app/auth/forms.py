@@ -17,7 +17,7 @@ class RegisterForm(FlaskForm):
                                                     Length(min=4, max=16, message="Password must be between 4 and 16 characters long")])
     confirm_password = PasswordField('confirm password', validators=[EqualTo('password',message="Passwords must match"),
                                                             DataRequired(message="Please enter your confirm-password")])
-    submit = SubmitField('สมัครสมาชิก')
+    submit = SubmitField('Sign in')
     def validateName(self,firstname):
         if not re.match(r'^[a-zA-Z]+$', firstname.data):
             raise ValidationError('Please enter your name in English.')
@@ -32,9 +32,9 @@ class RegisterForm(FlaskForm):
 
 class LoginForm(FlaskForm):
 
-    username = StringField('ชื่อผู้ใช้', validators=[DataRequired(message="Please enter your username")])
-    password = PasswordField('รหัสผ่าน', validators=[DataRequired(message="Please enter your password")])
-    submit = SubmitField('เข้าสู่ระบบ')
+    username = StringField('Username', validators=[DataRequired(message="Please enter your username")])
+    password = PasswordField('Password', validators=[DataRequired(message="Please enter your password")])
+    submit = SubmitField('Login')
 
     def validate_username(self,username):
         cursor.execute("SELECT username FROM user WHERE username = %s", (username.data))

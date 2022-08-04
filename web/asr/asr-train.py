@@ -31,16 +31,14 @@ from tqdm import tqdm
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 CORPUS_BASE_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\asr-data")
 # ANNOTATIONS_FILE: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_train.csv"
-ANNOTATIONS_FILE: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\asr-data\cb2_clean1_train.csv")
+ANNOTATIONS_FILE: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\asr-data\cb5_clean1_train.csv")
 # ANNOTATIONS_FILE_TEST: pathlib.Path = CORPUS_BASE_DIR / "gwjcommand_test.csv"
-ANNOTATIONS_FILE_TEST: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\asr-data\cb2_clean1_test.csv")
+ANNOTATIONS_FILE_TEST: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\asr-data\cb5_clean1_test.csv")
 AUDIO_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\asr-data\wav")
 
-
-APP_DIR: pathlib.Path = pathlib.Path.cwd()
-VAR_DIR: pathlib.Path = APP_DIR / "var"
+VAR_DIR: pathlib.Path = pathlib.Path(r"E:\SciUsProject_ENGFORTHAI\web\var")
 CACHE_DIR: pathlib.Path = VAR_DIR / "cache"
-print(f"APP_DIR = {APP_DIR}")
+
 print(f"VAR_DIR = {VAR_DIR}")
 print(f"CACHE_DIR = {CACHE_DIR}")
 
@@ -50,7 +48,7 @@ VAR_DIR.mkdir(exist_ok=True)
 print(f"ensuring CACHE_DIR")
 CACHE_DIR.mkdir(exist_ok=True)
 
-MODEL_FILE: pathlib.Path = CACHE_DIR / "model.pickle"
+MODEL_FILE: pathlib.Path = CACHE_DIR / "cb5_clean1_model.pickle"
 
 # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 device = torch.device("cpu")

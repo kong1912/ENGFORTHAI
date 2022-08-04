@@ -4,15 +4,13 @@
 
 {% block content %}
     <div class="text-center">
-        <h1>Post-test</h1>       
+        <h1>Pre-test</h1>       
         <h2> Speak these words </h2> 
     </div>
     {% for word in words %}
 
         <div class="text-center" id="wordData-{{ loop.index }}"> {{word| first}} </div>
         <div class="text-center">       
-           {# <textarea disabled  style="resize: none;"  id="output-textarea-{{ loop.index }}" rows="1" cols="25"></textarea><br>
-            <textarea disabled  style="resize: none;"  id="score-{{ loop.index }}"  rows="1" cols="10"></textarea><br>#}
             <button class="btn btn-success" id="startRecording-{{ loop.index }}" type="button" name="start-btn-{{ loop.index }}" >start</button>
             <button class="btn btn-success" id="stopRecording-{{ loop.index }}" type="button" name="stop-btn-{{ loop.index }}" >stop</button>
             <input type="hidden" id="text-{{ loop.index }}" name="text-{{ loop.index }}" value="{{word| first}}" >

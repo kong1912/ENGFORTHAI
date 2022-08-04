@@ -199,7 +199,6 @@ def asr():
             "text": tensor,
             "score": predict_score,
         })
-    asr_results.append({"google_text" : text})
     print(f"asr_results={asr_results}")
     """
     if level == 1:
