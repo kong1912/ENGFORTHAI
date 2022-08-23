@@ -91,49 +91,29 @@ def pretest():
 
 @test_bp.route('/post-test')
 def postteset():
-    cursor.execute("SELECT word FROM word_list WHERE stress = '1_1' ORDER BY RAND() LIMIT 3")
+    form = submitForm()
+    cursor.execute("SELECT word FROM word_list WHERE stress = '1_1' LIMIT 3")
     w1 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = '1_2' ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = '1_2' LIMIT 3")
     w2 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = '2_1' ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = '2_1' LIMIT 3")
     w3 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = '2_2' ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = '2_2' LIMIT 3")
     w4 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = '3_1' ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = '3_1' LIMIT 3")
     w5 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = '3_2' ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = '3_2' LIMIT 3")
     w6 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = '4_1' ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = '4_1' LIMIT 3")
     w7 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = '4_2' ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = '4_2' LIMIT 3")
     w8 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = '5_1' ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = '5_1' LIMIT 3")
     w9 = cursor.fetchall()
-    cursor.execute("SELECT word FROM word_list WHERE stress = '5_2' ORDER BY RAND() LIMIT 3")
+    cursor.execute("SELECT word FROM word_list WHERE stress = '5_2' LIMIT 3")
     w10 = cursor.fetchall()
     words = w1 + w2 + w3 + w4 + w5 + w6 + w7 + w8 + w9 + w10
-    form = submitForm()
-    return render_template('posttest.html.jinja',words=words,form=form)
+    # print(words)
+    return render_template('pretest.html.jinja',words=words,form=form)
 
-@test_bp.route('/insert_score',methods=['POST'])
-def insert_score():
-    if request.method == 'POST':
-        data = request.get_json()
-        print(data)
-        cursor.execute(f"INSERT INTO score (s1_s,s2_s,s3_s,s4_s,s5_s) \
-                         VALUES ({data[0].score},{data[1].score},{data[2].score},{data[3].score},{data[4].score})")
-        conn.commit()
-        return jsonify({})
-
-@test_bp.route('/result')
-def result():
-    cursor.execute("SELECT pre_s FROM score WHERE u_id = %s", (session['u_id']))
-    pre_s = cursor.fetchone()
-    cursor_dict.execute("SELECT s1_s,s2_s,s3_s,s4_s,s5_s FROM score WHERE u_id = %s", (session['u_id']))
-    stress = cursor_dict.fetchone()
-    print(stress)
-    # sort stress ascending
-    stress = sorted(stress, key=lambda x: x[1:])
-    print(stress)
-    return render_template('result.html.jinja',stress=stress,pre_s=pre_s)
 

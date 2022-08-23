@@ -85,7 +85,7 @@ END_TO_END_SETTINGS: (EndToEndSetting) = (
 
 # Tuple from generator
 # END_TO_END_ASRS: [EndToEndASR] = [EndToEndASR(e) for e in END_TO_END_SETTINGS]
-END_TO_END_ASRS: [EndToEndASR] = []
+END_TO_END_ASRS: EndToEndASR = []
 for s in END_TO_END_SETTINGS:
     asr = EndToEndASR(s)
     END_TO_END_ASRS.append(asr)
@@ -123,10 +123,6 @@ def asr():
         flash('No file part')
         return redirect(request.url)
 
-    
-    word = request.form['word']
-    print(f"word={word}")
-    
     file = request.files['file']
     # if user does not select file, browser also
     # submit an empty part without filename
@@ -169,7 +165,14 @@ def asr():
         print("ffmpeg execution failed: ", e)
 
     waveform, sample_rate = torchaudio.load(full_file_name_wav)
-    """
+    
+    word = request.form['word']
+    print(f"word={word}")
+    
+    cursor.execute(f"SELECT lesson FROM word_list WHERE word = '{word}' ")
+    level = cursor.fetchone()
+    level = int(level[0])
+
     #google asr
     # Create an instance of the Recognizer class
     recognizer = sr.Recognizer()
@@ -184,15 +187,23 @@ def asr():
     text = recognizer.recognize_google(clean_support_call_audio,
                                    language="en-US")
     print(f"google text = {text}")
-    """
-        
     # google asr end
-
+    
+    # asr predict
+    stress = {1:"/ð/ - /θ/ - /tθ/", 2: "/ʒ/ - /ʃ/", 3: "/dʒ/ - /tʃ/", 4: "/z/ - /s/", 5: "/b/ - /p/"}
     asr_results: list = []
     cursor.execute(f"SELECT lesson FROM word_list WHERE word = '{word}' ")
-    level = cursor.fetchone()
-    level = int(level[0])
-    print(f"level={level}")
+    if word == text:
+        cursor.execute(f"SELECT s{level}_s from score WHERE u_id = {session['u_id']} ")
+        old_s = cursor.fetchone()
+        old_s = old_s[0]
+        print(f"old_s = {old_s}")
+        new_s = 1 + old_s
+        print(f"new_s = {new_s}")
+        cursor.execute(f"UPDATE score SET s{level}_s = {new_s}  WHERE u_id = {session['u_id']}")
+        conn.commit()
+        return jsonify("You said it right! Your score is increased by 1 point.")
+
     for asr in END_TO_END_ASRS:
         tensor, predict_score = asr.predict(waveform)
         asr_results.append({
@@ -200,51 +211,28 @@ def asr():
             "score": predict_score,
         })
     print(f"asr_results={asr_results}")
-    """
-    if level == 1:
-        score = asr_results[0]['score']
-        cursor.execute(f"SELECT s1_s from score WHERE u_id = {session['u_id']} ")
-        old_s = cursor.fetchone()
-        old_s = old_s[0]
-        new_s = score + old_s
-        cursor.execute(f"UPDATE score SET s1_s = {new_s}  WHERE u_id = {session['u_id']}")
-        conn.commit()
-    elif level == 2:
-        score = asr_results[1]['score']
-        cursor.execute(f"SELECT s2_s from score WHERE u_id = {session['u_id']} ")
-        old_s = cursor.fetchone()
-        old_s = old_s[0]
-        new_s = score + old_s
-        cursor.execute(f"UPDATE score SET s2_s = {new_s}  WHERE u_id = {session['u_id']} ")
-        conn.commit()
-    elif level == 3:
-        score = asr_results[2]['score']
-        cursor.execute(f"SELECT s3_s from score WHERE u_id = {session['u_id']} ")
-        old_s = cursor.fetchone()
-        old_s = old_s[0]
-        new_s = score + old_s
-        cursor.execute(f"UPDATE score SET s3_s = {new_s}  WHERE u_id = {session['u_id']} ")
-        conn.commit()
-    elif level == 4:
-        score = asr_results[3]['score']
-        cursor.execute(f"SELECT s4_s from score WHERE u_id = {session['u_id']} ")
-        old_s = cursor.fetchone()
-        old_s = old_s[0]
-        new_s = score + old_s
-        cursor.execute(f"UPDATE score SET s4_s = {new_s}  WHERE u_id = {session['u_id']} ")
-        conn.commit()
-    elif level == 5:
-        score = asr_results[4]['score']
-        cursor.execute(f"SELECT s5_s from score WHERE u_id = {session['u_id']} ")
-        old_s = cursor.fetchone()
-        old_s = old_s[0]
-        new_s = score + old_s
-        cursor.execute(f"UPDATE score SET s5_s = {new_s}  WHERE u_id = {session['u_id']} ")
-        conn.commit()
-    """
-    cursor.execute(f"INSERT INTO asr (word,u_id,score,predict_word) VALUES('{word}',{session['u_id']},{asr_results[level-1]['score']},'{asr_results[level-1]['text']}')")
+    
+    #insert data to asr table
+    cursor.execute(f"INSERT INTO asr (word,u_id,score,predict_word) \
+    VALUES('{word}',{session['u_id']},{asr_results[level-1]['score']},'{asr_results[level-1]['text']}')")
     conn.commit()
-    return jsonify(asr_results[level-1])
+
+
+
+    # if asr can recognize the word
+    for asr_result in asr_results:
+        if word == asr_result['text']:
+            cursor.execute(f"SELECT s{level}_s from score WHERE u_id = {session['u_id']} ")
+            return jsonify(f"You said it wrong. You have problem with {stress[level]}. Your score is not changed.")
+    
+    # if asr can't recognize the word
+    asr_results.sort(key=lambda x: x['score'], reverse=True)
+    print(f"asr_results={asr_results}")
+    asr_text = asr_results[0]['text']
+    cursor.execute(f"SELECT lesson FROM word_list WHERE word = '{asr_text}' ")
+    asr_level = cursor.fetchone()
+    asr_level = int(asr_level[0])
+    return jsonify(f"You said it wrong.You have problem with {stress[asr_level]} Your score is not changed.")
 
 
 def test1():
