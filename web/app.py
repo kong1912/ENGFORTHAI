@@ -184,16 +184,15 @@ def asr():
     with clean_support_call as source:
         clean_support_call_audio = recognizer.record(source)
     # Transcribe AudioData to text
-    text = recognizer.recognize_google(clean_support_call_audio,
+    google_text = recognizer.recognize_google(clean_support_call_audio,
                                    language="en-US")
-    print(f"google text = {text}")
+    print(f"google text = {google_text}")
     # google asr end
     
     # asr predict
     stress = {1:"/ð/ - /θ/ - /tθ/", 2: "/ʒ/ - /ʃ/", 3: "/dʒ/ - /tʃ/", 4: "/z/ - /s/", 5: "/b/ - /p/"}
     asr_results: list = []
-    cursor.execute(f"SELECT lesson FROM word_list WHERE word = '{word}' ")
-    if word == text:
+    if word == google_text:
         cursor.execute(f"SELECT s{level}_s from score WHERE u_id = {session['u_id']} ")
         old_s = cursor.fetchone()
         old_s = old_s[0]
@@ -201,6 +200,10 @@ def asr():
         new_s = 1 + old_s
         print(f"new_s = {new_s}")
         cursor.execute(f"UPDATE score SET s{level}_s = {new_s}  WHERE u_id = {session['u_id']}")
+        conn.commit()
+
+        #insert to asr table
+        cursor.execute(f"INSERT INTO asr (u_id,word,google_text,score) VALUES({int(session['u_id'])},'{word}','{google_text}',1)")
         conn.commit()
         return jsonify("You said it right! Your score is increased by 1 point.")
 
@@ -212,17 +215,11 @@ def asr():
         })
     print(f"asr_results={asr_results}")
     
-    #insert data to asr table
-    cursor.execute(f"INSERT INTO asr (word,u_id,score,predict_word) \
-    VALUES('{word}',{session['u_id']},{asr_results[level-1]['score']},'{asr_results[level-1]['text']}')")
-    conn.commit()
-
-
-
     # if asr can recognize the word
     for asr_result in asr_results:
         if word == asr_result['text']:
-            cursor.execute(f"SELECT s{level}_s from score WHERE u_id = {session['u_id']} ")
+            cursor.execute(f"INSERT INTO asr (u_id,word,google_text,model_phoneme,model_word,model_prob,score) VALUES({int(session['u_id'])},'{word}','{google_text}',{level},'{asr_result['text']}',{asr_result['score']},0)")
+            conn.commit()
             return jsonify(f"You said it wrong. You have problem with {stress[level]}. Your score is not changed.")
     
     # if asr can't recognize the word
@@ -232,6 +229,8 @@ def asr():
     cursor.execute(f"SELECT lesson FROM word_list WHERE word = '{asr_text}' ")
     asr_level = cursor.fetchone()
     asr_level = int(asr_level[0])
+    cursor.execute(f"INSERT INTO asr (u_id,word,google_text,model_phoneme,model_word,model_prob,score) VALUES({int(session['u_id'])},'{word}','{google_text}',{asr_level},'{asr_text}',{asr_results[0]['score']},0)")
+    conn.commit()
     return jsonify(f"You said it wrong.You have problem with {stress[asr_level]} Your score is not changed.")
 
 
